@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="add_data">增加数据</string>
+    <string name="delete_data">删除数据</string>
+    <string name="update_data">更改数据</string>
+    <string name="query_data">查询数据</string>
+</resources>

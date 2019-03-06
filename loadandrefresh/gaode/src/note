@@ -1,0 +1,35 @@
+高德的地理编码与逆地理编码
+
+地理编码：根据位置找出对应的经纬度  ----  GeocodeQuery 筛选条件
+
+逆地理编码：根据经纬度找出对应的位置  ---  RegeocodeQuery  筛选条件
+
+geocoderSearch = new GeocodeSearch(this);
+geocoderSearch.setOnGeocodeSearchListener(this);
+RegeocodeQuery query = new RegeocodeQuery(latLonPoint, 200, GeocodeSearch.AMAP);// 第一个参数表示一个Latlng，第二参数表示范围多少米，第三个参数表示是火系坐标系还是GPS原生坐标系
+geocoderSearch.getFromLocationAsyn(query);// 设置同步逆地理编码请求
+@Override
+    public void onRegeocodeSearched(RegeocodeResult result, int rCode) {
+        if (rCode == 1000) {
+            if (result != null && result.getRegeocodeAddress() != null
+                    && result.getRegeocodeAddress().getFormatAddress() != null) {
+
+                Toast.makeText(MainActivity.this,result.getRegeocodeAddress().getFormatAddress()
+                        + "附近",Toast.LENGTH_LONG).show();
+                aMap.animateCamera(CameraUpdateFactory.newLatLngZoom(
+                        AMapUtil.convertToLatLng(latLonPoint), 15));
+                geoMarker.setPosition(AMapUtil.convertToLatLng(latLonPoint));
+            } else {
+
+            }
+        } else {
+        }
+    }
+
+
+<meta-data
+    android:name="com.amap.api.v2.apikey"
+    android:value="57b811b21061501ee320e171568f0dac"
+    />
+
+这个value的值是根据包名来生成的，所以与包名一致的，换了其他的包名，该值就不能生效，就会导致定位失败，错位码为7.

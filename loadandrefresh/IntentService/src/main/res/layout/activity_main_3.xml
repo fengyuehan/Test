@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/btn_start"
+        android:text="开始"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/tv_status"
+        android:text="线程状态：未运行"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_marginTop="20dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/tv_progress"
+        android:layout_marginTop="20dp"
+        android:text="0%"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

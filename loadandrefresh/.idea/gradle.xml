@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AsynTask" />
+            <option value="$PROJECT_DIR$/ContentProvider" />
+            <option value="$PROJECT_DIR$/FlowLayout" />
+            <option value="$PROJECT_DIR$/IntentService" />
+            <option value="$PROJECT_DIR$/LiveData" />
+            <option value="$PROJECT_DIR$/MarqueTextView" />
+            <option value="$PROJECT_DIR$/MaterialDesign" />
+            <option value="$PROJECT_DIR$/PopupWindow" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/camerademo" />
+            <option value="$PROJECT_DIR$/dialogfragment" />
+            <option value="$PROJECT_DIR$/eventbus" />
+            <option value="$PROJECT_DIR$/file" />
+            <option value="$PROJECT_DIR$/fragment" />
+            <option value="$PROJECT_DIR$/gaode" />
+            <option value="$PROJECT_DIR$/glidepicasso" />
+            <option value="$PROJECT_DIR$/greendao" />
+            <option value="$PROJECT_DIR$/scrollview" />
+            <option value="$PROJECT_DIR$/shoppingcart" />
+            <option value="$PROJECT_DIR$/staggeredgrid" />
+            <option value="$PROJECT_DIR$/statusbarplus" />
+            <option value="$PROJECT_DIR$/video" />
+            <option value="$PROJECT_DIR$/viewpager" />
+            <option value="$PROJECT_DIR$/wanandroid" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

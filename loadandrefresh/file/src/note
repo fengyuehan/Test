@@ -1,0 +1,8 @@
+new File("/tmp/one/two/three").mkdirs();
+执行后， 会建立tmp/one/two/three四级目录
+new File("/tmp/one/two/three").mkdir();
+则不会建立任何目录， 因为找不到/tmp/one/two目录， 结果返回false
+
+
+delete：删除File对象表示的文件或目录，如果表示的是目录，需要保证目录是空的，否则无法删除。若成功删除返回true，否则返回false。
+deleteOnExit：当虚拟机终止时，删除File对象表示的文件或目录，如果表示的是目录，需要保证目录是空的，否则无法删除，无返回值。

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:scaleType="fitXY"
+        android:src="@drawable/splash_cat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tv_jump"
+        android:layout_width="@dimen/x70"
+        android:layout_height="@dimen/y30"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_margin="12dp"
+        android:background="@drawable/drawable_splash_time"
+        android:text="@string/jump_to_main"
+        android:textColor="@color/white_255"
+        android:textSize="15sp"
+        />
+</RelativeLayout>
