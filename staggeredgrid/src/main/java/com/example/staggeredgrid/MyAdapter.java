@@ -40,6 +40,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return mTitles.size();
     }
 
+
     class MyViewHolder extends RecyclerView.ViewHolder{
 
         private TextView textView;

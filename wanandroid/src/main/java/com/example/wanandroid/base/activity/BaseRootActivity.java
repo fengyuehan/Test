@@ -21,10 +21,10 @@ public abstract class BaseRootActivity<T extends AbsPresenter> extends BaseActiv
     public BaseRootActivity() {
     }
 
-    @Override
+   /* @Override
     protected void initToolbar() {
         super.initToolbar();
-    }
+    }*/
 
     @Override
     protected void initUI() {

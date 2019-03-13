@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     >
-    <android.support.design.widget.AppBarLayoutid
-        android:id = "@+id/abl_bar"
-        android:theme="@style/EditText"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/y50">
-    </android.support.design.widget.AppBarLayoutid>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <include layout="@layout/toolbar_white"/>
+
+        <TextView
+            android:layout_margin="10dp"
+            android:text="常用网站"
+            android:textSize="18sp"
+            android:textColor="@color/black_90"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/tfl"
+            android:layout_marginTop="15dp"
+            zhy:max_select="-1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        </com.zhy.view.flowlayout.TagFlowLayout>
+
+    </LinearLayout>
+</ScrollView>
+

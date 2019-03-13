@@ -48,7 +48,7 @@ public abstract class BaseActivity<T extends AbsPresenter> extends SupportActivi
         initBind();
         initInject();
         onViewCreated();
-        initToolbar();
+        //initToolbar();
         initUI();
         initData();
     }
@@ -57,9 +57,9 @@ public abstract class BaseActivity<T extends AbsPresenter> extends SupportActivi
 
     protected abstract void initUI();
 
-    protected  void initToolbar(){
+    /*protected  void initToolbar(){
 
-    }
+    }*/
 
     protected  void onViewCreated(){
         if (mPresenter != null){

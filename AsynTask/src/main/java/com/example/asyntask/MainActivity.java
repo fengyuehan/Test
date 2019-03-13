@@ -1,6 +1,7 @@
 package com.example.asyntask;
 
 import android.os.AsyncTask;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar pb;
     private TextView textView;
     private MyAsynTask mMyAsynTask;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

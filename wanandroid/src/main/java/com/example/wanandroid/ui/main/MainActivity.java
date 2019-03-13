@@ -17,6 +17,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidbase.utils.ToastUtils;
@@ -45,7 +47,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private BottomNavigationView mBottomNavigationView;
     private FloatingActionButton mFloatingActionButton;
-    private Toolbar mToolbar;
+    private TextView title;
+    private ImageView icon_back,menu_main_hot,menu_main_search;
 
     private List<Fragment> fragments;
     private BasePresenter mBasePresenter;
@@ -94,7 +97,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mBottomNavigationView = findViewById(R.id.bottom_navigation_view);
         mFloatingActionButton = findViewById(R.id.float_button);
         mFloatingActionButton.setOnClickListener(this);
-        mToolbar = findViewById(R.id.toolbar_common);
+        title = findViewById(R.id.tv_title);
+        title.setText("WanAndroid");
+        icon_back = findViewById(R.id.iv_back_toolbar);
+        icon_back.setVisibility(View.GONE);
+        menu_main_hot = findViewById(R.id.menu_main_hot);
+        menu_main_search = findViewById(R.id.menu_main_search);
         mBasePresenter = new BasePresenter();
         initFragment();
         selectFragment(0);
@@ -106,7 +114,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
+   /* @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.menu_main_hot:
@@ -116,6 +124,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 startActivity(new Intent(mBaseActivity, SearchActivity.class));
                 break;
         }
+        return super.onOptionsItemSelected(item);
+    }*/
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
         return super.onOptionsItemSelected(item);
     }
 
@@ -148,11 +161,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         return R.layout.activity_main;
     }
 
-    @Override
+    /*@Override
     protected void initToolbar() {
         super.initToolbar();
         setSupportActionBar(mToolbar);
-    }
+    }*/
 
 
     @Override
@@ -161,6 +174,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.float_button:
                 scrollToTop();
                 break;
+            case R.id.menu_main_hot:
+                startActivity(new Intent(mBaseActivity, HotActivity.class));
+                break;
+            case R.id.menu_main_search:
+                startActivity(new Intent(mBaseActivity, SearchActivity.class));
+                break;
+
         }
     }
 
