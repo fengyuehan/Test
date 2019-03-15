@@ -1,5 +1,7 @@
 package com.example.wanandroid.ui.hot;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -65,6 +67,16 @@ public class HotActivity extends BaseRootActivity<HotPresenter> implements HotCo
             }
         };
         tagFlowLayout.setAdapter(adapter);
+        tagFlowLayout.setOnTagClickListener(new TagFlowLayout.OnTagClickListener() {
+            @Override
+            public boolean onTagClick(View view, int position, FlowLayout parent) {
+                Bundle bundle = new Bundle();
+                bundle.putString("tltle",list.get(position).getName());
+                bundle.putString("link",list.get(position).getLink());
+                startActivity(new Intent(HotActivity.this,ArticleDetailsActivity.class),bundle);
+                return false;
+            }
+        });
     }
 
     @Override

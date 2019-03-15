@@ -39,6 +39,8 @@
         <activity android:name=".ui.main.MainActivity"
             android:launchMode="singleTop"
             />
+        <activity android:name=".ui.hot.HotActivity" />
+        <activity android:name=".ui.hot.ArticleDetailsActivity"/>
     </application>
 
 
