@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    <array name="wallet_main_tab">
+        <item>@string/tab1</item>
+        <item>@string/tab2</item>
+        <item>@string/tab3</item>
+    </array>
+
+    <string name="tab1">11</string>
+    <string name="tab2">22</string>
+    <string name="tab3">33</string>
 </resources>

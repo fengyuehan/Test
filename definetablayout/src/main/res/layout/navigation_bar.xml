@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.example.definetablayout.TabView
+        android:id="@+id/tv1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:src="@drawable/selector_tab_wallet"
+        app:text="钱包" />
+
+    <com.example.definetablayout.TabView
+        android:id="@+id/tv2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:src="@drawable/selector_tab_discover"
+        app:text="发现" />
+
+    <com.example.definetablayout.TabView
+        android:id="@+id/tv3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:src="@drawable/selector_tab_mine"
+        app:text="我的" />
+</LinearLayout>

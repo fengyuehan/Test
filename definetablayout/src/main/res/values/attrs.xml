@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TabView">
+        <attr name="src" format="reference"></attr>
+        <attr name="text" ></attr>
+    </declare-styleable>
+</resources>
