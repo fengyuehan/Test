@@ -3,6 +3,7 @@ package com.example.jsandandroid;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.net.http.SslError;
 import android.os.Build;
 import android.os.Handler;
@@ -19,12 +20,13 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView tv_showmsg;
+   // private TextView tv_showmsg;
     private WebView webview;
-    private Button tv_androidcalljs,tv_androidcalljsargs;
+    //private Button tv_androidcalljs,tv_androidcalljsargs;
     Handler handler = new Handler();
 
     @SuppressLint("JavascriptInterface")
@@ -38,14 +40,14 @@ public class MainActivity extends AppCompatActivity {
         initListener();
 
         //webview.loadUrl("http://baidu.com");
-        webview.loadUrl("file:///android_asset/123.html");
-        //webview.loadUrl("http://192.168.1.121:8889/third_pay/showbutton.html");
+        //webview.loadUrl("file:///android_asset/123.html");
+        webview.loadUrl("http://192.168.1.121:8889/third_pay/showbutton.html");
         webview.addJavascriptInterface(MainActivity.this,"jsCallAndroid");
 
     }
 
     private void initListener() {
-        tv_androidcalljs.setOnClickListener(new View.OnClickListener() {
+       /* tv_androidcalljs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 webview.loadUrl("javascript:javacalljs()");
@@ -56,15 +58,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 webview.loadUrl("javascript:javacalljswith(" + "'Android传过来的参数'" + ")");
             }
-        });
+        });*/
     }
 
     private void initWebView() {
-        /*WebSettings webSettings = webview.getSettings();
-        //与js交互必须设置
-        webSettings.setJavaScriptEnabled(true);*/
-
-
         WebSettings webSettings = webview.getSettings();
         webSettings.setDefaultTextEncodingName("utf-8");
         //如果访问的页面中要与Javascript交互，则webview必须设置支持Javascript
@@ -94,14 +91,13 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setAllowContentAccess(false);
         //设置WebView是否保存表单数据，默认true，保存数据。
         webSettings.setSaveFormData(true);
-
         webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         webSettings.setRenderPriority(WebSettings.RenderPriority.HIGH);
         webSettings.setPluginState(WebSettings.PluginState.ON);
         webSettings.setLoadsImagesAutomatically(true);
         webSettings.setUseWideViewPort(true);
         webview.requestFocus();
-
+        webSettings.setSupportMultipleWindows(true);
         //webview.setWebChromeClient(mWebChromeClient);
         webview.setWebViewClient(mWebViewClient);
         //缓存模式如下：
@@ -142,13 +138,9 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             Log.e("zzf",url);
-            view.loadUrl(url);
-            //startActivity(new Intent(MainActivity.this,PayActivity.class));
-            /*if (url.startsWith("app://xxx")) {
-                return true;
-            } else if (url.startsWith("https://xxx")) {
-                return true;
-            }*/
+            if (url.contains("antpocket://pay.com")){
+                jumpAntPocket(url);
+            }
             return true;
         }
 
@@ -185,9 +177,9 @@ public class MainActivity extends AppCompatActivity {
         }
     };
     private void initView() {
-        tv_androidcalljs = findViewById(R.id.tv_androidcalljs);
+        /*tv_androidcalljs = findViewById(R.id.tv_androidcalljs);
         tv_androidcalljsargs = findViewById(R.id.tv_androidcalljsargs);
-        tv_showmsg = findViewById(R.id.tv_showmsg);
+        tv_showmsg = findViewById(R.id.tv_showmsg);*/
         webview = findViewById(R.id.webview);
 
     }
@@ -203,8 +195,22 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @JavascriptInterface
+    private void jumpAntPocket(String url) {
+
+        Uri data = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, data);
+        //保证新启动的APP有单独的堆栈，如果希望新启动的APP和原有APP使用同一个堆栈则去掉该项
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        try {
+            startActivityForResult(intent, RESULT_OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(MainActivity.this, "未安装AntPocket！", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+   /* @JavascriptInterface
     public void jsCallAndroidArgs(String args){
         tv_showmsg.setText(args);
-    }
+    }*/
 }
