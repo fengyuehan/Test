@@ -29,11 +29,13 @@
             <option value="$PROJECT_DIR$/jsandandroid" />
             <option value="$PROJECT_DIR$/scrollview" />
             <option value="$PROJECT_DIR$/shoppingcart" />
+            <option value="$PROJECT_DIR$/smartrefreshlayout" />
             <option value="$PROJECT_DIR$/staggeredgrid" />
             <option value="$PROJECT_DIR$/statusbarplus" />
             <option value="$PROJECT_DIR$/video" />
             <option value="$PROJECT_DIR$/viewpager" />
             <option value="$PROJECT_DIR$/wanandroid" />
+            <option value="$PROJECT_DIR$/zxingdemo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
