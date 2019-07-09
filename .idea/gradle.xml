@@ -27,6 +27,7 @@
             <option value="$PROJECT_DIR$/glidepicasso" />
             <option value="$PROJECT_DIR$/greendao" />
             <option value="$PROJECT_DIR$/jsandandroid" />
+            <option value="$PROJECT_DIR$/keyboard" />
             <option value="$PROJECT_DIR$/scrollview" />
             <option value="$PROJECT_DIR$/shoppingcart" />
             <option value="$PROJECT_DIR$/smartrefreshlayout" />
@@ -35,7 +36,6 @@
             <option value="$PROJECT_DIR$/video" />
             <option value="$PROJECT_DIR$/viewpager" />
             <option value="$PROJECT_DIR$/wanandroid" />
-            <option value="$PROJECT_DIR$/zgg" />
             <option value="$PROJECT_DIR$/zxingdemo" />
           </set>
         </option>
