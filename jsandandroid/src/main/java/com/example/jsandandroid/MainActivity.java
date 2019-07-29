@@ -3,6 +3,7 @@ package com.example.jsandandroid;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.net.Uri;
 import android.net.http.SslError;
 import android.os.Build;
@@ -22,11 +23,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import cn.ycbjie.ycstatusbarlib.StatusBarUtils;
+import cn.ycbjie.ycstatusbarlib.bar.YCAppBar;
+
 public class MainActivity extends AppCompatActivity {
 
-   // private TextView tv_showmsg;
+   private TextView tv_showmsg;
     private WebView webview;
-    //private Button tv_androidcalljs,tv_androidcalljsargs;
+    private Button tv_androidcalljs,tv_androidcalljsargs;
     Handler handler = new Handler();
 
     @SuppressLint("JavascriptInterface")
@@ -41,9 +45,26 @@ public class MainActivity extends AppCompatActivity {
 
         //webview.loadUrl("http://baidu.com");
         //webview.loadUrl("file:///android_asset/123.html");
-        webview.loadUrl("http://192.168.1.121:8889/third_pay/showbutton.html");
+        webview.loadUrl("file:///android_asset/123.html");
         webview.addJavascriptInterface(MainActivity.this,"jsCallAndroid");
 
+    }
+
+    @JavascriptInterface
+    public void changeStatusBar(final String str) {
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                int id;
+                if (str == null){
+                    id = Color.parseColor("#FFFFFF");
+                }else {
+                    id = Color.parseColor(str);
+                }
+                YCAppBar.setStatusBarColor(MainActivity.this, id);
+                StatusBarUtils.StatusBarLightMode(MainActivity.this);
+            }
+        });
     }
 
     private void initListener() {
@@ -107,6 +128,16 @@ public class MainActivity extends AppCompatActivity {
         //LOAD_CACHE_ELSE_NETWORK，只要本地有，无论是否过期，或者no-cache，都使用缓存中的数据。
         //webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
 
+        webSettings.setCacheMode(WebSettings.LOAD_DEFAULT); //关闭webview中缓存
+
+        webSettings.setAppCacheEnabled(true);
+        String appCachePath = getApplicationContext().getCacheDir()
+                .getAbsolutePath() + "/webcache";
+        // 设置 Application Caches 缓存目录
+        webSettings.setAppCachePath(appCachePath);
+        webSettings.setAllowFileAccess(true); //设置可以访问文件
+        webSettings.setJavaScriptCanOpenWindowsAutomatically(true); //支持通过JS打开新窗口
+        webSettings.setLoadsImagesAutomatically(true); //支持自动加载图片
         //webSettings.setCacheMode(WebSettings.LOAD_CACHE_ONLY);
         webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
 
@@ -137,10 +168,10 @@ public class MainActivity extends AppCompatActivity {
         //而是在本WebView中显示
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            Log.e("zzf",url);
+            /*Log.e("zzf",url);
             if (url.contains("antpocket://pay.com")){
                 jumpAntPocket(url);
-            }
+            }*/
             return true;
         }
 
@@ -177,9 +208,9 @@ public class MainActivity extends AppCompatActivity {
         }
     };
     private void initView() {
-        /*tv_androidcalljs = findViewById(R.id.tv_androidcalljs);
+        tv_androidcalljs = findViewById(R.id.tv_androidcalljs);
         tv_androidcalljsargs = findViewById(R.id.tv_androidcalljsargs);
-        tv_showmsg = findViewById(R.id.tv_showmsg);*/
+        tv_showmsg = findViewById(R.id.tv_showmsg);
         webview = findViewById(R.id.webview);
 
     }
@@ -209,8 +240,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-   /* @JavascriptInterface
+   @JavascriptInterface
     public void jsCallAndroidArgs(String args){
         tv_showmsg.setText(args);
-    }*/
+    }
 }
