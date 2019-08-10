@@ -130,8 +130,6 @@ public class MainActivity extends AppCompatActivity implements FuncLayout.OnFunc
         ClipboardManager cm = (ClipboardManager) Utils.getApp().getSystemService(Context.CLIPBOARD_SERVICE);
         cm.setPrimaryClip(ClipData.newPlainText("text", content));
         Toast.makeText(MainActivity.this, "复制成功", Toast.LENGTH_SHORT).show();
-
-
     }
 
 
