@@ -49,4 +49,5 @@ dependencies {
     implementation 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v1.4.0'
     implementation 'com.github.yuweiguocn:GreenDaoUpgradeHelper:v2.0.1'
     compile'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.28'
+    implementation 'com.makeramen:roundedimageview:2.2.1'
 }

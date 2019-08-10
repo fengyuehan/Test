@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:background="#f5f5f5"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_above="@+id/view"
+            android:background="@drawable/shape_chat_bg"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <EditText
+                android:id="@+id/et_chat"
+                android:background="@drawable/shape_chat_box_bg"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_centerVertical="true"
+                android:layout_width="280dp"
+                android:layout_height="40dp" />
+
+            <ImageView
+                android:id="@+id/iv"
+                android:background="@drawable/shape_add_bg"
+                android:src="@mipmap/icon_add"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp"
+                android:layout_centerVertical="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </RelativeLayout>
+        <View
+            android:id="@+id/view"
+            android:layout_above="@+id/ll_picture_select"
+            android:background="#e6e6e6"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_picture_select"
+            android:orientation="vertical"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="168dp">
+            <ImageView
+                android:id="@+id/iv_image_select"
+                android:layout_marginTop="28dp"
+                android:layout_marginLeft="18dp"
+                android:src="@mipmap/icon_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

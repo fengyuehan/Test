@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/PopupWindow" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/camerademo" />
+            <option value="$PROJECT_DIR$/chatdemo" />
             <option value="$PROJECT_DIR$/definetablayout" />
             <option value="$PROJECT_DIR$/dialogfragment" />
             <option value="$PROJECT_DIR$/eventbus" />
@@ -27,9 +28,12 @@
             <option value="$PROJECT_DIR$/gaode" />
             <option value="$PROJECT_DIR$/glidepicasso" />
             <option value="$PROJECT_DIR$/greendao" />
+            <option value="$PROJECT_DIR$/immersionbar" />
             <option value="$PROJECT_DIR$/jsandandroid" />
             <option value="$PROJECT_DIR$/keyboard" />
             <option value="$PROJECT_DIR$/lettersidebar" />
+            <option value="$PROJECT_DIR$/otcchatkeyboard" />
+            <option value="$PROJECT_DIR$/rxjava" />
             <option value="$PROJECT_DIR$/scrollview" />
             <option value="$PROJECT_DIR$/shoppingcart" />
             <option value="$PROJECT_DIR$/smartrefreshlayout" />

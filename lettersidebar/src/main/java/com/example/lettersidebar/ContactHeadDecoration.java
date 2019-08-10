@@ -4,13 +4,13 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.jumai.antpocket.R;
-import com.jumai.antpocket.model.db.ContactBean;
 
 import java.util.List;
 import java.util.Objects;
@@ -99,6 +99,7 @@ public class ContactHeadDecoration extends RecyclerView.ItemDecoration {
     /**
      * 绘制最上层的头部
      */
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onDrawOver(@NonNull Canvas canvas, @NonNull final RecyclerView parent, @NonNull RecyclerView.State state) {
         if (mData.size() == 0) {

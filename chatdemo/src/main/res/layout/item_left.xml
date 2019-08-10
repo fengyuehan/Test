@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_marginLeft="18dp"
+        android:background="@drawable/shape_item_name_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_content"
+        android:background="#ffffff"
+        android:text="你好，订单已成功拍下，请及时付款以免系统自动取消订单"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:paddingLeft="17dp"
+        android:paddingBottom="13dp"
+        android:paddingRight="21dp"
+        android:layout_width="233dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content" />
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

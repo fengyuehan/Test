@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new ContactWithSearchAdapter(list);
-        recyclerView.addItemDecoration(new TitleItemDecoration(this, list));
+        recyclerView.addItemDecoration(new ContactHeadDecoration(this, list));
         recyclerView.setAdapter(mAdapter);
     }
 
