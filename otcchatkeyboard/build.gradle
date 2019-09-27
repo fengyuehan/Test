@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.otcchatkeyboard"
-        minSdkVersion 15
+        minSdkVersion 17
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -42,5 +42,7 @@ dependencies {
     implementation 'com.github.sunrise:photoviewer:1.0.1'
     implementation 'org.jetbrains:annotations-java5:15.0'
     implementation 'com.blankj:utilcode:1.10.0'
+
+    implementation 'com.github.AndyAls:QPopuWindow:v2.0.0'
 
 }

@@ -18,4 +18,9 @@
         <item name="android:windowFrame">@null</item><!--边框-->
         <item name="android:windowCloseOnTouchOutside" tools:targetApi="honeycomb">true</item>
     </style>
+
+    <style name="CustomPopWindowStyle">
+        <item name="android:windowEnterAnimation">@anim/wallet_push_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/wallet_push_scale_out</item>
+    </style>
 </resources>

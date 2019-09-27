@@ -19,6 +19,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/camerademo" />
             <option value="$PROJECT_DIR$/chatdemo" />
+            <option value="$PROJECT_DIR$/datastructures" />
             <option value="$PROJECT_DIR$/definetablayout" />
             <option value="$PROJECT_DIR$/dialogfragment" />
             <option value="$PROJECT_DIR$/eventbus" />
@@ -32,13 +33,17 @@
             <option value="$PROJECT_DIR$/jsandandroid" />
             <option value="$PROJECT_DIR$/keyboard" />
             <option value="$PROJECT_DIR$/lettersidebar" />
+            <option value="$PROJECT_DIR$/myapplication" />
+            <option value="$PROJECT_DIR$/notificaitondemo" />
             <option value="$PROJECT_DIR$/otcchatkeyboard" />
             <option value="$PROJECT_DIR$/rxjava" />
             <option value="$PROJECT_DIR$/scrollview" />
             <option value="$PROJECT_DIR$/shoppingcart" />
+            <option value="$PROJECT_DIR$/slidingverification" />
             <option value="$PROJECT_DIR$/smartrefreshlayout" />
             <option value="$PROJECT_DIR$/staggeredgrid" />
             <option value="$PROJECT_DIR$/statusbarplus" />
+            <option value="$PROJECT_DIR$/tuisong" />
             <option value="$PROJECT_DIR$/video" />
             <option value="$PROJECT_DIR$/viewpager" />
             <option value="$PROJECT_DIR$/wanandroid" />

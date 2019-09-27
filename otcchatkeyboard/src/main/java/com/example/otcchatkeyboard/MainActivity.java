@@ -4,7 +4,10 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Rect;
 import android.net.Uri;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -12,8 +15,11 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -30,6 +36,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.andy.qpopuwindow.QPopuWindow;
+
 import static android.support.v7.widget.RecyclerView.SCROLL_STATE_DRAGGING;
 import static android.support.v7.widget.RecyclerView.SCROLL_STATE_SETTLING;
 import static android.widget.NumberPicker.OnScrollListener.SCROLL_STATE_IDLE;
@@ -41,7 +49,14 @@ public class MainActivity extends AppCompatActivity implements FuncLayout.OnFunc
     private String imagePath;
     private LinearLayoutManager mLinearLayoutManager;
     private List<MsgBean> beanList;
-    private ChatDialog mChatDialog;
+    private ChatPop mChatPop;
+    private View mView;
+    private int mPopupWidth;
+    private int mPopupHeight;
+    private TextView textView;
+
+    private int rawX;
+    private int rawY;
 
 
     @Override
@@ -87,13 +102,6 @@ public class MainActivity extends AppCompatActivity implements FuncLayout.OnFunc
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 if (mChatTypeAdapter.getItemViewType(position) == MsgBean.CHAT_MSGTYPE_IMG) {
-                    /*PhotoViewer.INSTANCE.setClickView(view)
-                            .setShowImageViewInterface(new PhotoViewer.ShowImageViewInterface() {
-                                @Override
-                                public void show(@NotNull ImageView imageView, @NotNull String s) {
-                                    Glide.with(MainActivity.this).load(imagePath).into(imageView);
-                                }
-                            }).start(MainActivity.this);*/
                     PhotoViewer.INSTANCE.setClickSingleImg(imagePath, view)
                             .setShowImageViewInterface(new PhotoViewer.ShowImageViewInterface() {
                                 @Override
@@ -108,19 +116,47 @@ public class MainActivity extends AppCompatActivity implements FuncLayout.OnFunc
         });
         mChatTypeAdapter.setOnItemLongClickListener(new BaseQuickAdapter.OnItemLongClickListener() {
             @Override
-            public boolean onItemLongClick(BaseQuickAdapter adapter, View view, final int position) {
+            public boolean onItemLongClick(BaseQuickAdapter adapter, final View view, final int position) {
                 if (mChatTypeAdapter.getItemViewType(position) == MsgBean.CHAT_MSGTYPE_TEXT) {
-                    copyText(beanList.get(position).getContent());
-                    /*if (mChatDialog == null){
-                        mChatDialog = new ChatDialog(MainActivity.this, new ChatDialog.CallBack() {
-                            @Override
-                            public void callBack() {
+                    QPopuWindow.getInstance(MainActivity.this).builder
+                            .setNormalBackgroundColor(Color.parseColor("#ffffff"))
+                            .setIndicatorViewSize(130,44)
+                            .setTextColor(Color.parseColor("#333333"))
+                            .setTextSize(16)
+                            .bindView(view,position)
+                            .setPopupItemList(new String[]{"复制"})
+                            .setPointers(rawX,rawY)
+                            .setOnPopuListItemClickListener(new QPopuWindow.OnPopuListItemClickListener() {
+                                /**
+                                 * @param view 为pop的绑定view
+                                 * @param anchorViewPosition  pop绑定view在ListView的position
+                                 * @param position  pop点击item的position 第一个位置索引为0
+                                 */
+                                @Override
+                                public void onPopuListItemClick(View view, int anchorViewPosition, int position) {
+                                    copyText(beanList.get(anchorViewPosition).getContent());
+                                }
+                            }).show();
 
+                    /*if (mChatPop == null){
+                        mChatPop = new ChatPop(MainActivity.this, new ChatPop.CallBack() {
+                            @Override
+                            public void callBack(int popupHeight, int popupWidth) {
+                                copyText(beanList.get(position).getContent());
+                                mPopupHeight = popupHeight;
+                                mPopupWidth = popupWidth;
+                                Log.e("zzf",popupHeight + "-----" + popupWidth);
                             }
                         });
-                    }
-                    mChatDialog.show();*/
+                    }*/
                 }
+                /*int[] location = new int[2];
+                if (view != null){
+                    view.getLocationOnScreen(location);
+                    //在控件上方显示
+                    Log.e("zzf",location[0] + "-----" + location[1] + "--------" + view.getWidth() + "----" + view.getHeight());
+                    mChatPop.showAtLocation(view, Gravity.TOP, location[0] - view.getWidth()/2 - mPopupWidth, location[1] - view.getHeight()/2 - mPopupHeight);
+                }*/
                 return true;
             }
         });
@@ -199,5 +235,12 @@ public class MainActivity extends AppCompatActivity implements FuncLayout.OnFunc
             mChatTypeAdapter.addData(msgBean);
             scrollToBottom();
         }
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        rawX = (int) ev.getRawX();
+        rawY = (int) ev.getRawY();
+        return super.dispatchTouchEvent(ev);
     }
 }

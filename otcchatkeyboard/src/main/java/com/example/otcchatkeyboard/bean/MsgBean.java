@@ -6,8 +6,8 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class MsgBean implements MultiItemEntity {
-    public final static int CHAT_SENDER_OTHER= 0;
-    public final static int CHAT_SENDER_ME = 1;
+    public final static int CHAT_SENDER_TEXT= 0;
+    public final static int CHAT_SENDER_IMG = 1;
 
     public final static int CHAT_MSGTYPE_TEXT = 11;
     public final static int CHAT_MSGTYPE_IMG = 12;
