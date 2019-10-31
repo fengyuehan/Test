@@ -33,10 +33,10 @@ ext {
 
     dependencies = [
             //android
-            "appcompat-v7"                      : "com.android.support:appcompat-v7:${version["supportLibraryVersion"]}",
-            "cardview-v7"                       : "com.android.support:cardview-v7:${version["supportLibraryVersion"]}",
-            "support-v4"                        : "com.android.support:support-v4:${version["supportLibraryVersion"]}",
-            "design"                            : "com.android.support:design:${version["supportLibraryVersion"]}",
+            "appcompat-v7"                      : 'androidx.appcompat:appcompat:1.0.0',
+            "cardview-v7"                       : 'androidx.cardview:cardview:1.0.0',
+            "support-v4"                        : 'androidx.legacy:legacy-support-v4:1.0.0',
+            "design"                            : 'com.google.android.material:material:1.0.0',
 
             //ui
             "SmartRefreshLayout"                :"com.scwang.smartrefresh:SmartRefreshLayout:${version["smartrefreshVersion"]}",
@@ -52,7 +52,7 @@ ext {
             "ijkplayerexo"                      : "tv.danmaku.ijk.media:ijkplayer-exo:${version["ijkplayer"]}",
             "GSYVideoPlayer"                    : "com.shuyu:GSYVideoPlayer:${version["GSYVideoPlayer"]}",
             "danmuku"                           : "com.github.ctiao:DanmakuFlameMaster:${version["danmuku"]}",
-            "bottomsheet"                           : "com.cocosw:bottomsheet:1.3.1@aar",
+
 
             //net
             "okhttp"                            : "com.squareup.okhttp3:okhttp:${version["okhttpVersion"]}",
@@ -81,7 +81,7 @@ ext {
             "butterknife-compiler"              : "com.jakewharton:butterknife-compiler:${version["butterknifeVersion"]}",
 
             //MultiDex
-            "multidex"                          : "com.android.support:multidex:1.0.3",
+            "multidex"                          : 'androidx.multidex:multidex:2.0.0',
 
             //other
             "BaseRecyclerViewAdapterHelper"     : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34",
@@ -93,7 +93,7 @@ ext {
 
             //unit test , 为了整合mockito和PowerMockito，mockito暂时最高只支持2.8.9
             "junit"                             : "junit:junit:4.12",
-            "runner"                            : "com.android.support.test:runner:1.0.2",
+            "runner"                            : 'androidx.test:runner:1.1.0',
             "espresso-core"                     : "com.android.support.test.espresso:espresso-core:3.0.2",
             "androidJUnitRunner"                : "android.support.test.runner.AndroidJUnitRunner",
             "androidbase"                        :"com.androidbase:androidbase:${version["androidbase"]}",

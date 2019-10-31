@@ -1,16 +1,13 @@
 package com.example.shoppingcart;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.androidbase.widget.recycleadpter.BaseRecycleViewAdapter;
-import com.example.shoppingcart.greendao.ShopCarDao;
-
-import java.util.List;
 
 public class MyAdapter extends BaseRecycleViewAdapter<ShopCar> {
     Context mContext;

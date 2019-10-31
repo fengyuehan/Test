@@ -43,10 +43,10 @@
             android:layout_height="1dp"
             android:background="#ecedef" />
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.appcompat.widget.RecyclerView
             android:id="@+id/rv_bottom"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        </android.support.v7.widget.RecyclerView>
+        </androidx.appcompat.widget.RecyclerView>
     </LinearLayout>
 </ScrollView>

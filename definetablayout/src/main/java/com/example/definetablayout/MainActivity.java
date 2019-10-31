@@ -1,8 +1,8 @@
 package com.example.definetablayout;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.app.Fragment;
+import androidx.core.view.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.definetablayout.fragment.FirstFragment;

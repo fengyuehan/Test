@@ -1,6 +1,6 @@
 package com.example.shoppingcart;
 
-import android.support.v4.app.Fragment;
+import androidx.core.app.Fragment;
 
 import java.util.HashMap;
 

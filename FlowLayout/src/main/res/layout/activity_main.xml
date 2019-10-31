@@ -41,13 +41,13 @@
             android:layout_marginTop="3dp" />
 
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.appcompat.widget.RecyclerView
             android:id="@+id/search_page_rv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp">
 
-        </android.support.v7.widget.RecyclerView>
+        </androidx.appcompat.widget.RecyclerView>
 
         <RelativeLayout
             android:id="@+id/search_page_rl"

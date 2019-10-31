@@ -5,17 +5,14 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.net.Uri;
-import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.widget.LinearLayoutManager;
+import androidx.appcompat.widget.RecyclerView;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -24,7 +21,6 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.example.otcchatkeyboard.adapter.ChatAdapter;
 import com.example.otcchatkeyboard.adapter.ChatTypeAdapter;
 import com.example.otcchatkeyboard.bean.MsgBean;
 import com.wanglu.photoviewerlibrary.PhotoViewer;
@@ -38,8 +34,8 @@ import java.util.List;
 
 import cn.andy.qpopuwindow.QPopuWindow;
 
-import static android.support.v7.widget.RecyclerView.SCROLL_STATE_DRAGGING;
-import static android.support.v7.widget.RecyclerView.SCROLL_STATE_SETTLING;
+import static androidx.appcompat.widget.RecyclerView.SCROLL_STATE_DRAGGING;
+import static androidx.appcompat.widget.RecyclerView.SCROLL_STATE_SETTLING;
 import static android.widget.NumberPicker.OnScrollListener.SCROLL_STATE_IDLE;
 
 public class MainActivity extends AppCompatActivity implements FuncLayout.OnFuncKeyBoardListener {

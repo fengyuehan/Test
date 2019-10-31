@@ -6,8 +6,8 @@ import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.widget.NestedScrollView;
+import androidx.core.content.ContextCompat;
+
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;

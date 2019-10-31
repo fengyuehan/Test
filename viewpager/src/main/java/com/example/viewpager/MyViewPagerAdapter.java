@@ -1,7 +1,7 @@
 package com.example.viewpager;
 
 import android.support.annotation.NonNull;
-import android.support.v4.view.PagerAdapter;
+import androidx.core.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 

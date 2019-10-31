@@ -1,12 +1,11 @@
 package com.example.file;
 
 import android.os.Environment;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import java.io.File;
-import java.util.logging.Logger;
 
 public class MainActivity extends AppCompatActivity {
 

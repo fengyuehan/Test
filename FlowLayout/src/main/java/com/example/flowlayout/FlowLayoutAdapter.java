@@ -1,15 +1,13 @@
 package com.example.flowlayout;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
+import androidx.appcompat.widget.RecyclerView;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.androidbase.widget.recycleadpter.BaseRecycleViewAdapter;
-
-import java.util.List;
 
 public class FlowLayoutAdapter extends BaseRecycleViewAdapter<FlowLayoutBean> {
 

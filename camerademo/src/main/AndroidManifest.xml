@@ -28,7 +28,7 @@
         <activity android:name=".LuZhiActivity"/>
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.camerademo.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">

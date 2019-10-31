@@ -1,7 +1,7 @@
 package com.example.marquetextview;
 
 import android.content.Context;
-import android.support.v7.widget.AppCompatTextView;
+import androidx.appcompat.widget.AppCompatTextView;
 import android.util.AttributeSet;
 
 public class MyTextView extends AppCompatTextView {

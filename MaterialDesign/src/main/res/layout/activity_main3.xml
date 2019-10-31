@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout
+<androidx.core.widget.DrawerLayout
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
@@ -19,4 +19,4 @@
         android:layout_height="match_parent">
 
     </android.support.design.widget.NavigationView>
-</android.support.v4.widget.DrawerLayout>
+</androidx.core.widget.DrawerLayout>

@@ -15,7 +15,7 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <android.support.v7.widget.CardView
+        <androidx.appcompat.widget.CardView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="#aaa"
@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/img_none" />
-        </android.support.v7.widget.CardView>
+        </androidx.appcompat.widget.CardView>
     </LinearLayout>
     <Button
         android:id="@+id/btn"
