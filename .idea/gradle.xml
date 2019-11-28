@@ -36,6 +36,7 @@
             <option value="$PROJECT_DIR$/myapplication" />
             <option value="$PROJECT_DIR$/notificaitondemo" />
             <option value="$PROJECT_DIR$/otcchatkeyboard" />
+            <option value="$PROJECT_DIR$/produceandconsum" />
             <option value="$PROJECT_DIR$/rxjava" />
             <option value="$PROJECT_DIR$/scrollview" />
             <option value="$PROJECT_DIR$/shoppingcart" />
@@ -51,6 +52,7 @@
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
       </GradleProjectSettings>
     </option>
   </component>
