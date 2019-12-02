@@ -5,9 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import androidx.core.content.LocalBroadcastManager;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
+import android.os.Handler;
+import android.os.HandlerThread;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -23,6 +27,7 @@ public class IntentServiceActivity extends AppCompatActivity {
     private LocalBroadcastManager mLocalBroadcastManager;
     private MyBroadcastReceiver mBroadcastReceiver;
     public final static String ACTION_TYPE_THREAD = "action.type.thread";
+    private HandlerThread mH;
 
 
     //对于动态广播，在onResume注册广播，在onPause注销广播。
@@ -36,9 +41,6 @@ public class IntentServiceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_3);
         mLocalBroadcastManager = LocalBroadcastManager.getInstance(this);
         mBroadcastReceiver = new MyBroadcastReceiver();
-
-
-
         initView();
     }
 
@@ -84,7 +86,7 @@ public class IntentServiceActivity extends AppCompatActivity {
     }
 
     public class MyBroadcastReceiver extends BroadcastReceiver {
-        public final static String ACTION_TYPE_THREAD = "action.type.thread";
+        //public final static String ACTION_TYPE_THREAD = "action.type.thread";
         @Override
         public void onReceive(Context context, Intent intent) {
             switch (intent.getAction()){

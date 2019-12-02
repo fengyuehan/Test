@@ -2,8 +2,11 @@ package com.example.intentservice.intentservice;
 
 import android.app.IntentService;
 import android.content.Intent;
-import android.support.annotation.Nullable;
-import androidx.core.content.LocalBroadcastManager;
+
+
+import androidx.annotation.Nullable;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 import android.util.Log;
 
 public class MyIntentService extends IntentService {
