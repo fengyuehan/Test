@@ -1,9 +1,13 @@
 package com.example.livedata.livedataAndLifecycle;
 
-import android.arch.lifecycle.Observer;
+
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+
 import android.widget.TextView;
 
 import com.example.livedata.R;

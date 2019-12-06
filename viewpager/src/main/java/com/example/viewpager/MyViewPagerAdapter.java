@@ -1,7 +1,8 @@
 package com.example.viewpager;
 
-import android.support.annotation.NonNull;
-import androidx.core.view.PagerAdapter;
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.PagerAdapter;
+
 import android.view.View;
 import android.view.ViewGroup;
 

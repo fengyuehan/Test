@@ -5,9 +5,10 @@ import android.content.DialogInterface;
 import android.hardware.biometrics.BiometricPrompt;
 import android.os.Build;
 import android.os.CancellationSignal;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
 import android.util.Base64;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 
 @RequiresApi(Build.VERSION_CODES.P)
 public class FingerprintApi28 implements FingerprintImpl{

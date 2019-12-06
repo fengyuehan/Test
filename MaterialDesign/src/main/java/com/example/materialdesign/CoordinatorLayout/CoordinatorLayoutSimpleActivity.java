@@ -1,10 +1,8 @@
 package com.example.materialdesign.CoordinatorLayout;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.FloatingActionButton;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
@@ -13,6 +11,8 @@ import android.view.View;
 
 
 import com.example.materialdesign.R;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class CoordinatorLayoutSimpleActivity extends AppCompatActivity {
     private Toolbar toolbar;

@@ -1,7 +1,6 @@
 package com.example.viewpager;
 
 import android.content.Intent;
-import androidx.core.view.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;

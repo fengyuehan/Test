@@ -2,13 +2,13 @@ package com.example.fingerprintdemo;
 
 import android.app.Activity;
 import android.content.Context;
-import android.hardware.biometrics.BiometricPrompt;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Build;
 import android.os.CancellationSignal;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
 import android.util.Base64;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class FingerprintApi23 implements FingerprintImpl {

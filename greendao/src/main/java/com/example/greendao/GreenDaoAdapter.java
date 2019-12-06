@@ -1,7 +1,8 @@
 package com.example.greendao;
 
 import android.content.Context;
-import androidx.appcompat.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;

@@ -1,12 +1,12 @@
 package com.example.shoppingcart;
 
-import android.support.design.widget.TabLayout;
-import androidx.core.view.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.appcompat.widget.DividerItemDecoration;
-import androidx.appcompat.widget.LinearLayoutManager;
-import androidx.appcompat.widget.RecyclerView;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.cpoopc.scrollablelayoutlib.ScrollableLayout;
 import com.flipboard.bottomsheet.BottomSheetLayout;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.List;
 

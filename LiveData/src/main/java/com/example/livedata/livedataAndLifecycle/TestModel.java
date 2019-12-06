@@ -1,6 +1,7 @@
 package com.example.livedata.livedataAndLifecycle;
 
-import android.arch.lifecycle.MutableLiveData;
+
+import androidx.lifecycle.MutableLiveData;
 
 public class TestModel {
     private MutableLiveData<String> status;

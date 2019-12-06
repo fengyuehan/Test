@@ -2,7 +2,8 @@ package com.example.camerademo;
 
 import android.hardware.Camera;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LuZhiActivity extends AppCompatActivity {

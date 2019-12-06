@@ -1,10 +1,11 @@
 package com.example.livedata.SlidingTabLayout.SlidingTabLayout;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import androidx.core.app.Fragment;
-import androidx.core.view.ViewPager;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.livedata.R;
 import com.flyco.tablayout.SlidingTabLayout;

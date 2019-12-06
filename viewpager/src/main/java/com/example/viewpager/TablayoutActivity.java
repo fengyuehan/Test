@@ -1,12 +1,12 @@
 package com.example.viewpager;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import androidx.core.app.Fragment;
-import androidx.core.view.PagerAdapter;
-import androidx.core.view.ViewPager;
+
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.viewpager.fragment.FirstFragment;
 import com.example.viewpager.fragment.SecondFragment;

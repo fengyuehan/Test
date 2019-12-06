@@ -1,11 +1,13 @@
 package com.example.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import androidx.core.app.Fragment;
-import androidx.core.app.FragmentManager;
-import androidx.core.app.FragmentTransaction;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;

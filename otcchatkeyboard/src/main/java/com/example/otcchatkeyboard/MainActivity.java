@@ -6,12 +6,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.appcompat.widget.LinearLayoutManager;
-import androidx.appcompat.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -34,8 +36,6 @@ import java.util.List;
 
 import cn.andy.qpopuwindow.QPopuWindow;
 
-import static androidx.appcompat.widget.RecyclerView.SCROLL_STATE_DRAGGING;
-import static androidx.appcompat.widget.RecyclerView.SCROLL_STATE_SETTLING;
 import static android.widget.NumberPicker.OnScrollListener.SCROLL_STATE_IDLE;
 
 public class MainActivity extends AppCompatActivity implements FuncLayout.OnFuncKeyBoardListener {
@@ -83,13 +83,13 @@ public class MainActivity extends AppCompatActivity implements FuncLayout.OnFunc
                     //静止没有滚动
                     case SCROLL_STATE_IDLE:
                         break;
-                    //手指滚动
+                    /*//手指滚动
                     case SCROLL_STATE_SETTLING:
                         mOtcKeyBoard.reset();
                         break;
                     //自动滚动
                     case SCROLL_STATE_DRAGGING:
-                        break;
+                        break;*/
                 }
             }
         });

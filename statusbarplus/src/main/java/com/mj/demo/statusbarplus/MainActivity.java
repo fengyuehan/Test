@@ -2,8 +2,9 @@ package com.mj.demo.statusbarplus;
 
 import android.graphics.Color;
 import android.os.Build;
-import androidx.core.view.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;

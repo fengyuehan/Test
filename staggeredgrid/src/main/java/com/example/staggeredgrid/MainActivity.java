@@ -2,11 +2,12 @@ package com.example.staggeredgrid;
 
 import android.graphics.Color;
 import android.os.Handler;
-import androidx.core.widget.SwipeRefreshLayout;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.appcompat.widget.LinearLayoutManager;
-import androidx.appcompat.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.widget.Toast;
 

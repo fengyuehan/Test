@@ -9,8 +9,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Icon;
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.widget.RemoteViews;
+
+import androidx.annotation.RequiresApi;
 
 /**
  * @ClassName Notificaitons
