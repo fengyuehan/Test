@@ -1,11 +1,15 @@
 package com.example.rxjava;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.rxjava.backpress.BackPressActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -23,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
     private Banner banner;
+    private Button mButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.tv);
         banner = findViewById(R.id.banner);
+        mButton = findViewById(R.id.btn);
         initBanner();
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +85,12 @@ public class MainActivity extends AppCompatActivity {
 
                             }
                         });
+            }
+        });
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, BackPressActivity.class));
             }
         });
     }
