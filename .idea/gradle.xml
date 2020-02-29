@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -24,6 +27,7 @@
             <option value="$PROJECT_DIR$/designpattern" />
             <option value="$PROJECT_DIR$/dialogfragment" />
             <option value="$PROJECT_DIR$/eventbus" />
+            <option value="$PROJECT_DIR$/eventdispatch" />
             <option value="$PROJECT_DIR$/file" />
             <option value="$PROJECT_DIR$/fingerprintdemo" />
             <option value="$PROJECT_DIR$/fragment" />
@@ -31,6 +35,7 @@
             <option value="$PROJECT_DIR$/glidepicasso" />
             <option value="$PROJECT_DIR$/greendao" />
             <option value="$PROJECT_DIR$/immersionbar" />
+            <option value="$PROJECT_DIR$/ioc2" />
             <option value="$PROJECT_DIR$/jsandandroid" />
             <option value="$PROJECT_DIR$/keyboard" />
             <option value="$PROJECT_DIR$/lettersidebar" />
@@ -56,7 +61,6 @@
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
-        <option name="testRunner" value="PLATFORM" />
       </GradleProjectSettings>
     </option>
   </component>

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
-    <!-- iBeancon功能所需权限 -->;
+    <!-- iBeancon功能所需权限 -->
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <!-- 个推3.0电子围栏功能所需权限 -->
