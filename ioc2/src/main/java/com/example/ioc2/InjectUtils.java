@@ -2,13 +2,54 @@ package com.example.ioc2;
 
 import android.view.View;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 
 public class InjectUtils {
     public static void inject(Object object){
         injectLayout(object);
         inijectView(object);
+        injectClick(object);
+    }
+
+    private static void injectClick(Object object) {
+        Class<?> clazz = object.getClass();
+        Method[] methods = clazz.getDeclaredMethods();
+        for (Method method:methods){
+            Annotation[] annotations = method.getAnnotations();
+            for (Annotation annotation :annotations){
+                Class<?> annotationClass = annotation.annotationType();
+                EventBase eventBase = annotationClass.getAnnotation(EventBase.class);
+                if (eventBase == null){
+                    continue;
+                }
+
+                String listenerSetter = eventBase.listenerSetter();
+                Class<?> listenerType = eventBase.listenerType();
+                String callbackMethed = eventBase.callbackMethod();
+                Method valueMethed = null;
+                try {
+                    valueMethed = annotationClass.getDeclaredMethod("value");
+                    int[] viewId = (int[]) valueMethed.invoke(annotation);
+                    for (int id : viewId){
+                        Method finViewById = clazz.getMethod("finViewById",int.class);
+                        View view = (View) finViewById.invoke(object,id);
+                        if (view == null){
+                            continue;
+                        }
+                        ListenerInvocationHandler listenerInvocationHandler = new ListenerInvocationHandler(object,method);
+                        Object proxy = Proxy.newProxyInstance(listenerType.getClassLoader(),new Class[]{listenerType},listenerInvocationHandler);
+                        Method onClickMethod = view.getClass().getMethod(listenerSetter,listenerType);
+                        onClickMethod.invoke(view,proxy);
+                    }
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     private static void inijectView(Object object) {
