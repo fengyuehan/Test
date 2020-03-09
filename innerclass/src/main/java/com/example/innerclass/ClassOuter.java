@@ -24,6 +24,7 @@ public class ClassOuter {
             System.out.println("静态内部类方法");
             System.out.println(staticInt);
             System.out.println(num);
+
         }
     }
 }
