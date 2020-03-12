@@ -1,24 +1,9 @@
 package com.example.zxingdemo;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.DecodeHintType;
-import com.google.zxing.MultiFormatReader;
-import com.google.zxing.RGBLuminanceSource;
-import com.google.zxing.Result;
-import com.google.zxing.common.GlobalHistogramBinarizer;
-import com.google.zxing.common.HybridBinarizer;
-
-import java.util.ArrayList;
-import java.util.EnumMap;
-import java.util.List;
-import java.util.Map;
 
 public class QRCodeDecoder {
-    public static final Map<DecodeHintType, Object> HINTS = new EnumMap<>(DecodeHintType.class);
+    /*public static final Map<DecodeHintType, Object> HINTS = new EnumMap<>(DecodeHintType.class);
     static {
         List<BarcodeFormat> allFormats = new ArrayList<>();
         allFormats.add(BarcodeFormat.AZTEC);
@@ -73,12 +58,12 @@ public class QRCodeDecoder {
             return null;
         }
     }
-    /**
+    *//**
      * 将本地图片文件转换成可解码二维码的 Bitmap。为了避免图片太大，这里对图片进行了压缩。
      *
      * @param picturePath 本地图片文件路径
      * @return
-     */
+     *//*
     private static Bitmap getDecodeAbleBitmap(String picturePath) {
         try {
             BitmapFactory.Options options = new BitmapFactory.Options();
@@ -96,5 +81,5 @@ public class QRCodeDecoder {
         } catch (Exception e) {
             return null;
         }
-    }
+    }*/
 }

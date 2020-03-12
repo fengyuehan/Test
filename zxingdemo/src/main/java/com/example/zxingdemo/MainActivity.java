@@ -18,9 +18,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.zxing.Result;
+/*import com.google.zxing.Result;
 import com.google.zxing.client.result.ParsedResult;
-import com.mylhyl.zxing.scanner.OnScannerCompletionListener;
+import com.mylhyl.zxing.scanner.OnScannerCompletionListener;*/
 import com.mylhyl.zxing.scanner.ScannerView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -39,12 +39,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mScannerView.setLaserFrameBoundColor(getResources().getColor(R.color.zz));
         mScannerView.setLaserColor(getResources().getColor(R.color.zz));
 
-        mScannerView.setOnScannerCompletionListener(new OnScannerCompletionListener() {
+        /*mScannerView.setOnScannerCompletionListener(new OnScannerCompletionListener() {
             @Override
             public void onScannerCompletion(Result result, ParsedResult parsedResult, Bitmap bitmap) {
                 Log.e("zzf",parsedResult.toString());
             }
-        });
+        });*/
 
     }
 
@@ -84,13 +84,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 case 1:
                     Uri uri = data.getData();
                     String imagePath = UriUtils.getPicturePathFromUri(MainActivity.this,uri);
-                    praseImage(imagePath);
+                    //praseImage(imagePath);
                     break;
             }
     }
 }
 
-    private void praseImage(final String imagePath) {
+    /*private void praseImage(final String imagePath) {
         AsyncTask myTask = new AsyncTask<String, Integer, String>() {
             @Override
             protected String doInBackground(String... params) {
@@ -110,5 +110,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         }.execute(imagePath);
-    }
+    }*/
 }

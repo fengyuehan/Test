@@ -47,6 +47,7 @@
             <option value="$PROJECT_DIR$/otcchatkeyboard" />
             <option value="$PROJECT_DIR$/produceandconsum" />
             <option value="$PROJECT_DIR$/proxy" />
+            <option value="$PROJECT_DIR$/roomdemo" />
             <option value="$PROJECT_DIR$/rxjava" />
             <option value="$PROJECT_DIR$/scrollview" />
             <option value="$PROJECT_DIR$/shoppingcart" />
@@ -54,10 +55,8 @@
             <option value="$PROJECT_DIR$/smartrefreshlayout" />
             <option value="$PROJECT_DIR$/staggeredgrid" />
             <option value="$PROJECT_DIR$/statusbarplus" />
-            <option value="$PROJECT_DIR$/tuisong" />
             <option value="$PROJECT_DIR$/video" />
             <option value="$PROJECT_DIR$/viewpager" />
-            <option value="$PROJECT_DIR$/wanandroid" />
             <option value="$PROJECT_DIR$/zxingdemo" />
           </set>
         </option>
