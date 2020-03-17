@@ -2,3 +2,4 @@ include ':app', ':staggeredgrid', ':dialogfragment', ':viewpager', ':fragment', 
 include ':ioc2'
 include ':innerclass'
 include ':roomdemo'
+include ':aspectjdemo'
