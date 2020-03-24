@@ -1,6 +1,9 @@
 package com.example.designpattern.Facade;
 
 public class Facade {
+    /**
+     * 外观模式
+     */
     private SubSystemOne subSystemOne;
     private SubSystemTwo subSystemTwo;
     private SubSystemThree subSystemThree;

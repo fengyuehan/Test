@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ReportManagerFactory {
+    /**
+     * 享元模式
+     */
     Map<String,IReportManager> map = new HashMap<>();
     Map<String,IReportManager> managerMap = new HashMap<>();
 
