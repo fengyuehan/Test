@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WordDocument implements Cloneable {
+    /**
+     * 原型模型
+     */
     private String text;
 
     private List<String> mImages = new ArrayList<>();
