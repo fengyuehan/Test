@@ -40,7 +40,8 @@ dependencies {
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     implementation 'com.github.bumptech.glide:glide:3.6.1'
     implementation 'com.github.sunrise:photoviewer:1.0.1'
-    implementation 'org.jetbrains:annotations-java5:15.0'
+    //implementation 'org.jetbrains:annotations-java5:15.0'
+    implementation 'org.jetbrains:annotations:13.0'
     implementation 'com.blankj:utilcode:1.10.0'
 
     implementation 'com.github.AndyAls:QPopuWindow:v2.0.0'
