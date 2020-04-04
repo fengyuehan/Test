@@ -8,6 +8,10 @@ public class MessageModel implements Parcelable {
     private String to;
     private String content;
 
+    public MessageModel() {
+
+    }
+
     public String getFrom() {
         return from;
     }
@@ -32,7 +36,7 @@ public class MessageModel implements Parcelable {
         this.content = content;
     }
 
-    protected MessageModel(Parcel in) {
+    public MessageModel(Parcel in) {
         from = in.readString();
         to = in.readString();
         content = in.readString();
