@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
     private Banner banner;
-    private Button mButton;
+    private Button mButton,button1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.tv);
         banner = findViewById(R.id.banner);
         mButton = findViewById(R.id.btn);
+        button1 = findViewById(R.id.btn_background);
         initBanner();
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,6 +92,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, BackPressActivity.class));
+            }
+        });
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,BackgroundActivity.class));
             }
         });
     }
