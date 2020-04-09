@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
     private Banner banner;
-    private Button mButton,button1;
+    private Button mButton,button1,button2;
+    private ArrayList list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         banner = findViewById(R.id.banner);
         mButton = findViewById(R.id.btn);
         button1 = findViewById(R.id.btn_background);
+        button2 = findViewById(R.id.btn_buffer);
         initBanner();
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,6 +100,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,BackgroundActivity.class));
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,BufferActivity.class));
             }
         });
     }

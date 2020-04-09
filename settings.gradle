@@ -12,3 +12,4 @@ include ':wanandroid'
 include ':aidl'
 include ':changeskin'
 include ':luckypan'
+
