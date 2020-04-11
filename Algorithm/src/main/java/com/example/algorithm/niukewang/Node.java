@@ -5,4 +5,10 @@ public class Node {
     Node left;
     Node right;
     Node next;
+    int maxDistance;
+    int maxDepth;
+
+    public Node(int value){
+        this.val = value;
+    }
 }

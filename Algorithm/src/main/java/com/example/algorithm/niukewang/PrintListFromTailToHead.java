@@ -10,6 +10,7 @@ public  class PrintListFromTailToHead {
      * @return
      */
     public static ArrayList<Integer> printListFromTailToHead(Node node){
+        //用一个栈，因为栈是先进后出，然后放在一个链表中
         ArrayList<Integer> arrayList = new ArrayList<>();
         if (node == null){
             return arrayList;

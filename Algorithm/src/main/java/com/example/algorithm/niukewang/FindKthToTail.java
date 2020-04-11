@@ -16,9 +16,11 @@ public class FindKthToTail {
             n++;
             head = head.next;
         }
+        //先用循环找出链表的长度
         if (k > n){
             return null;
         }
+        //然后循环找出第n-k个
         for (int i = 0; i < n-k;i++){
             head = head.next;
         }
