@@ -18,6 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ColorActivity"/>
+        <activity android:name=".LinearGradientActivity"/>
+        <activity android:name=".RadialGradientActivity"/>
+        <activity android:name=".SweepGradientActivity"/>
+        <activity android:name=".BitmapShaderActivity"/>
+        <activity android:name=".ColorFliterActivity"/>
+        <activity android:name=".LockActivity"/>
     </application>
 
 </manifest>
