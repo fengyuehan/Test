@@ -16,6 +16,22 @@ public class MainActivity extends AppCompatActivity {
      * 2、UiMode支持日间、夜间模式的切换
      * 3、通过资源id的映射
      */
+
+    /**
+     * setTheme模式是通过设置两套主题
+     * 然后recraate()
+     */
+
+    /**
+     * UiMode
+     * 需要设置两套color
+     * 然后recraate()
+     */
+
+    /**
+     * 前两种是需要recraate()，会导致白屏或者黑屏的出现
+     * 在回调的方法中需要设置每一项 UI 相关的属性值
+     */
     private Button button,button1,button2;
     private int theme = R.style.AppTheme;
 
