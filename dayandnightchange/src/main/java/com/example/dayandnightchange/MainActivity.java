@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * setTheme模式是通过设置两套主题
+     * 在setContentView()之前设置Theme
      * 然后recraate()
      */
 
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
      * UiMode
      * 需要设置两套color
      * 然后recraate()
+     * 需要设置application
      */
 
     /**
