@@ -12,11 +12,5 @@
         android:text="测试"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/btn1"
-        android:text="跳转testActivity"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
 </LinearLayout>

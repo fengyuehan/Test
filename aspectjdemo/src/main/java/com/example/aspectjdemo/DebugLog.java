@@ -8,6 +8,6 @@ public class DebugLog {
     }
 
     public static void log(String tag,String msg){
-        Log.d(tag,msg);
+        Log.e(tag,msg);
     }
 }
