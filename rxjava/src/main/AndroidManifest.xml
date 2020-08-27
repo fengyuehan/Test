@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         tools:replace="android:icon, android:theme"
         android:usesCleartextTraffic="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +25,7 @@
         <activity android:name=".backpress.BackPressActivity"/>
         <activity android:name=".BackgroundActivity"/>
         <activity android:name=".BufferActivity"/>
+        <activity android:name=".combine.CombineActivity"/>
     </application>
 
 </manifest>

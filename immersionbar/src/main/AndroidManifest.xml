@@ -12,7 +12,8 @@
         tools:replace="android:icon, android:theme"
         android:resizeableActivity="true"
         android:maxAspectRatio="2.4"
-        android:theme="@style/AppBaseTheme">
+        android:theme="@style/AppBaseTheme"
+        tools:ignore="AllowBackup">
         <activity android:name=".MainActivity"
             android:theme="@style/AppBaseTheme"
             >

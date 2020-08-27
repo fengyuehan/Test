@@ -40,5 +40,10 @@
         android:text="跳转到BufferActivity"
         android:layout_width="match_parent"
         android:layout_height="44dp"/>
-
+    <Button
+        android:id="@+id/btn_combine"
+        android:layout_marginTop="20dp"
+        android:text="跳转到CombineActivity"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
 </LinearLayout>

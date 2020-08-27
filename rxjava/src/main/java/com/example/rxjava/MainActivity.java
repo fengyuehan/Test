@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.rxjava.backpress.BackPressActivity;
+import com.example.rxjava.combine.CombineActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
     private Banner banner;
-    private Button mButton,button1,button2;
+    private Button mButton,button1,button2,btn_combine;
     private ArrayList list;
 
     @Override
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         mButton = findViewById(R.id.btn);
         button1 = findViewById(R.id.btn_background);
         button2 = findViewById(R.id.btn_buffer);
+        btn_combine = findViewById(R.id.btn_combine);
         initBanner();
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,6 +108,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,BufferActivity.class));
+            }
+        });
+        btn_combine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CombineActivity.class));
             }
         });
     }

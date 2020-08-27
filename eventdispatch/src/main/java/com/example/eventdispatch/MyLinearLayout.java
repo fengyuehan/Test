@@ -20,22 +20,22 @@ public class MyLinearLayout extends LinearLayout {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Log.d(TAG, "=================ViewGrop dispatchTouchEvent Action: "
+        Log.e("zzf", "=================ViewGrop dispatchTouchEvent Action: "
                 + Util.getAction(ev));
         return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        Log.d(TAG, "=================ViewGrop onInterceptTouchEvent Action: "
+        Log.e("zzf", "=================ViewGrop onInterceptTouchEvent Action: "
                 + Util.getAction(ev));
-        return super.onInterceptTouchEvent(ev);
+        return false;
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        Log.d(TAG, "=================ViewGrop onTouchEvent Action: "
+        Log.e("zzf", "=================ViewGrop onTouchEvent Action: "
                 + Util.getAction(event));
-        return super.onTouchEvent(event);
+        return false;
     }
 }
