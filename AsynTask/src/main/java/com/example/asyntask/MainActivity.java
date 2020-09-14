@@ -1,5 +1,6 @@
 package com.example.asyntask;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +12,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btn_start,btn_cancel;
+    private Button btn_start,btn_cancel,btn_handler;
     private ProgressBar pb;
     private TextView textView;
     private MyAsynTask mMyAsynTask;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         btn_cancel = findViewById(R.id.btn_cancel);
         pb = findViewById(R.id.progress_bar);
         textView = findViewById(R.id.tv_show);
+        btn_handler = findViewById(R.id.btn_handler);
         mMyAsynTask = new MyAsynTask();
         textView.setText("还没有开始");
         btn_start.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
                 //AsyncTask不与任何组件绑定生命周期
                 //在Activity 或 Fragment中使用 AsyncTask时，最好在Activity 或 Fragment的onDestory（）调用 cancel(boolean)；
                 mMyAsynTask.cancel(true);
+            }
+        });
+        btn_handler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,HandlerActivity.class));
             }
         });
     }

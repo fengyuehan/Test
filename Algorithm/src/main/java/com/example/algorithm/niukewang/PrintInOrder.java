@@ -6,7 +6,7 @@ public class PrintInOrder {
             return;
         }
         printInOrder(node.left);
-        System.out.print(""+ node.value);
+        System.out.print(""+ node.val);
         printInOrder(node.right);
     }
 }

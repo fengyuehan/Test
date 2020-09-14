@@ -14,7 +14,7 @@ public class MergeTwoLists {
         if (node2 == null){
             return node1;
         }
-        Node node = new Node(0);
+        Node node = new Node();
         while (node1 != null && node2 != null){
             if (node1.val < node2.val){
                 node.next = node1;

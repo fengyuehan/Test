@@ -5,7 +5,7 @@ public class PrintPreOrder {
         if (node == null){
             return;
         }
-        System.out.print("" + node.value);
+        System.out.print("" + node.val);
         printPreOrder(node.left);
         printPreOrder(node.right);
     }

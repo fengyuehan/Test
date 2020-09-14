@@ -8,6 +8,6 @@ public class PrintPostOrder {
 
         printPostOrder(node.left);
         printPostOrder(node.right);
-        System.out.print(""+node.value);
+        System.out.print(""+node.val);
     }
 }
