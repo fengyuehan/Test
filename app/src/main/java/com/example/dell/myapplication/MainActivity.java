@@ -1,5 +1,6 @@
 package com.example.dell.myapplication;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "点击了" + position, Toast.LENGTH_LONG).show();
             }
         });
+        startActivity(new Intent(this,MainActivity.class));
     }
 
     private void initView() {

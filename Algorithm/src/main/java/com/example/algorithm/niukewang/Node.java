@@ -7,8 +7,5 @@ public class Node {
     Node next;
     int maxDistance;
     int maxDepth;
-
-    public Node(int value){
-        this.val = value;
-    }
+    Node root;
 }

@@ -9,7 +9,7 @@ public class IsKInTree {
             return false;
         }
 
-        if (node.value == k){
+        if (node.val == k){
             return true;
         }
 

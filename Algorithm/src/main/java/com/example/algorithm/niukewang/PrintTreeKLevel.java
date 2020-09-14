@@ -16,7 +16,7 @@ public class PrintTreeKLevel {
         while (! queue.isEmpty()){
             Node node1 = queue.getFirst();
             if (curLevel == k){
-                System.out.print("" + node1.value);
+                System.out.print("" + node1.val);
             }
 
             if(node1.left != null){
