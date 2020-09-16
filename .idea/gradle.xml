@@ -5,7 +5,6 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="delegatedBuild" value="false" />
-        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -44,6 +43,7 @@
             <option value="$PROJECT_DIR$/gaode" />
             <option value="$PROJECT_DIR$/glidepicasso" />
             <option value="$PROJECT_DIR$/greendao" />
+            <option value="$PROJECT_DIR$/hotfix" />
             <option value="$PROJECT_DIR$/htmllink" />
             <option value="$PROJECT_DIR$/immersionbar" />
             <option value="$PROJECT_DIR$/innerclass" />
@@ -81,6 +81,7 @@
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
       </GradleProjectSettings>
     </option>
   </component>
