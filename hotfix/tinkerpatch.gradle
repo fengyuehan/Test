@@ -1,0 +1,75 @@
+//apply tinker插件
+apply plugin: 'com.tencent.bugly.tinker-support'
+
+def bakPath = file("${buildDir}/bakApk/") //指定基准文件存放位置
+/**
+ * 构建的基准包
+ */
+def baseApkDir = "app-0916-11-51-11"
+tinkerSupport  {
+    /** 当disable tinker的时候需要添加multiDexKeepProguard和proguardFiles,
+     这些配置文件本身由tinkerPatch的插件自动添加，当你disable后需要手动添加
+     你可以copy本示例中的proguardRules.pro和tinkerMultidexKeep.pro,
+     需要你手动修改'tinker.sample.android.app'本示例的包名为你自己的包名, com.xxx前缀的包名不用修改
+     **/
+    //tinkerEnable = true
+    //reflectApplication = true
+    /**
+     * 是否开启加固模式，只能在APK将要进行加固时使用，否则会patch失败。
+     * 如果只在某个渠道使用了加固，可使用多flavors配置
+     **/
+    //protectedApp = false
+    /**
+     * 实验功能
+     * 补丁是否支持新增 Activity (新增Activity的exported属性必须为false)
+     **/
+    //supportComponent = true
+
+    ignoreWarning = true
+    autoBackupApkDir = "${bakPath}"
+    enableProxyApplication = true
+    supportHotplugComponent = true
+    overrideTinkerPatchConfiguration = true
+    //appKey = "fa04b1ba-9616-4aac-ba81-85aca09200ca"
+
+    /** 注意: 若发布新的全量包, appVersion一定要更新 **/
+    //appVersion = "1.0.0"
+    enable = true
+
+    baseApk = "${bakPath}/${baseApkDir}/app-release.apk"
+    //基类包的tinkerId与补丁包的tinkerId不能一样
+    //tinkerId = "base-1.0.0"
+    tinkerId = "patch-1.0.0"
+    //如果添加了混淆，则需要写下面这个
+    //baseApkProguardMapping = "${bakPath}/${baseApkDir}/app-release-mapping.txt"
+    baseApkResourceMapping = "${bakPath}/${baseApkDir}/app-release-R.txt"
+}
+
+//这下面的不用改
+tinkerPatch {
+    ignoreWarning = false
+    useSign = true
+    dex {
+        dexMode = "jar"
+        pattern = ["classes*.dex"]
+        loader = []
+    }
+    lib {
+        pattern = ["lib/*/*.so"]
+    }
+
+    res {
+        pattern = ["res/*", "r/*", "assets/*", "resources.arsc", "AndroidManifest.xml"]
+        ignoreChange = []
+        largeModSize = 100
+    }
+
+    packageConfig {
+    }
+    sevenZip {
+        zipArtifact = "com.tencent.mm:SevenZip:1.1.10"
+    }
+    buildConfig {
+        keepDexApply = false
+    }
+}
