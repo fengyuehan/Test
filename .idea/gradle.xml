@@ -5,6 +5,7 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -40,6 +41,7 @@
             <option value="$PROJECT_DIR$/file" />
             <option value="$PROJECT_DIR$/fingerprintdemo" />
             <option value="$PROJECT_DIR$/fragment" />
+            <option value="$PROJECT_DIR$/fragmentjumpactivity" />
             <option value="$PROJECT_DIR$/gaode" />
             <option value="$PROJECT_DIR$/glidepicasso" />
             <option value="$PROJECT_DIR$/greendao" />
@@ -81,7 +83,6 @@
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
-        <option name="testRunner" value="PLATFORM" />
       </GradleProjectSettings>
     </option>
   </component>
