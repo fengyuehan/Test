@@ -1,5 +1,7 @@
 package com.example.fragment;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -155,5 +157,17 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             mSelected.setChecked(true);
         }
         showFragment(v.getId());
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1){
+            if (resultCode == 1){
+                showFragment(R.id.rb_support);
+                int age = data.getIntExtra("age",0);
+
+            }
+        }
     }
 }
