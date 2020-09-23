@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.customview">
 
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -27,6 +29,7 @@
         <activity android:name=".BitmapShaderActivity"/>
         <activity android:name=".ColorFliterActivity"/>
         <activity android:name=".LockActivity"/>
+        <activity android:name=".WaveActivity"/>
     </application>
 
 </manifest>

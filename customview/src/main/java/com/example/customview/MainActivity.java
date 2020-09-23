@@ -13,7 +13,7 @@ import com.gyf.immersionbar.ImmersionBar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mColorButton,mLinearShader,mRadialShader,mSweepShader,mBitmapShader;
-    private Button mColorFilter,mLockView;
+    private Button mColorFilter,mLockView,mWaveVIew;
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBitmapShader.setOnClickListener(this);
         mColorFilter.setOnClickListener(this);
         mLockView.setOnClickListener(this);
+        mWaveVIew.setOnClickListener(this);
     }
 
     private void initView() {
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBitmapShader = findViewById(R.id.btn_bitmap_shader);
         mColorFilter = findViewById(R.id.btn_color_filter);
         mLockView = findViewById(R.id.btn_lock_view);
+        mWaveVIew = findViewById(R.id.btn_wave_view);
     }
 
     @Override
@@ -72,6 +74,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_lock_view:
                 startActivity(new Intent(MainActivity.this,LockActivity.class));
+                break;
+            case R.id.btn_wave_view:
+                startActivity(new Intent(MainActivity.this,WaveActivity.class));
                 break;
         }
     }
