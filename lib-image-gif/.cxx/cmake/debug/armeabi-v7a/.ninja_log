@@ -1,0 +1,14 @@
+# ninja log v5
+0	4638	622722007	CMakeFiles/giftool.dir/src/main/cpp/GifDecoder.cpp.o	3c7eee3069edd232
+468	5553	622722008	CMakeFiles/giftool.dir/src/main/cpp/lib-native-bridge.cpp.o	ae4009fa6299f164
+1056	6476	622722008	CMakeFiles/giftool.dir/src/main/cpp/stream/Registry.cpp.o	7d0cbe62742b7bd3
+1982	7442	622722009	CMakeFiles/giftool.dir/src/main/cpp/stream/Stream.cpp.o	4c3d619d745c47b1
+2870	8340	622722010	src/main/cpp/giflib/CMakeFiles/giflib.dir/dgif_lib.c.o	58f6692d98228274
+3770	9243	622722011	src/main/cpp/giflib/CMakeFiles/giflib.dir/egif_lib.c.o	8abad2a577244f33
+4639	9245	622722012	src/main/cpp/giflib/CMakeFiles/giflib.dir/gif_err.c.o	946fafbd69cfc65f
+5553	9484	622722013	src/main/cpp/giflib/CMakeFiles/giflib.dir/gif_font.c.o	e7a53e7da7822a7b
+6476	9931	622722014	src/main/cpp/giflib/CMakeFiles/giflib.dir/gif_hash.c.o	59d8576ca7e1781d
+7442	9938	622722015	src/main/cpp/giflib/CMakeFiles/giflib.dir/gifalloc.c.o	d9d5b5b1dce4f265
+8341	10157	622722015	src/main/cpp/giflib/CMakeFiles/giflib.dir/openbsd-reallocarray.c.o	ad8d26df41790f6d
+10158	11511	622722016	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libgiflib.so	e78a0533ffe9748e
+11511	12887	622722018	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libgiftool.so	e4df80458a96ac8b
