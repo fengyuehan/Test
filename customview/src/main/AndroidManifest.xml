@@ -30,6 +30,8 @@
         <activity android:name=".ColorFliterActivity"/>
         <activity android:name=".LockActivity"/>
         <activity android:name=".WaveActivity"/>
+        <activity android:name=".RulerActivity"/>
+        <activity android:name=".ScrollActivity"/>
     </application>
 
 </manifest>

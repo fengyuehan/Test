@@ -60,6 +60,18 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_ruler_view"
+                android:text="RulerView"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_scroll"
+                android:text="scroll的相关问题"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,5 @@
 package com.example.customview.wave;
 
-import android.animation.ValueAnimator;
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -13,20 +11,12 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.Xfermode;
-import android.os.Handler;
-import android.os.Message;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.View;
-import android.view.animation.LinearInterpolator;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
-
-public class WaveView extends View {
-    private static final String TAG = "WaveView";
-
+public class RenderWaveView extends SurfaceView implements SurfaceHolder.Callback {
+    private static Object lock = new Object();
     private Paint mPaint;
     /**
      * 三条线
@@ -72,33 +62,18 @@ public class WaveView extends View {
     private final int backGroundColor = Color.rgb(24, 33, 41);
     private final int centerPathColor = Color.argb(64, 255, 255, 255);
 
-     long startTime = System.currentTimeMillis();
-
-    @SuppressLint("HandlerLeak")
-    private Handler mHandler = new android.os.Handler() {
-        @Override
-        public void handleMessage(@NonNull Message msg) {
-            super.handleMessage(msg);
-            switch (msg.what) {
-                case 0:
-                    invalidate();
-                    break;
-            }
-        }
-    };
-
-
-    public WaveView(Context context) {
-        this(context, null);
+    WaveThread waveThread;
+    public RenderWaveView(Context context) {
+        super(context);
         initView();
     }
 
-    public WaveView(Context context, @Nullable AttributeSet attrs) {
-        this(context, attrs, 0);
+    public RenderWaveView(Context context, AttributeSet attrs) {
+        super(context, attrs);
         initView();
     }
 
-    public WaveView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public RenderWaveView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initView();
     }
@@ -112,9 +87,61 @@ public class WaveView extends View {
         mPaint.setDither(true);
     }
 
+
     @Override
-    protected void onDraw(Canvas canvas) {
-        Log.e("zzf","--------开始时间--------" + System.currentTimeMillis());
+    public void surfaceCreated(SurfaceHolder holder) {
+        waveThread = new WaveThread(holder);
+        waveThread.start();
+    }
+
+    @Override
+    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+
+    }
+
+
+    @Override
+    public void surfaceDestroyed(SurfaceHolder holder) {
+        synchronized (lock){
+            if (waveThread != null){
+                waveThread.setRun(false);
+            }
+        }
+    }
+
+    class WaveThread extends Thread{
+        SurfaceHolder surfaceHolder;
+        private boolean isRunning;
+        public WaveThread(SurfaceHolder surfaceHolder){
+            this.surfaceHolder = surfaceHolder;
+        }
+
+        @Override
+        public void run() {
+            long startTime = System.currentTimeMillis();
+            while (true){
+                synchronized (lock){
+                    while (true){
+                        if (!isRunning){
+                            return;
+                        }
+                        Canvas canvas = surfaceHolder.lockCanvas();
+                        drawRender(canvas,startTime);
+                        surfaceHolder.unlockCanvasAndPost(canvas);
+                    }
+                }
+            }
+        }
+        public void setRun(boolean isRun){
+            isRunning = isRun;
+        }
+    }
+
+    /**
+     * Canvas：渲染器
+     * @param canvas
+     */
+    private  void drawRender(Canvas canvas,long startTime){
         if (mSimplePointX == null) {
             width = canvas.getWidth();
             height = canvas.getHeight();
@@ -222,9 +249,6 @@ public class WaveView extends View {
         //绘制中间线
         mPaint.setColor(centerPathColor);
         canvas.drawPath(mCenterPath, mPaint);
-        mHandler.sendEmptyMessageDelayed(0, 16);
-        super.onDraw(canvas);
-        Log.e("zzf","--------结束时间--------" + System.currentTimeMillis());
     }
 
     private double calcValue(float mapX, float offset) {
@@ -233,13 +257,4 @@ public class WaveView extends View {
         double recessionFunc = Math.pow(4 / (4 + Math.pow(mapX, 4)), 2.5);
         return sinFunc * recessionFunc;
     }
-
-    public void cancelAnimation(){
-        mHandler.removeMessages(0);
-    }
-
-    public void startAnimation(){
-        mHandler.sendEmptyMessageDelayed(0, 16);
-    }
-
 }
