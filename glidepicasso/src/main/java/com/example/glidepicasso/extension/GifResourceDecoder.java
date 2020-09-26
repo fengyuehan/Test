@@ -36,6 +36,9 @@ public class GifResourceDecoder implements ResourceDecoder<InputStream, FrameSeq
 
             @Override
             public void releaseBitmap(Bitmap bitmap) {
+                /**
+                 * 当release时，直接放进复用池，供下次使用
+                 */
                 bitmapPool.put(bitmap);
             }
         };

@@ -54,6 +54,9 @@ public class InjectUtils {
 
     private static void inijectView(Object object) {
         Class<?> clazz = object.getClass();
+        /**
+         * 遍历所有的属性
+         */
         Field[] fields = clazz.getDeclaredFields();
         for (Field field:fields){
             BindView bindView = field.getAnnotation(BindView.class);

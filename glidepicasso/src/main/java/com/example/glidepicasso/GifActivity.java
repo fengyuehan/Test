@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bumptech.glide.annotation.GlideType;
 import com.example.glidepicasso.extension.GlideApp;
 
 public class GifActivity extends AppCompatActivity {
