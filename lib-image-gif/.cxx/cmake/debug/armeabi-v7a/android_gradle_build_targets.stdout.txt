@@ -1,0 +1,14 @@
+ninja: Entering directory `C:\Users\Yu\Desktop\GifSamplerForGlide-master\lib-image-gif\.cxx\cmake\debug\armeabi-v7a'
+[1/13] Building CXX object CMakeFiles/giftool.dir/src/main/cpp/GifDecoder.cpp.o
+[2/13] Building CXX object CMakeFiles/giftool.dir/src/main/cpp/lib-native-bridge.cpp.o
+[3/13] Building CXX object CMakeFiles/giftool.dir/src/main/cpp/stream/Registry.cpp.o
+[4/13] Building CXX object CMakeFiles/giftool.dir/src/main/cpp/stream/Stream.cpp.o
+[5/13] Building C object src/main/cpp/giflib/CMakeFiles/giflib.dir/dgif_lib.c.o
+[6/13] Building C object src/main/cpp/giflib/CMakeFiles/giflib.dir/egif_lib.c.o
+[7/13] Building C object src/main/cpp/giflib/CMakeFiles/giflib.dir/gif_err.c.o
+[8/13] Building C object src/main/cpp/giflib/CMakeFiles/giflib.dir/gif_font.c.o
+[9/13] Building C object src/main/cpp/giflib/CMakeFiles/giflib.dir/gif_hash.c.o
+[10/13] Building C object src/main/cpp/giflib/CMakeFiles/giflib.dir/gifalloc.c.o
+[11/13] Building C object src/main/cpp/giflib/CMakeFiles/giflib.dir/openbsd-reallocarray.c.o
+[12/13] Linking C shared library ..\..\..\..\build\intermediates\cmake\debug\obj\armeabi-v7a\libgiflib.so
+[13/13] Linking CXX shared library ..\..\..\..\build\intermediates\cmake\debug\obj\armeabi-v7a\libgiftool.so

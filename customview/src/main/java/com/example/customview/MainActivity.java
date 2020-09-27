@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -13,7 +14,7 @@ import com.gyf.immersionbar.ImmersionBar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mColorButton,mLinearShader,mRadialShader,mSweepShader,mBitmapShader;
-    private Button mColorFilter,mLockView;
+    private Button mColorFilter,mLockView,mWaveVIew,mRulerView,mScroll;
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBitmapShader.setOnClickListener(this);
         mColorFilter.setOnClickListener(this);
         mLockView.setOnClickListener(this);
+        mWaveVIew.setOnClickListener(this);
+        mRulerView.setOnClickListener(this);
+        mScroll.setOnClickListener(this);
     }
 
     private void initView() {
@@ -47,6 +51,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBitmapShader = findViewById(R.id.btn_bitmap_shader);
         mColorFilter = findViewById(R.id.btn_color_filter);
         mLockView = findViewById(R.id.btn_lock_view);
+        mWaveVIew = findViewById(R.id.btn_wave_view);
+        mRulerView = findViewById(R.id.btn_ruler_view);
+        mScroll = findViewById(R.id.btn_scroll);
     }
 
     @Override
@@ -72,6 +79,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_lock_view:
                 startActivity(new Intent(MainActivity.this,LockActivity.class));
+                break;
+            case R.id.btn_wave_view:
+                startActivity(new Intent(MainActivity.this,WaveActivity.class));
+                break;
+            case R.id.btn_ruler_view:
+                startActivity(new Intent(MainActivity.this,RulerActivity.class));
+                break;
+            case R.id.btn_scroll:
+                startActivity(new Intent(MainActivity.this,ScrollActivity.class));
                 break;
         }
     }
