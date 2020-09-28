@@ -1,3 +1,4 @@
+include ':bitmap'
 include ':fragmentjumpactivity'
 include ':animation', ':hotfix'
 include ':htmllink'
