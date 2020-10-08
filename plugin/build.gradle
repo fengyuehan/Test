@@ -1,0 +1,29 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation gradleApi()
+    implementation 'com.android.tools.build:gradle:3.4.2'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
+apply plugin: 'maven-publish'
+
+/**
+ * classpath 'com.android.tools.build:gradle:3.4.2'
+ * com.android.tools.build对应groupId
+ * gradle对应artifactId
+ * 3.4.2对应version
+ */
+publishing {
+    publications {
+        JiaguPlugin(MavenPublication){
+            from components.java
+            groupId 'com.example'
+            artifactId 'jiagu'
+            version '1.0'
+        }
+    }
+}

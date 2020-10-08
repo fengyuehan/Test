@@ -25,6 +25,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/aspectjdemo" />
             <option value="$PROJECT_DIR$/banner" />
+            <option value="$PROJECT_DIR$/bitmap" />
             <option value="$PROJECT_DIR$/camerademo" />
             <option value="$PROJECT_DIR$/changeskin" />
             <option value="$PROJECT_DIR$/chatdemo" />
@@ -44,6 +45,7 @@
             <option value="$PROJECT_DIR$/fragmentjumpactivity" />
             <option value="$PROJECT_DIR$/gaode" />
             <option value="$PROJECT_DIR$/glidepicasso" />
+            <option value="$PROJECT_DIR$/gradleplugin" />
             <option value="$PROJECT_DIR$/greendao" />
             <option value="$PROJECT_DIR$/hotfix" />
             <option value="$PROJECT_DIR$/htmllink" />
@@ -63,6 +65,7 @@
             <option value="$PROJECT_DIR$/navigation" />
             <option value="$PROJECT_DIR$/notificaitondemo" />
             <option value="$PROJECT_DIR$/otcchatkeyboard" />
+            <option value="$PROJECT_DIR$/plugin" />
             <option value="$PROJECT_DIR$/produceandconsum" />
             <option value="$PROJECT_DIR$/proxy" />
             <option value="$PROJECT_DIR$/reflect" />

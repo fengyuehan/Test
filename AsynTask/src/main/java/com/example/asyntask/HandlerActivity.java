@@ -1,5 +1,6 @@
 package com.example.asyntask;
 
+import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -34,6 +35,7 @@ public class HandlerActivity extends AppCompatActivity {
 
     private void initHandler() {
         new Thread(new Runnable() {
+            @SuppressLint("HandlerLeak")
             @Override
             public void run() {
                 Looper.prepare();

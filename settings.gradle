@@ -1,3 +1,6 @@
+include ':plugin'
+include ':gradleplugin'
+include ':bitmap'
 include ':fragmentjumpactivity'
 include ':animation', ':hotfix'
 include ':htmllink'
