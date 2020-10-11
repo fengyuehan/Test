@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 /**
  * 这个对应resources文件下文件名前面的东西
  */
-apply plugin: 'com.jiagu'
+//apply plugin: 'com.jiagu'
 
 /*jiagu{
     userName "xxx"
