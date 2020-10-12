@@ -12,7 +12,6 @@ import com.example.daggerdemo2.dagger.di.HttpModule;
 import com.example.daggerdemo2.dagger.di.UserModule;
 
 import javax.inject.Inject;
-import javax.inject.Named;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
      */
     @Inject
     HttpService apiService_dev;
-
 
     @Inject
     HttpService apiService_release;

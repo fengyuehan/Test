@@ -114,6 +114,10 @@ public class UserModule {
         return new ApiService();
     }*/
 
+    /**
+     * error:UserComponet (unscoped) may not reference scoped bindings:
+     *
+     */
     @Provides
     public ApiService getApiService(OkHttpClient okHttpClient,String url){
         return new ApiService(okHttpClient,url);
@@ -136,22 +140,10 @@ public class UserModule {
         return new OkHttpClient().newBuilder().build();
     }*/
 
-    /*@AppScope*/
     @Provides
     public String url(){
         return "Http://baidu.com";
     }
-
-    /**
-     * com.example.daggerdemo2.dagger.di.UserComponet (unscoped) may not reference scoped bindings:
-     *
-     * @param okHttpClient
-     * @param url
-     * @return
-     */
-
-
-
 
     @Provides
     public UserStore getUserStore(){

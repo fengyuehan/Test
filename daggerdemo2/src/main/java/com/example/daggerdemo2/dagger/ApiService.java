@@ -28,9 +28,9 @@ public class ApiService {
      * Types may only contain one @Inject constructor
      */
     //@Inject
-    public ApiService(){
+    /*public ApiService(){
 
-    }
+    }*/
 
     /**
      * 在一个类中，其构造函数中有多少个参数，我们需要在module中提供对应的方法
