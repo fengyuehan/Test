@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Dicos dicos;
 
     TextView textView;
-    Button button;
+    Button button,daggerButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +35,18 @@ public class MainActivity extends AppCompatActivity {
         DaggerColaComponent.builder().dicosModule(new DicosModule()).build().inject(this);
         textView = findViewById(R.id.tv);
         button = findViewById(R.id.btn);
+        daggerButton = findViewById(R.id.btn_dagger);
         textView.setText(cola.getName() + "---" + dicos.returnDicos());
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,ModelActivity.class));
+            }
+        });
+        daggerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,DaggerActivity.class));
             }
         });
     }

@@ -36,7 +36,7 @@ public abstract class BaseRefreshActivity<T> extends BaseActivity{
         mRefreshLayout.setOnRefreshLoadMoreListener(new OnRefreshLoadMoreListener() {
             @Override
             public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
-                mAdapter.removeAllFooterView();
+                //mAdapter.removeAllFooterView();
                 mPageIndex++;
                 getData();
             }

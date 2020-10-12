@@ -1,3 +1,4 @@
+include ':daggerdemo2'
 include ':transition'
 include ':plugin'
 include ':gradleplugin'

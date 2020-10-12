@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ModelActivity"/>
+        <activity android:name=".DaggerActivity"/>
     </application>
 
 </manifest>

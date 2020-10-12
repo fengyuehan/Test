@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private CardView home_transition1,home_transition2,home_transition3;
+    private CardView home_transition1,home_transition2,home_transition3,home_transition4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,9 +20,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         home_transition1 = findViewById(R.id.home_transition1);
         home_transition2 = findViewById(R.id.home_transition2);
         home_transition3 = findViewById(R.id.home_transition3);
+        home_transition4 = findViewById(R.id.home_transition4);
         home_transition1.setOnClickListener(this);
         home_transition2.setOnClickListener(this);
         home_transition3.setOnClickListener(this);
+        home_transition4.setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +38,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.home_transition3:
                 startActivity(new Intent(MainActivity.this,TransitionThreeActivity.class));
+                break;
+            case R.id.home_transition4:
+                startActivity(new Intent(MainActivity.this,MotionActivity.class));
                 break;
         }
     }

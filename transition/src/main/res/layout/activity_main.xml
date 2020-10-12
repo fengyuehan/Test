@@ -67,5 +67,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/home_transition4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/color3"
+        app:layout_constraintEnd_toEndOf="@id/home_transition2"
+        app:layout_constraintStart_toStartOf="@id/home_transition2"
+        app:layout_constraintTop_toBottomOf="@id/home_transition2"
+        >
+        <TextView
+            android:text="Motion"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
