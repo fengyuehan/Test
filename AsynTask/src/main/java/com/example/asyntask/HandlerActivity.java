@@ -95,7 +95,7 @@ public class HandlerActivity extends AppCompatActivity {
         Message message=Message.obtain();
         message.what=MESSAGE_TYPE_ASYN;
         message.setAsynchronous(true);
-        mHandler.sendMessageDelayed(message,1000);
+        mHandler.sendMessageDelayed(message,5000);
     }
 
     private void sendSyncMessage() {
@@ -118,6 +118,9 @@ public class HandlerActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * 插入同步屏障
+     */
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void sendSyncBarrier() {
         try{
