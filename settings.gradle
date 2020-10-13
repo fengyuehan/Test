@@ -1,3 +1,6 @@
+include ':annotation_compiler'
+include ':annotations'
+include ':aptdemo'
 include ':daggerdemo2'
 include ':transition'
 include ':plugin'
