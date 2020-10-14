@@ -15,10 +15,8 @@ public class MyApp extends Application {
     }
 
     private void initArouter() {
-        if (BuildConfig.DEBUG){
-            ARouter.openLog();
-            ARouter.openDebug();
-        }
+        ARouter.openLog();
+        ARouter.openDebug();
         ARouter.init(this);
     }
 }

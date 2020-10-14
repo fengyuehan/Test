@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "点击了" + position, Toast.LENGTH_LONG).show();
             }
         });
-        startActivity(new Intent(this,MainActivity.class));
+        //startActivity(new Intent(this,MainActivity.class));
     }
 
     private void initView() {
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 /**
                  * 不带参跳转
                  */
-                ARouter.getInstance().build("/app/LoginActivity").navigation();
+                ARouter.getInstance().build("/main/login").navigation();
             }
         });
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
+   /* @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return super.onCreateOptionsMenu(menu);
@@ -161,5 +161,5 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return true;
-    }
+    }*/
 }
