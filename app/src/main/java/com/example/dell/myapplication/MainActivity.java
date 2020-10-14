@@ -12,8 +12,12 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import com.alibaba.android.arouter.launcher.ARouter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.ItemDecoration mItemDecoration;
     private MyAdapter mMyAdapter;
     private Resources resources;
+    private Button btn,btn_intepter,btn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +63,30 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         mRecyclerView = findViewById(R.id.rv);
+        btn = findViewById(R.id.btn);
+        btn_intepter = findViewById(R.id.btn_intepter);
+        btn1 = findViewById(R.id.btn1);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /**
+                 * 不带参跳转
+                 */
+                ARouter.getInstance().build("/app/LoginActivity").navigation();
+            }
+        });
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        btn_intepter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override

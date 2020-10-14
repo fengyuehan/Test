@@ -12,6 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Algorithm" />
+            <option value="$PROJECT_DIR$/ArouterTest" />
             <option value="$PROJECT_DIR$/AsynTask" />
             <option value="$PROJECT_DIR$/ContentProvider" />
             <option value="$PROJECT_DIR$/FlowLayout" />

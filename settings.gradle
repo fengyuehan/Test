@@ -1,3 +1,4 @@
+include ':ArouterTest'
 include ':annotation_compiler'
 include ':annotations'
 include ':aptdemo'
