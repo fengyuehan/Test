@@ -3,7 +3,10 @@ package com.example.dell.myapplication;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,6 +20,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.Postcard;
+import com.alibaba.android.arouter.facade.callback.NavigationCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
 
 import java.util.ArrayList;
@@ -29,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.ItemDecoration mItemDecoration;
     private MyAdapter mMyAdapter;
     private Resources resources;
-    private Button btn,btn_intepter,btn1;
+    private Button btn,btn_intepter,btn1,btn_url,btn_ForResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,25 +71,89 @@ public class MainActivity extends AppCompatActivity {
         btn = findViewById(R.id.btn);
         btn_intepter = findViewById(R.id.btn_intepter);
         btn1 = findViewById(R.id.btn1);
+        btn_url = findViewById(R.id.btn_url);
+        btn_ForResult = findViewById(R.id.btn_ForResult);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 /**
                  * 不带参跳转
                  */
-                ARouter.getInstance().build("/main/login").navigation();
+                ARouter.getInstance()
+                        .build("/main/LogoutActivity")
+                        .navigation();
             }
         });
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                ARouter.getInstance()
+                        .build("/main/login")
+                        .withString("path","您好")
+                        .navigation();
             }
         });
         btn_intepter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ARouter.getInstance()
+                        .build("/main/login")
+                        .withString("path","您好")
+                        .navigation();
+            }
+        });
+        btn_url.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("test://com/main/UrlLoginActivity");
+                ARouter.getInstance().build(uri).navigation(MainActivity.this, new NavigationCallback() {
+                    @Override
+                    public void onFound(Postcard postcard) {
 
+                    }
+
+                    @Override
+                    public void onLost(Postcard postcard) {
+                        /**
+                         * 在这做降级处理
+                         */
+                    }
+
+                    @Override
+                    public void onArrival(Postcard postcard) {
+                        /**
+                         * 跳转成功的回调
+                         */
+                    }
+
+                    @Override
+                    public void onInterrupt(Postcard postcard) {
+
+                    }
+                });
+            }
+        });
+        btn_ForResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /**
+                 * 很多博客都说requestCode必须》0
+                 * 其实看源码0是可以的
+                 */
+                /**
+                 * if (requestCode >= 0) {  // Need start for result
+                 *             if (currentContext instanceof Activity) {
+                 *                 ActivityCompat.startActivityForResult((Activity) currentContext, intent, requestCode, postcard.getOptionsBundle());
+                 *             } else {
+                 *                 logger.warning(Consts.TAG, "Must use [navigation(activity, ...)] to support [startActivityForResult]");
+                 *             }
+                 *         } else {
+                 *             ActivityCompat.startActivity(currentContext, intent, postcard.getOptionsBundle());
+                 *         }
+                 */
+                ARouter.getInstance().build("/main/ForResultActivity")
+                        .withInt("paths",1)
+                        .navigation(MainActivity.this,0);
             }
         });
     }
@@ -162,4 +231,14 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }*/
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 0){
+            if (resultCode == 1){
+                btn_ForResult.setText(data.getIntExtra("name",0)+"");
+            }
+        }
+    }
 }

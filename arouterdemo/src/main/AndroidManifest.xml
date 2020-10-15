@@ -17,6 +17,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity"/>
+        <activity android:name=".LogoutActivity"/>
+        <activity android:name=".UrlLoginActivity">
+            <intent-filter>
+                <data android:host="com"
+                    android:scheme="test"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ForResultActivity"/>
     </application>
 
 </manifest>

@@ -33,4 +33,14 @@
         android:text="跳转拦截Arouter"
         android:layout_width="match_parent"
         android:layout_height="44dp"/>
+    <Button
+        android:id="@+id/btn_url"
+        android:text="url跳转Arouter"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <Button
+        android:id="@+id/btn_ForResult"
+        android:text="startActivityForResult跳转Arouter"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
 </LinearLayout>
