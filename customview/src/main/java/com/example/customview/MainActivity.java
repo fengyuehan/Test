@@ -15,6 +15,7 @@ import com.gyf.immersionbar.ImmersionBar;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mColorButton,mLinearShader,mRadialShader,mSweepShader,mBitmapShader;
     private Button mColorFilter,mLockView,mWaveVIew,mRulerView,mScroll,btn_cloud;
+    private Button btn_dot;
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mRulerView.setOnClickListener(this);
         mScroll.setOnClickListener(this);
         btn_cloud.setOnClickListener(this);
+        btn_dot.setOnClickListener(this);
     }
 
     private void initView() {
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mRulerView = findViewById(R.id.btn_ruler_view);
         mScroll = findViewById(R.id.btn_scroll);
         btn_cloud = findViewById(R.id.btn_cloud);
+        btn_dot = findViewById(R.id.btn_dot);
     }
 
     @Override
@@ -93,6 +96,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_cloud:
                 startActivity(new Intent(MainActivity.this,CloudMusicLoadingActivity.class));
+                break;
+            case R.id.btn_dot:
+                startActivity(new Intent(MainActivity.this,VerticalTextIndicatorActivity.class));
                 break;
         }
     }

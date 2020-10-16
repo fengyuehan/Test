@@ -37,4 +37,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     //沉浸式状态栏
     implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 }

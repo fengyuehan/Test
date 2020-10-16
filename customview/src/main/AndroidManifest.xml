@@ -33,6 +33,7 @@
         <activity android:name=".RulerActivity"/>
         <activity android:name=".ScrollActivity"/>
         <activity android:name=".CloudMusicLoadingActivity"/>
+        <activity android:name=".VerticalTextIndicatorActivity"/>
     </application>
 
 </manifest>
