@@ -7,7 +7,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="100dp"/>
     <ImageView
         android:layout_marginLeft="10dp"
         android:src="@drawable/shape_dot"

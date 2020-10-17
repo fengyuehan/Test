@@ -1,7 +1,9 @@
 package com.example.banner
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.nostra13.universalimageloader.core.ImageLoader
@@ -17,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initView()
         initBanner()
+        btn.setOnClickListener {
+            startActivity(Intent(this,LayoutInflaterActivity::class.java))
+        }
     }
 
     private fun initBanner() {
