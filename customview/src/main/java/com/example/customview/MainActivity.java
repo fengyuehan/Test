@@ -16,7 +16,7 @@ import com.gyf.immersionbar.ImmersionBar;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mColorButton,mLinearShader,mRadialShader,mSweepShader,mBitmapShader;
     private Button mColorFilter,mLockView,mWaveVIew,mRulerView,mScroll,btn_cloud;
-    private Button btn_dot,btn_text;
+    private Button btn_dot,btn_text,btn_draw_text,btn_draw_more_text;
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_cloud.setOnClickListener(this);
         btn_dot.setOnClickListener(this);
         btn_text.setOnClickListener(this);
+        btn_draw_text.setOnClickListener(this);
+        btn_draw_more_text.setOnClickListener(this);
     }
 
     private void initView() {
@@ -62,7 +64,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_cloud = findViewById(R.id.btn_cloud);
         btn_dot = findViewById(R.id.btn_dot);
         btn_text = findViewById(R.id.btn_text);
-
+        btn_draw_text = findViewById(R.id.btn_draw_text);
+        btn_draw_more_text = findViewById(R.id.btn_draw_more_text);
     }
 
     @Override
@@ -106,6 +109,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_text:
                 startActivity(new Intent(MainActivity.this, SampleActivity.class));
+                break;
+            case R.id.btn_draw_text:
+                startActivity(new Intent(MainActivity.this,DrawTextActivity.class));
+                break;
+            case R.id.btn_draw_more_text:
+                startActivity(new Intent(MainActivity.this,DrawMoreLineActivity.class));
                 break;
         }
     }

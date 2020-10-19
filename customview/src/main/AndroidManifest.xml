@@ -36,6 +36,8 @@
         <activity android:name=".VerticalTextIndicatorActivity"/>
         <activity android:name=".TextActivity"/>
         <activity android:name=".picker.SampleActivity"/>
+        <activity android:name=".DrawTextActivity"/>
+        <activity android:name=".DrawMoreLineActivity"/>
     </application>
 
 </manifest>
