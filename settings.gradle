@@ -1,3 +1,4 @@
+include ':floatingwindow'
 include ':arouterdemo'
 include ':ArouterTest'
 include ':annotation_compiler'
