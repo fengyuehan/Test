@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/firstFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.jetpack.navigation.FirstFragment"
+        android:label="FirstFragment" >
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.jetpack.navigation.SecondFragment"
+        android:label="SecondFragment" />
+    <argument
+        android:name="name"
+        app:argType="string"
+        android:defaultValue="unknown"/>
+</navigation>
