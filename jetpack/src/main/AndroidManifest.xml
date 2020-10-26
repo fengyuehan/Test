@@ -21,6 +21,8 @@
         <activity android:name=".navigation.NavigationActivity"/>
         <activity android:name=".databinding.DataBindingActivity"/>
         <activity android:name=".room.RoomActivity"/>
+        <activity android:name=".paging3.PagingActivity"/>
+        <activity android:name=".ktpaging.KtPagingActivity"/>
     </application>
 
 </manifest>

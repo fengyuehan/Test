@@ -75,8 +75,62 @@ public class RoomActivity extends AppCompatActivity {
             @Override
             public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
                 Student student = (Student) adapter.getData().get(position);
+                updateOrDeleteDialog(student);
             }
         });
+    }
+
+    private void updateOrDeleteDialog(final Student student) {
+        String[] options = new String[]{"更新","删除"};
+        new AlertDialog.Builder(this).setTitle("")
+                .setItems(options, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which){
+                            case 0:
+                                updataStudentDialog(student);
+                                break;
+                            case 1:
+                                new DeleteStudentTask(student).execute();
+                                break;
+                        }
+                    }
+                }).show();
+    }
+
+    private void updataStudentDialog(final Student student) {
+        if (student == null) {
+            return;
+        }
+        View customView = this.getLayoutInflater().inflate(R.layout.dialog_layout_student, null);
+        final EditText etName = customView.findViewById(R.id.etName);
+        final EditText etAge = customView.findViewById(R.id.etAge);
+        etName.setText(student.name);
+        etAge.setText(student.age);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(RoomActivity.this);
+        AlertDialog dialog = builder.create();
+        dialog.setTitle("Update Student");
+        dialog.setButton(DialogInterface.BUTTON_POSITIVE, "OK", new DialogInterface.OnClickListener()
+        {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which)
+            {
+                if (TextUtils.isEmpty(etName.getText().toString()) || TextUtils.isEmpty(etAge.getText().toString())) {
+                    Toast.makeText(RoomActivity.this, "输入不能为空", Toast.LENGTH_SHORT).show();
+                } else {
+                    new UpdateStudentTask(student.id, etName.getText().toString(), etAge.getText().toString()).execute();
+                }
+            }
+        });
+        dialog.setButton(DialogInterface.BUTTON_NEGATIVE, "CANCEL", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        dialog.setView(customView);
+        dialog.show();
     }
 
     private void addDataDialog(final Context context) {
@@ -130,6 +184,55 @@ public class RoomActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
+            adapter.notifyDataSetChanged();
+        }
+    }
+
+    private class UpdateStudentTask extends AsyncTask<Void,Void,Void> {
+        private int id;
+        private String name;
+        private String age;
+
+        public UpdateStudentTask(int id, String name, String age) {
+            this.id = id;
+            this.name = name;
+            this.age = age;
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            myDatabase.studentDao().updataStudent(new Student(id,name,age));
+            data.clear();
+            data.addAll(myDatabase.studentDao().getStudentList());
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            adapter.notifyDataSetChanged();
+        }
+    }
+
+    private class DeleteStudentTask extends AsyncTask<Void, Void, Void> {
+        Student student;
+
+        public DeleteStudentTask(Student student) {
+            this.student = student;
+        }
+
+        @Override
+        protected Void doInBackground(Void... arg0) {
+            myDatabase.studentDao().deleteStudent(student);
+            data.clear();
+            data.addAll(myDatabase.studentDao().getStudentList());
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result)
+        {
+            super.onPostExecute(result);
             adapter.notifyDataSetChanged();
         }
     }

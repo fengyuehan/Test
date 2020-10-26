@@ -8,13 +8,15 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.jetpack.databinding.DataBindingActivity;
+import com.example.jetpack.ktpaging.KtPagingActivity;
 import com.example.jetpack.lifecycle.LifecycleActivity;
 import com.example.jetpack.livedata.LiveDataActivity;
 import com.example.jetpack.navigation.NavigationActivity;
+import com.example.jetpack.paging3.PagingActivity;
 import com.example.jetpack.room.RoomActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btn_lifecycle,btn_livedata,btn_navigation,btn_databinding,btn_room;
+    private Button btn_lifecycle,btn_livedata,btn_navigation,btn_databinding,btn_room,btn_paging,btn_kt_paging;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_navigation.setOnClickListener(this);
         btn_databinding.setOnClickListener(this);
         btn_room.setOnClickListener(this);
+        btn_paging.setOnClickListener(this);
+        btn_kt_paging.setOnClickListener(this);
     }
 
     private void init() {
@@ -38,6 +42,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_navigation  = findViewById(R.id.btn_navigation);
         btn_databinding = findViewById(R.id.btn_databinding);
         btn_room = findViewById(R.id.btn_room);
+        btn_paging = findViewById(R.id.btn_paging);
+        btn_kt_paging = findViewById(R.id.btn_kt_paging);
     }
 
     @Override
@@ -57,6 +63,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_room:
                 startActivity(new Intent(MainActivity.this, RoomActivity.class));
+                break;
+            case R.id.btn_paging:
+                startActivity(new Intent(MainActivity.this, PagingActivity.class));
+                break;
+            case R.id.btn_kt_paging:
+                startActivity(new Intent(MainActivity.this, KtPagingActivity.class));
                 break;
         }
     }
