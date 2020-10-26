@@ -1,3 +1,4 @@
+include ':viewstubdemo'
 include ':jetpack'
 include ':floatingwindow'
 include ':arouterdemo'
