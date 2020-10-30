@@ -25,7 +25,6 @@ public class GrayFrameLayout extends FrameLayout {
 
     @Override
     protected void dispatchDraw(Canvas canvas) {
-        super.dispatchDraw(canvas);
         canvas.saveLayer(null,mPaint,Canvas.ALL_SAVE_FLAG);
         super.dispatchDraw(canvas);
         canvas.restore();
