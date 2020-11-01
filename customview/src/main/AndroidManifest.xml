@@ -3,9 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.customview">
 
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
+    <!-- 前台服务 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -38,6 +42,26 @@
         <activity android:name=".picker.SampleActivity"/>
         <activity android:name=".DrawTextActivity"/>
         <activity android:name=".DrawMoreLineActivity"/>
+        <activity android:name=".lockscreen.HomeActivity"
+            android:launchMode="singleTop"
+            >
+        </activity>
+        <activity android:name=".lockscreen.ScreenLockActivity"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            />
+        <service android:name=".lockscreen.ScreenLockService"
+            android:exported="false"
+            />
+
+        <!-- 开机启动 -->
+        <receiver android:name=".lockscreen.SystemBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

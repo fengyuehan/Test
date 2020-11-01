@@ -21,6 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"/>
+        <activity android:name=".zip.ZipActivity"/>
+        <activity android:name=".plugin.SettingsActivity"/>
     </application>
 
 </manifest>

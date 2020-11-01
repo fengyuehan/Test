@@ -102,6 +102,12 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_lock_screen"
+                android:text="滑动解锁"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

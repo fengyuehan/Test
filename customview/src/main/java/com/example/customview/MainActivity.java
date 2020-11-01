@@ -10,13 +10,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.customview.lockscreen.HomeActivity;
 import com.example.customview.picker.SampleActivity;
 import com.gyf.immersionbar.ImmersionBar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mColorButton,mLinearShader,mRadialShader,mSweepShader,mBitmapShader;
     private Button mColorFilter,mLockView,mWaveVIew,mRulerView,mScroll,btn_cloud;
-    private Button btn_dot,btn_text,btn_draw_text,btn_draw_more_text;
+    private Button btn_dot,btn_text,btn_draw_text,btn_draw_more_text,btn_lock_screen;
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_text.setOnClickListener(this);
         btn_draw_text.setOnClickListener(this);
         btn_draw_more_text.setOnClickListener(this);
+        btn_lock_screen.setOnClickListener(this);
     }
 
     private void initView() {
@@ -66,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_text = findViewById(R.id.btn_text);
         btn_draw_text = findViewById(R.id.btn_draw_text);
         btn_draw_more_text = findViewById(R.id.btn_draw_more_text);
+        btn_lock_screen = findViewById(R.id.btn_lock_screen);
     }
 
     @Override
@@ -115,6 +118,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_draw_more_text:
                 startActivity(new Intent(MainActivity.this,DrawMoreLineActivity.class));
+                break;
+            case R.id.btn_lock_screen:
+                startActivity(new Intent(MainActivity.this, HomeActivity.class));
                 break;
         }
     }

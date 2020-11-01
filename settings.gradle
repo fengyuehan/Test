@@ -1,3 +1,4 @@
+include ':skin-night'
 include ':lombok'
 include ':viewstubdemo'
 include ':jetpack'

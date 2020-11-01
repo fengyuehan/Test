@@ -4,6 +4,9 @@ import android.app.Application;
 
 import androidx.appcompat.app.AppCompatDelegate;
 
+import com.example.changeskin.plugin.CustomSDCardLoader;
+import com.example.changeskin.zip.ZipSDCardLoader;
+
 import skin.support.SkinCompatManager;
 import skin.support.app.SkinAppCompatViewInflater;
 import skin.support.app.SkinCardViewInflater;
@@ -20,6 +23,11 @@ public class SkinApp extends Application {
          */
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         SkinCompatManager.withoutActivity(this)
+                /**
+                 * 使用不同的策略
+                 */
+                .addStrategy(new ZipSDCardLoader())
+                .addStrategy(new CustomSDCardLoader())
                 /**
                  * 基础控件换肤
                  */

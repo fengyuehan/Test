@@ -18,6 +18,12 @@ import skin.support.widget.SkinCompatSupportable;
 
 public  abstract class BaseActivity extends AppCompatActivity implements SkinCompatSupportable {
 
+    public Toolbar getToolbar() {
+        return toolbar;
+    }
+
+    public Toolbar toolbar;
+
     @NonNull
     @Override
     public AppCompatDelegate getDelegate() {
@@ -48,7 +54,7 @@ public  abstract class BaseActivity extends AppCompatActivity implements SkinCom
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     protected void initToolBar(boolean enableHomeAsUp){
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         if (toolbar == null){
             return;
         }
