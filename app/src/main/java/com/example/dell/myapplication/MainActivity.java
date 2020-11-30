@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.ItemDecoration mItemDecoration;
     private MyAdapter mMyAdapter;
     private Resources resources;
-    private Button btn,btn_intepter,btn1,btn_url,btn_ForResult;
+    private Button btn,btn_intepter,btn1,btn_url,btn_ForResult,btn_MaterialRatingBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         btn_intepter = findViewById(R.id.btn_intepter);
         btn1 = findViewById(R.id.btn1);
         btn_url = findViewById(R.id.btn_url);
+        btn_MaterialRatingBar = findViewById(R.id.btn_MaterialRatingBar);
         btn_ForResult = findViewById(R.id.btn_ForResult);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -154,6 +155,12 @@ public class MainActivity extends AppCompatActivity {
                 ARouter.getInstance().build("/main/ForResultActivity")
                         .withInt("paths",1)
                         .navigation(MainActivity.this,0);
+            }
+        });
+        btn_MaterialRatingBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,MaterialRatingBarActivity.class));
             }
         });
     }

@@ -1,3 +1,8 @@
+include ':pickerview'
+include ':wheelview'
+include ':timepicker'
+include ':lottie'
+include ':recyclerviewdemo'
 include ':skin-night'
 include ':lombok'
 include ':viewstubdemo'
