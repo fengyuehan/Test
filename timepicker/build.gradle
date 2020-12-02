@@ -31,4 +31,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //implementation 'com.contrarywind:Android-PickerView:4.1.9'
     implementation project(':pickerview')
+    implementation 'com.github.zouhuanxin:CustomDate:1.9.3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.github.KuangGang:RoundCorners:1.0.4'
+    implementation "com.google.android.material:material:1.2.1"
 }

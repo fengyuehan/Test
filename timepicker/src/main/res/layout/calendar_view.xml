@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_year"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv_left"
+            android:padding="6dp"
+            android:src="@drawable/jiantouzuo"
+            android:layout_width="30dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_year"
+            android:text="2020"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/iv_right"
+            android:padding="6dp"
+            android:src="@drawable/jiantouyou"
+            android:layout_width="30dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.example.timepicker.calendar.NoSlidingViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.example.timepicker.calendar.NoSlidingViewPager>
+</LinearLayout>
