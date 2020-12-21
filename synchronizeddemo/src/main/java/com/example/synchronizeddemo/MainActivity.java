@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.synchronizeddemo.Atomic.AtomicActivity;
+import com.example.synchronizeddemo.LocalDemo.LocalActivity;
 import com.example.synchronizeddemo.ReentrantLock.ReentrantLockActivity;
 
 import java.util.concurrent.locks.ReentrantLock;
@@ -22,6 +24,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ReentrantLockActivity.class));
+            }
+        });
+        findViewById(R.id.btn_local).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LocalActivity.class));
+            }
+        });
+        findViewById(R.id.btn_Atomic).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AtomicActivity.class));
             }
         });
         TextView textView = findViewById(R.id.tv);

@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    //判断是否
+    //判断是否服务已经死亡
     IBinder.DeathRecipient deathRecipient = new IBinder.DeathRecipient() {
         @Override
         public void binderDied() {
@@ -68,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
                 messageSender.asBinder().linkToDeath(deathRecipient,0);
                 messageSender.registerReceiveListener(messageReceiver);
                 messageSender.sendMessage(messageModel);
-
             } catch (RemoteException e) {
                 e.printStackTrace();
             }

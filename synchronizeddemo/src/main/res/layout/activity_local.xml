@@ -24,17 +24,11 @@
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints" />
     <Button
-        android:id="@+id/btn_local"
+        android:id="@+id/btn_test"
         android:layout_marginTop="10dp"
-        android:text="跳转ThreadLocalActivity"
+        android:text="跳转InheritableThreadLocal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints" />
-    <Button
-        android:id="@+id/btn_Atomic"
-        android:layout_marginTop="10dp"
-        android:text="跳转AtomicActivity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints" />
+
 </LinearLayout>
