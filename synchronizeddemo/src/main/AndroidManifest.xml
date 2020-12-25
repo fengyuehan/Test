@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ReentrantLock.ReentrantLockActivity"/>
-        <activity android:name=".LocalDemo.LocalActivity"/>
+        <activity android:name=".ThreadLocalDemo.LocalActivity"/>
         <activity android:name=".Atomic.AtomicActivity"/>
     </application>
 

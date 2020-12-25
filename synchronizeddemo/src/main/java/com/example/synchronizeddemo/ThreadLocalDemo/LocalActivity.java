@@ -1,4 +1,4 @@
-package com.example.synchronizeddemo.LocalDemo;
+package com.example.synchronizeddemo.ThreadLocalDemo;
 
 import android.os.Bundle;
 import android.util.Log;

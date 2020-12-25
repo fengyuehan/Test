@@ -69,6 +69,18 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_atomic_example_11"
+                android:text="atomic_example_11"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_atomic_example_12"
+                android:text="atomic_example_12"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
