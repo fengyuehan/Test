@@ -21,6 +21,7 @@
         <activity android:name=".ReentrantLock.ReentrantLockActivity"/>
         <activity android:name=".ThreadLocalDemo.LocalActivity"/>
         <activity android:name=".Atomic.AtomicActivity"/>
+        <activity android:name=".wait.WaitOrNotifyActivity"/>
     </application>
 
 </manifest>

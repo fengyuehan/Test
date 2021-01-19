@@ -23,6 +23,7 @@ import io.reactivex.schedulers.Schedulers;
 public class CombineActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button button,button1,button2,button3,button4,button5;
+    private Disposable disposable;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -128,7 +129,7 @@ public class CombineActivity extends AppCompatActivity implements View.OnClickLi
         }).subscribe(new Observer<String>() {
             @Override
             public void onSubscribe(Disposable d) {
-
+                disposable = d;
             }
 
             @Override
@@ -311,5 +312,13 @@ public class CombineActivity extends AppCompatActivity implements View.OnClickLi
             }
         });
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (!disposable.isDisposed()){
+            disposable.dispose();
+        }
     }
 }

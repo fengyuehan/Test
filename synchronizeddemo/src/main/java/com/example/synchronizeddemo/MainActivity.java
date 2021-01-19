@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.synchronizeddemo.Atomic.AtomicActivity;
 import com.example.synchronizeddemo.ThreadLocalDemo.LocalActivity;
 import com.example.synchronizeddemo.ReentrantLock.ReentrantLockActivity;
+import com.example.synchronizeddemo.wait.WaitOrNotifyActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, AtomicActivity.class));
+            }
+        });
+        findViewById(R.id.btn_wait).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, WaitOrNotifyActivity.class));
             }
         });
         TextView textView = findViewById(R.id.tv);

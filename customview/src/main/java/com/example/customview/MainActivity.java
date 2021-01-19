@@ -17,7 +17,7 @@ import com.gyf.immersionbar.ImmersionBar;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mColorButton,mLinearShader,mRadialShader,mSweepShader,mBitmapShader;
     private Button mColorFilter,mLockView,mWaveVIew,mRulerView,mScroll,btn_cloud;
-    private Button btn_dot,btn_text,btn_draw_text,btn_draw_more_text,btn_lock_screen;
+    private Button btn_dot,btn_text,btn_draw_text,btn_draw_more_text,btn_lock_screen,btn_red_envelopes;
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_draw_text.setOnClickListener(this);
         btn_draw_more_text.setOnClickListener(this);
         btn_lock_screen.setOnClickListener(this);
+        btn_red_envelopes.setOnClickListener(this);
     }
 
     private void initView() {
@@ -69,8 +70,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_draw_text = findViewById(R.id.btn_draw_text);
         btn_draw_more_text = findViewById(R.id.btn_draw_more_text);
         btn_lock_screen = findViewById(R.id.btn_lock_screen);
+        btn_red_envelopes = findViewById(R.id.btn_red_envelopes);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -121,6 +124,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_lock_screen:
                 startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                break;
+            case R.id.btn_red_envelopes:
+
                 break;
         }
     }

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,5 +13,19 @@
        android:id="@+id/btn_dialog_fragment"
        android:layout_width="match_parent"
        android:layout_height="wrap_content" />
-
-</androidx.constraintlayout.ConstraintLayout>
+   <Button
+       android:text="Dialog"
+       android:id="@+id/btn_dialog"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+   <Button
+       android:text="ApplicationDialog"
+       android:id="@+id/btn_application_dialog"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+   <Button
+       android:text="server_dialog"
+       android:id="@+id/btn_server_dialog"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+</LinearLayout>

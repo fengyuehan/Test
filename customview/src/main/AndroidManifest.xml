@@ -42,6 +42,7 @@
         <activity android:name=".picker.SampleActivity"/>
         <activity android:name=".DrawTextActivity"/>
         <activity android:name=".DrawMoreLineActivity"/>
+        <activity android:name=".FloatActivity"/>
         <activity android:name=".lockscreen.HomeActivity"
             android:launchMode="singleTop"
             >
