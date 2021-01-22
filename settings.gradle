@@ -1,3 +1,4 @@
+include ':processkeeplive'
 include ':service'
 include ':asm'
 include ':pickerview'

@@ -29,4 +29,10 @@
         <!-- 音轨线宽粗细 -->
         <attr name="cmlv_line_width" format="integer|float|dimension" />
     </declare-styleable>
+
+    <declare-styleable name="MultiImageView">
+        <attr name="singleImgSize" format="dimension" />
+        <attr name="imgGap" format="dimension" />
+        <attr name="maxSize" format="integer" />
+    </declare-styleable>
 </resources>

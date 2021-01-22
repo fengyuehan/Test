@@ -54,10 +54,10 @@ public class MainActivity extends AppCompatActivity {
         btRemoteStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent();
+                Intent intent = new Intent();
                 intent.setAction("com.renj.remote.start");
-                intent.setPackage("com.renj.service");
-                startService(intent);*/
+                intent.setPackage("com.example.servicewomen douzhi");
+                startService(intent);
             }
         });
         btRemoteStop.setOnClickListener(new View.OnClickListener() {
