@@ -24,6 +24,15 @@ public class MainActivity extends AppCompatActivity {
     private ComponentName jobService;
     private static final long JOB_PERIODIC = 15 * 60 * 1000L;
 
+    /**
+     * 启动一个服务
+     * if (Build.VERSION.SDK_INT >= 26) {
+     *     Context.startForegroundService(service);
+     * } else {
+     *     Context.startService(service);
+     * }
+     *
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

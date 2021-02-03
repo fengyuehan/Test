@@ -43,6 +43,9 @@ public class WorkerActivity extends AppCompatActivity {
                 .setInputData(data)
                 .setConstraints(constraints)
                 .build();
+        /**
+         * 使用PeriodicWorkRequest只执行一次，并不重复执行。原因是PeriodicWorkRequest默认的时间间隔是15分钟如果设置的时间小于15分钟，就会出现问题。
+         */
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +59,40 @@ public class WorkerActivity extends AppCompatActivity {
                         tv_content.setText(workInfo.getOutputData().getString("output"));
                     }
                 });
+
+        /**
+         * WorkManager多任务调度
+         *
+         * 1、先后顺序执行单个任务
+         *   WorkManager.getInstance()
+         *     .beginWith(workA)
+         *     .then(workB)  instance
+         *     .then(workC)
+         *     .enqueue();
+         *
+         * 2、先后顺序执行多个任务列
+         *   WorkManager.getInstance()
+         *     // First, run all the A tasks (in parallel):
+         *     .beginWith(Arrays.asList(workA1, workA2, workA3))
+         *     // ...when all A tasks are finished, run the single B task:
+         *     .then(workB)
+         *     // ...then run the C tasks (in any order):
+         *     .then(Arrays.asList(workC1, workC2))
+         *     .enqueue();
+         *
+         * 3、多路径先后执行
+         *   WorkContinuation chain1 = WorkManager.getInstance()
+         *     .beginWith(workA)
+         *     .then(workB);
+         *  WorkContinuation chain2 = WorkManager.getInstance()
+         *     .beginWith(workC)
+         *     .then(workD);
+         *  WorkContinuation chain3 = WorkContinuation
+         *     .combine(Arrays.asList(chain1, chain2))
+         *     .then(workE);
+         *  chain3.enqueue();
+         *
+         */
     }
 
     private void init() {

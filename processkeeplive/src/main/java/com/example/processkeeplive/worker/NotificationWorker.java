@@ -26,6 +26,10 @@ public class NotificationWorker extends Worker {
         this.context = context;
     }
 
+    /**
+     * doWork()方法是在WorkManager管理的后台线程中执行的，更新UI操作只能在主线程中进行。
+     * @return
+     */
     @NonNull
     @Override
     public Result doWork() {
