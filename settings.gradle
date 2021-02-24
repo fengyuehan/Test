@@ -1,3 +1,4 @@
+include ':taskaffinitytest'
 include ':processkeeplive'
 include ':service'
 include ':asm'

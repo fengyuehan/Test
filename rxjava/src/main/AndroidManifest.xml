@@ -26,6 +26,9 @@
         <activity android:name=".BackgroundActivity"/>
         <activity android:name=".BufferActivity"/>
         <activity android:name=".combine.CombineActivity"/>
+        <activity android:name=".coldOrHotObservable.ColdObservableActivity"/>
+        <activity android:name=".merge.MerageActivity"/>
+        <activity android:name=".filter.FilterActivity"/>
     </application>
 
 </manifest>

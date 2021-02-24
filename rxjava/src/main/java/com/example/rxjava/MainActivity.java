@@ -10,7 +10,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.rxjava.backpress.BackPressActivity;
+import com.example.rxjava.coldOrHotObservable.ColdObservableActivity;
 import com.example.rxjava.combine.CombineActivity;
+import com.example.rxjava.filter.FilterActivity;
+import com.example.rxjava.merge.MerageActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -20,15 +23,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
+import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
     private Banner banner;
-    private Button mButton,button1,button2,btn_combine;
+    private Button mButton,button1,button2,btn_combine,btn_map,btn_flat_map,btn_concat_map,btn_cold_or_hot,btn_merge,btn_fliter;
     private ArrayList list;
 
     @Override
@@ -41,16 +52,29 @@ public class MainActivity extends AppCompatActivity {
         button1 = findViewById(R.id.btn_background);
         button2 = findViewById(R.id.btn_buffer);
         btn_combine = findViewById(R.id.btn_combine);
+        btn_map = findViewById(R.id.btn_map);
+        btn_flat_map = findViewById(R.id.btn_flat_map);
+        btn_concat_map = findViewById(R.id.btn_concat_map);
+        btn_cold_or_hot = findViewById(R.id.btn_cold_or_hot);
+        btn_merge = findViewById(R.id.btn_merge);
+        btn_fliter = findViewById(R.id.btn_fliter);
         initBanner();
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                io.reactivex.Observable.interval(1,TimeUnit.SECONDS)
+                Observable.interval(1,TimeUnit.SECONDS)
                         .takeUntil(new Predicate<Long>() {
                             @Override
                             public boolean test(Long aLong) throws Exception {
                                 Log.e("zzf",aLong+"");
                                 return aLong >= 10;
+                            }
+                        })
+                        .map(new Function<Long, Long>() {
+                            @Override
+                            public Long apply(@NonNull Long aLong) throws Exception {
+
+                                return 2 * aLong;
                             }
                         })
                         /*.takeWhile(new Predicate<Long>() {
@@ -116,6 +140,231 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, CombineActivity.class));
             }
         });
+        btn_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                map1();
+            }
+        });
+        btn_flat_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /**
+                 * 无序,内部是用merge的方式实现，
+                 */
+                flatMap1();
+            }
+        });
+        btn_concat_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /**
+                 * 有序，都是将一个Observableh转化成Observables
+                 * 内部采用concat的方式实现
+                 *
+                 * 与switchMap的区别是，switchMap是当原始的额Observable发射一个新的数据时，它将取消订阅并停止监听之前的那个数据，只监视当前的这个
+                 */
+                concatMap1();
+            }
+        });
+        btn_cold_or_hot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ColdObservableActivity.class));
+            }
+        });
+        btn_merge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MerageActivity.class));
+            }
+        });
+        btn_fliter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FilterActivity.class));
+            }
+        });
+    }
+
+    private void concatMap1() {
+        Observable<String> createObservable = Observable.just("1", "2", "3", "4", "5", "6", "7", "8", "9");
+        Observable<Integer> flatMapObservable = createObservable.concatMap(new Function<String, ObservableSource<Integer>>() {
+            @Override
+            public ObservableSource<Integer> apply(final String s) {
+                if (s.equals("2")) {
+                    return Observable.create(new ObservableOnSubscribe<Integer>() {
+                        @Override
+                        public void subscribe(@NonNull ObservableEmitter<Integer> emitter) {
+                            emitter.onNext(Integer.valueOf(s) + 1);
+                            emitter.onComplete();
+                        }
+                    }).delay(500, TimeUnit.MILLISECONDS);
+                } else {
+                    return Observable.create(new ObservableOnSubscribe<Integer>() {
+                        @Override
+                        public void subscribe(@NonNull ObservableEmitter<Integer> emitter) {
+                            emitter.onNext(Integer.valueOf(s) + 1);
+                            emitter.onComplete();
+                        }
+                    });
+                }
+
+            }
+        });
+        Observable<Integer> observeOnObservable = flatMapObservable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        Observer<Integer> observer = new Observer<Integer>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+                Log.d("zzf", "onSubscribe:" + d.getClass().getName());
+            }
+
+            @Override
+            public void onNext(@NonNull Integer string) {
+                Log.d("zzf", "onNext: " + string);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                Log.d("zzf", "onError: " + e.getMessage());
+            }
+
+            @Override
+            public void onComplete() {
+                Log.d("zzf", "onComplete");
+            }
+        };
+        observeOnObservable.subscribe(observer);
+    }
+
+    private void map1() {
+        Observable<Integer> observable = Observable.create(new ObservableOnSubscribe<Integer>() {
+            @Override
+            public void subscribe(@NonNull ObservableEmitter<Integer> emitter) throws Exception {
+                emitter.onNext(1);
+                emitter.onNext(2);
+                emitter.onNext(3);
+                emitter.onComplete();
+            }
+        });
+        Observable<String> observable1 = observable.map(new Function<Integer, String>() {
+            @Override
+            public String apply(@NonNull Integer integer) throws Exception {
+                return String.valueOf(integer + 1);
+            }
+        });
+        Observer<String> observer = new Observer<String>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+                Log.d("zzf", "onSubscribe:" + d.getClass().getName());
+            }
+
+            @Override
+            public void onNext(@NonNull String s) {
+                Log.d("zzf", "onNext: " + s);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                Log.d("zzf", "onError: " + e.getMessage());
+            }
+
+            @Override
+            public void onComplete() {
+                Log.d("zzf", "onComplete");
+            }
+        };
+        observable1.subscribe(observer);
+    }
+
+    private void flatMap1() {
+        Observable<String> createObservable = Observable.just("1", "2", "3", "4", "5", "6", "7", "8", "9");
+        Observable<Integer> flatMapObservable = createObservable.flatMap(new Function<String, ObservableSource<Integer>>() {
+            @Override
+            public ObservableSource<Integer> apply(final String s) {
+                if (s.equals("2")) {
+                    return Observable.create(new ObservableOnSubscribe<Integer>() {
+                        @Override
+                        public void subscribe(@NonNull ObservableEmitter<Integer> emitter) {
+                            emitter.onNext(Integer.valueOf(s) + 1);
+                            emitter.onComplete();
+                        }
+                    }).delay(500, TimeUnit.MILLISECONDS);
+                } else {
+                    return Observable.create(new ObservableOnSubscribe<Integer>() {
+                        @Override
+                        public void subscribe(@NonNull ObservableEmitter<Integer> emitter) {
+                            emitter.onNext(Integer.valueOf(s) + 1);
+                            emitter.onComplete();
+                        }
+                    });
+                }
+
+            }
+        });
+        Observable<Integer> observeOnObservable = flatMapObservable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+        Observer<Integer> observer = new Observer<Integer>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+                Log.d("zzf", "onSubscribe:" + d.getClass().getName());
+            }
+
+            @Override
+            public void onNext(@NonNull Integer string) {
+                Log.d("zzf", "onNext: " + string);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                Log.d("zzf", "onError: " + e.getMessage());
+            }
+
+            @Override
+            public void onComplete() {
+                Log.d("zzf", "onComplete");
+            }
+        };
+        observeOnObservable.subscribe(observer);
+    }
+
+    private void map() {
+        Observable<Integer> observable = Observable.create(new ObservableOnSubscribe<Integer>() {
+            @Override
+            public void subscribe(@NonNull ObservableEmitter<Integer> emitter) throws Exception {
+                emitter.onNext(1);
+                emitter.onNext(2);
+                emitter.onNext(3);
+                emitter.onComplete();
+            }
+        });
+        Observable<String> observable1 = observable.map(new Function<Integer, String>() {
+            @Override
+            public String apply(@NonNull Integer integer) throws Exception {
+                return String.valueOf(integer + 1);
+            }
+        });
+        Observer<String> observer = new Observer<String>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+                Log.d("zzf", "onSubscribe:" + d.getClass().getName());
+            }
+
+            @Override
+            public void onNext(@NonNull String s) {
+                Log.d("zzf", "onNext: " + s);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                Log.d("zzf", "onError: " + e.getMessage());
+            }
+
+            @Override
+            public void onComplete() {
+                Log.d("zzf", "onComplete");
+            }
+        };
+        observable1.subscribe(observer);
     }
 
     private void initBanner() {
