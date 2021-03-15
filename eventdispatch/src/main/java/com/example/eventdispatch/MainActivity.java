@@ -2,6 +2,7 @@ package com.example.eventdispatch;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -11,7 +12,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private final String TAG = "zzf";
-    private Button button,button1;
+    private Button button,button1,btn_ontouch;
     private MyLinearLayout myLinearLayout;
 
     @Override
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         button = findViewById(R.id.btn);
         button1 = findViewById(R.id.btn1);
+        btn_ontouch = findViewById(R.id.btn_ontouch);
         myLinearLayout = findViewById(R.id.ll_my_layout);
         myLinearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +30,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_ontouch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,OnTouchActivity.class));
+            }
+        });
         myLinearLayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply from: 'tinkerpatch.gradle' //引用tinkerpatch.gradle文件
+//apply from: 'tinkerpatch.gradle' //引用tinkerpatch.gradle文件
 
 
 android {

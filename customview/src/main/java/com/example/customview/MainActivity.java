@@ -17,7 +17,7 @@ import com.gyf.immersionbar.ImmersionBar;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mColorButton,mLinearShader,mRadialShader,mSweepShader,mBitmapShader;
     private Button mColorFilter,mLockView,mWaveVIew,mRulerView,mScroll,btn_cloud;
-    private Button btn_dot,btn_text,btn_draw_text,btn_draw_more_text,btn_lock_screen,btn_red_envelopes;
+    private Button btn_dot,btn_text,btn_draw_text,btn_draw_more_text,btn_lock_screen,btn_red_envelopes,btn_image_autentication,btn_travel_people;
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_draw_more_text.setOnClickListener(this);
         btn_lock_screen.setOnClickListener(this);
         btn_red_envelopes.setOnClickListener(this);
+        btn_image_autentication.setOnClickListener(this);
+        btn_travel_people.setOnClickListener(this);
     }
 
     private void initView() {
@@ -71,6 +73,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_draw_more_text = findViewById(R.id.btn_draw_more_text);
         btn_lock_screen = findViewById(R.id.btn_lock_screen);
         btn_red_envelopes = findViewById(R.id.btn_red_envelopes);
+        btn_image_autentication = findViewById(R.id.btn_image_autentication);
+        btn_travel_people = findViewById(R.id.btn_travel_people);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -127,6 +131,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_red_envelopes:
 
+                break;
+            case R.id.btn_image_autentication:
+                startActivity(new Intent(MainActivity.this,ImageAuthenticationActivity.class));
+                break;
+            case R.id.btn_travel_people:
+                startActivity(new Intent(MainActivity.this,TravelPeopleActivity.class));
                 break;
         }
     }

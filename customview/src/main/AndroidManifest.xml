@@ -63,6 +63,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".ImageAuthenticationActivity"/>
+        <activity android:name=".TravelPeopleActivity"/>
     </application>
 
 </manifest>

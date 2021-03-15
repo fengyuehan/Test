@@ -114,6 +114,18 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_image_autentication"
+                android:text="图片验证"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_travel_people"
+                android:text="旅行人数"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

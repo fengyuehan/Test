@@ -31,7 +31,7 @@
     },
     {
       "level": "INFO",
-      "message": "Rejected C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\ndk-bundle in SDK ndk-bundle folder because that location has no source.properties"
+      "message": "Considering C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669 in SDK ndk folder"
     },
     {
       "level": "INFO",

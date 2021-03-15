@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Yu/Desktop/GifSamplerForGlide-master/lib-image-gif
+# Install script for directory: C:/Users/Yu/Desktop/Test/lib-image-gif
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Yu/Desktop/GifSamplerForGlide-master/lib-image-gif/.cxx/cmake/debug/armeabi-v7a/src/main/cpp/giflib/cmake_install.cmake")
+  include("C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a/src/main/cpp/giflib/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Yu/Desktop/GifSamplerForGlide-master/lib-image-gif/.cxx/cmake/debug/armeabi-v7a/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

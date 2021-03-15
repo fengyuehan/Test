@@ -85,7 +85,7 @@ build ../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libgiftool.so:
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Yu\Desktop\GifSamplerForGlide-master\lib-image-gif\.cxx\cmake\debug\armeabi-v7a && C:\Users\Yu\AppData\Local\Android\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\Yu\Desktop\Test\lib-image-gif\.cxx\cmake\debug\armeabi-v7a && C:\Users\Yu\AppData\Local\Android\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -94,14 +94,14 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Yu\Desktop\GifSamplerForGlide-master\lib-image-gif\.cxx\cmake\debug\armeabi-v7a && C:\Users\Yu\AppData\Local\Android\sdk\cmake\3.10.2.4988404\bin\cmake.exe -HC:\Users\Yu\Desktop\GifSamplerForGlide-master\lib-image-gif -BC:\Users\Yu\Desktop\GifSamplerForGlide-master\lib-image-gif\.cxx\cmake\debug\armeabi-v7a"
+  COMMAND = cmd.exe /C "cd /D C:\Users\Yu\Desktop\Test\lib-image-gif\.cxx\cmake\debug\armeabi-v7a && C:\Users\Yu\AppData\Local\Android\sdk\cmake\3.10.2.4988404\bin\cmake.exe -HC:\Users\Yu\Desktop\Test\lib-image-gif -BC:\Users\Yu\Desktop\Test\lib-image-gif\.cxx\cmake\debug\armeabi-v7a"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# C:/Users/Yu/Desktop/GifSamplerForGlide-master/lib-image-gif/CMakeLists.txt
+# C:/Users/Yu/Desktop/Test/lib-image-gif/CMakeLists.txt
 # =============================================================================
 
 
@@ -109,7 +109,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build src/main/cpp/giflib/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Yu\Desktop\GifSamplerForGlide-master\lib-image-gif\.cxx\cmake\debug\armeabi-v7a\src\main\cpp\giflib && C:\Users\Yu\AppData\Local\Android\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\Yu\Desktop\Test\lib-image-gif\.cxx\cmake\debug\armeabi-v7a\src\main\cpp\giflib && C:\Users\Yu\AppData\Local\Android\sdk\cmake\3.10.2.4988404\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 build src/main/cpp/giflib/edit_cache: phony src/main/cpp/giflib/CMakeFiles/edit_cache.util
@@ -187,7 +187,7 @@ build ../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libgiflib.so: 
 # Utility command for rebuild_cache
 
 build src/main/cpp/giflib/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\Yu\Desktop\GifSamplerForGlide-master\lib-image-gif\.cxx\cmake\debug\armeabi-v7a\src\main\cpp\giflib && C:\Users\Yu\AppData\Local\Android\sdk\cmake\3.10.2.4988404\bin\cmake.exe -HC:\Users\Yu\Desktop\GifSamplerForGlide-master\lib-image-gif -BC:\Users\Yu\Desktop\GifSamplerForGlide-master\lib-image-gif\.cxx\cmake\debug\armeabi-v7a"
+  COMMAND = cmd.exe /C "cd /D C:\Users\Yu\Desktop\Test\lib-image-gif\.cxx\cmake\debug\armeabi-v7a\src\main\cpp\giflib && C:\Users\Yu\AppData\Local\Android\sdk\cmake\3.10.2.4988404\bin\cmake.exe -HC:\Users\Yu\Desktop\Test\lib-image-gif -BC:\Users\Yu\Desktop\Test\lib-image-gif\.cxx\cmake\debug\armeabi-v7a"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -206,7 +206,7 @@ build libgiftool.so: phony ../../../../build/intermediates/cmake/debug/obj/armea
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/Yu/Desktop/GifSamplerForGlide-master/lib-image-gif/.cxx/cmake/debug/armeabi-v7a/src/main/cpp/giflib
+# Folder: C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a/src/main/cpp/giflib
 
 build  src/main/cpp/giflib/all: phony giflib
 # =============================================================================

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Yu/Desktop/GifSamplerForGlide-master/lib-image-gif/src/main/cpp/giflib
+# Install script for directory: C:/Users/Yu/Desktop/Test/lib-image-gif/src/main/cpp/giflib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

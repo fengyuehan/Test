@@ -17,7 +17,7 @@
 rule CXX_COMPILER__giftool
   depfile = $DEP_FILE
   deps = gcc
-  command = C:\Users\Yu\AppData\Local\Android\sdk\ndk\20.0.5594570\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=i686-none-linux-android19 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = C:\Users\Yu\AppData\Local\Android\sdk\ndk\20.0.5594570\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=i686-none-linux-android16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building CXX object $out
 
 
@@ -25,7 +25,7 @@ rule CXX_COMPILER__giftool
 # Rule for linking CXX shared library.
 
 rule CXX_SHARED_LIBRARY_LINKER__giftool
-  command = cmd.exe /C "$PRE_LINK && C:\Users\Yu\AppData\Local\Android\sdk\ndk\20.0.5594570\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=i686-none-linux-android19 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot -fPIC $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared $SONAME_FLAG$SONAME -o $TARGET_FILE $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && C:\Users\Yu\AppData\Local\Android\sdk\ndk\20.0.5594570\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=i686-none-linux-android16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot -fPIC $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared $SONAME_FLAG$SONAME -o $TARGET_FILE $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX shared library $TARGET_FILE
   restat = $RESTAT
 
@@ -44,7 +44,7 @@ rule CUSTOM_COMMAND
 rule C_COMPILER__giflib
   depfile = $DEP_FILE
   deps = gcc
-  command = C:\Users\Yu\AppData\Local\Android\sdk\ndk\20.0.5594570\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=i686-none-linux-android19 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out   -c $in
+  command = C:\Users\Yu\AppData\Local\Android\sdk\ndk\20.0.5594570\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=i686-none-linux-android16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out   -c $in
   description = Building C object $out
 
 
@@ -52,7 +52,7 @@ rule C_COMPILER__giflib
 # Rule for linking C shared library.
 
 rule C_SHARED_LIBRARY_LINKER__giflib
-  command = cmd.exe /C "$PRE_LINK && C:\Users\Yu\AppData\Local\Android\sdk\ndk\20.0.5594570\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=i686-none-linux-android19 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot -fPIC $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared $SONAME_FLAG$SONAME -o $TARGET_FILE $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && C:\Users\Yu\AppData\Local\Android\sdk\ndk\20.0.5594570\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe --target=i686-none-linux-android16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot -fPIC $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared $SONAME_FLAG$SONAME -o $TARGET_FILE $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking C shared library $TARGET_FILE
   restat = $RESTAT
 
@@ -61,7 +61,7 @@ rule C_SHARED_LIBRARY_LINKER__giflib
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Users\Yu\AppData\Local\Android\sdk\cmake\3.10.2.4988404\bin\cmake.exe -HC:\Users\Yu\Desktop\GifSamplerForGlide-master\lib-image-gif -BC:\Users\Yu\Desktop\GifSamplerForGlide-master\lib-image-gif\.cxx\cmake\debug\x86
+  command = C:\Users\Yu\AppData\Local\Android\sdk\cmake\3.10.2.4988404\bin\cmake.exe -HC:\Users\Yu\Desktop\Test\lib-image-gif -BC:\Users\Yu\Desktop\Test\lib-image-gif\.cxx\cmake\debug\x86
   description = Re-running CMake...
   generator = 1
 

@@ -35,4 +35,23 @@
         <attr name="imgGap" format="dimension" />
         <attr name="maxSize" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="ImageAuthenticationView">
+        <!--滑块的高度-->
+        <attr name="unitHeight" format="dimension" />
+        <!--滑块的宽度-->
+        <attr name="unitWidth" format="dimension" />
+        <!--滑块占图片高度的比例-->
+        <attr name="unitHeightScale" format="integer" />
+        <!--滑块占图片宽度的比例-->
+        <attr name="unitWidthScale" format="integer" />
+        <!--滑块边框的图片资源-->
+        <attr name="unitShadeSrc" format="reference" />
+        <!--阴影部分的图片资源-->
+        <attr name="unitShowSrc" format="reference" />
+        <!--是否需要旋转-->
+        <attr name="needRotate" format="boolean" />
+        <!--验证时的误差值-->
+        <attr name="deviate" format="integer" />
+    </declare-styleable>
 </resources>

@@ -13,9 +13,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -25,7 +27,9 @@ import com.alibaba.android.arouter.facade.callback.NavigationCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,12 +40,25 @@ public class MainActivity extends AppCompatActivity {
     private Resources resources;
     private Button btn,btn_intepter,btn1,btn_url,btn_ForResult,btn_MaterialRatingBar;
 
+    private HashMap<Integer,Integer> map;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        map = new HashMap<>();
+        initMap();
         initView();
         initData();
+    }
+
+    private void initMap() {
+        map.put(1,1);
+        map.put(2,3);
+        map.put(3,3);
+        Integer value = map.put(18,2);
+        Integer value1 = map.put(2,4);
+        Log.e("zzf",value + "" + value1);
     }
 
     private void initData() {
