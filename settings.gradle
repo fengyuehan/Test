@@ -1,3 +1,6 @@
+include ':pluginservice'
+include ':pluginactivity'
+include ':androidplugin'
 include ':hilt'
 include ':taskaffinitytest'
 include ':processkeeplive'
