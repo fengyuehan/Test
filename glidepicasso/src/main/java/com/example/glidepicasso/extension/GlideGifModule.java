@@ -12,7 +12,7 @@ import com.hash.study.gif.FrameSequenceDrawable;
 
 import java.io.InputStream;
 
-@GlideModule
+/*@GlideModule
 public class GlideGifModule extends AppGlideModule {
 
     @Override
@@ -24,4 +24,4 @@ public class GlideGifModule extends AppGlideModule {
                 new GifResourceDecoder(glide.getBitmapPool())
         );
     }
-}
+}*/

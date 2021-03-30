@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mColorButton,mLinearShader,mRadialShader,mSweepShader,mBitmapShader;
     private Button mColorFilter,mLockView,mWaveVIew,mRulerView,mScroll,btn_cloud;
     private Button btn_dot,btn_text,btn_draw_text,btn_draw_more_text,btn_lock_screen,btn_red_envelopes,btn_image_autentication,btn_travel_people;
+    private Button btn_canvas,btn_ship,btn_matrix,btn_pen,btn_mosaic,btn_gua;
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_red_envelopes.setOnClickListener(this);
         btn_image_autentication.setOnClickListener(this);
         btn_travel_people.setOnClickListener(this);
+        btn_canvas.setOnClickListener(this);
+        btn_ship.setOnClickListener(this);
+        btn_matrix.setOnClickListener(this);
+        btn_pen.setOnClickListener(this);
+        btn_mosaic.setOnClickListener(this);
+        btn_gua.setOnClickListener(this);
     }
 
     private void initView() {
@@ -75,6 +82,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_red_envelopes = findViewById(R.id.btn_red_envelopes);
         btn_image_autentication = findViewById(R.id.btn_image_autentication);
         btn_travel_people = findViewById(R.id.btn_travel_people);
+        btn_canvas = findViewById(R.id.btn_canvas);
+        btn_ship = findViewById(R.id.btn_ship);
+        btn_matrix = findViewById(R.id.btn_matrix);
+        btn_pen = findViewById(R.id.btn_pen);
+        btn_mosaic = findViewById(R.id.btn_mosaic);
+        btn_gua = findViewById(R.id.btn_gua);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -137,6 +150,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_travel_people:
                 startActivity(new Intent(MainActivity.this,TravelPeopleActivity.class));
+                break;
+            case R.id.btn_canvas:
+                startActivity(new Intent(MainActivity.this,CanvasActivity.class));
+                break;
+            case R.id.btn_ship:
+                startActivity(new Intent(MainActivity.this,ShipActivity.class));
+                break;
+            case R.id.btn_matrix:
+                startActivity(new Intent(MainActivity.this,MatrixActivity.class));
+                break;
+            case R.id.btn_pen:
+                startActivity(new Intent(MainActivity.this,DoodleActivity.class));
+                break;
+            case R.id.btn_mosaic:
+                startActivity(new Intent(MainActivity.this,MosaicActivity.class));
+                break;
+            case R.id.btn_gua:
+                startActivity(new Intent(MainActivity.this,GuaGuaActivity.class));
                 break;
         }
     }

@@ -66,6 +66,11 @@
 
         <activity android:name=".ImageAuthenticationActivity"/>
         <activity android:name=".TravelPeopleActivity"/>
+        <activity android:name=".CanvasActivity"/>
+        <activity android:name=".ShipActivity"/>
+        <activity android:name=".MatrixActivity"/>
+        <activity android:name=".DoodleActivity"/>
+        <activity android:name=".GuaGuaActivity"/>
     </application>
 
 </manifest>

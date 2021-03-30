@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.glidepicasso.extension.GlideApp;
+//import com.example.glidepicasso.extension.GlideApp;
 
 public class GifActivity extends AppCompatActivity {
     private Button showGif;
@@ -24,10 +24,10 @@ public class GifActivity extends AppCompatActivity {
         showGif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GlideApp.with(GifActivity.this)
+                /*GlideApp.with(GifActivity.this)
                         .asGif2()
                         .load(R.mipmap.a11)
-                        .into(imageView);
+                        .into(imageView);*/
             }
         });
     }

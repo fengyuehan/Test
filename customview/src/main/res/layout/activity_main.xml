@@ -126,6 +126,42 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_canvas"
+                android:text="Canvas状态保存和恢复"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_ship"
+                android:text="乘风破浪的小船"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_matrix"
+                android:text="matrix的使用"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_pen"
+                android:text="画笔"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_mosaic"
+                android:text="马赛克"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_gua"
+                android:text="刮刮乐"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

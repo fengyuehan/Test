@@ -64,6 +64,11 @@ public class HookPMS {
             sPackageManagerField.setAccessible(true);
             sPackageManager = sPackageManagerField.get(activityThreadObj);
             sPackageManagerField.set(sPackageManager, packageManagerObj);
+
+            /**
+             * 先getPackageManager得到的是宿主的Packmanager.然后调用调用了getPackageInfo方法获取包的信息；
+             * 我们宿主包是装上的，所以这样就能欺骗PMS
+             */
         } catch (InvocationTargetException e) {
             e.printStackTrace();
         } catch (NoSuchMethodException e) {

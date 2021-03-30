@@ -7,9 +7,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.glidepicasso.https.HttpsActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    Button button,btn_gif;
+    Button button,btn_gif,btn_http;
     private final static String TAG = "ZZF";
 
     @Override
@@ -29,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,GifActivity.class));
+            }
+        });
+        findViewById(R.id.btn_http).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, HttpsActivity.class));
             }
         });
     }
@@ -68,5 +76,7 @@ public class MainActivity extends AppCompatActivity {
         Log.e(TAG,"onSaveInstanceState");
         super.onSaveInstanceState(outState);
     }
+
+
 
 }
