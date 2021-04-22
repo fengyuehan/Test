@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -36,7 +37,7 @@ public class MyView extends View {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         Log.e("zzf","----------------------onMeasure");
-        setMeasuredDimension(150,150);
+        //setMeasuredDimension(150,150);
     }
 
     @Override
@@ -56,9 +57,13 @@ public class MyView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         Log.e("zzf","----------------------onDraw");
-        canvas.drawCircle(50,50,50,mPaint);
+        //canvas.drawCircle(50,50,50,mPaint);
+        canvas.drawRect(new Rect(0,0,200,200),mPaint);
     }
 
+    /**
+     * 当布局完成之后执行
+     */
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();

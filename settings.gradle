@@ -1,3 +1,10 @@
+/*include ':flavorgradle:out3'
+include ':flavorgradle:out2'
+include ':flavorgradle:out1'*/
+include ':flavorgradle'
+include ':parcelable'
+include ':buildSrc'
+include ':pictureoptimization'
 include ':mat'
 include ':pluginservice'
 include ':pluginactivity'

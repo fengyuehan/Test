@@ -71,6 +71,7 @@
         <activity android:name=".MatrixActivity"/>
         <activity android:name=".DoodleActivity"/>
         <activity android:name=".GuaGuaActivity"/>
+        <activity android:name=".ShapeActivity"/>
     </application>
 
 </manifest>

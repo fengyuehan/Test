@@ -1,20 +1,15 @@
-Executable : C:\Users\Yu\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\cmake.exe
+Executable : C:\Users\Yu\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\cmake.exe
 arguments : 
 -HC:\Users\Yu\Desktop\Test\lib-image-gif
--DCMAKE_BUILD_TYPE=Debug
--DCMAKE_TOOLCHAIN_FILE=C:\Users\Yu\AppData\Local\Android\Sdk\ndk\20.0.5594570\build\cmake\android.toolchain.cmake
--DANDROID_ABI=x86
--DANDROID_NDK=C:\Users\Yu\AppData\Local\Android\Sdk\ndk\20.0.5594570
--DANDROID_PLATFORM=android-16
--DCMAKE_ANDROID_ARCH_ABI=x86
--DCMAKE_ANDROID_NDK=C:\Users\Yu\AppData\Local\Android\Sdk\ndk\20.0.5594570
--DCMAKE_EXPORT_COMPILE_COMMANDS=ON
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\Yu\Desktop\Test\lib-image-gif\build\intermediates\cmake\debug\obj\x86
--DCMAKE_MAKE_PROGRAM=C:\Users\Yu\AppData\Local\Android\Sdk\cmake\3.10.2.4988404\bin\ninja.exe
--DCMAKE_SYSTEM_NAME=Android
--DCMAKE_SYSTEM_VERSION=16
 -BC:\Users\Yu\Desktop\Test\lib-image-gif\.cxx\cmake\debug\x86
--GNinja
+-DANDROID_ABI=x86
+-DANDROID_PLATFORM=android-16
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\Users\Yu\Desktop\Test\lib-image-gif\build\intermediates\cmake\debug\obj\x86
+-DCMAKE_BUILD_TYPE=Debug
+-DANDROID_NDK=C:\Users\Yu\AppData\Local\Android\Sdk\ndk\21.0.6113669
+-DCMAKE_CXX_FLAGS=
+-DCMAKE_TOOLCHAIN_FILE=C:\Users\Yu\AppData\Local\Android\Sdk\ndk\21.0.6113669\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=C:\Users\Yu\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\ninja.exe
+-GAndroid Gradle - Ninja
 jvmArgs : 
 
-Build command args:

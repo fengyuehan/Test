@@ -2,6 +2,6 @@
 <resources>
     <declare-styleable name="TabView">
         <attr name="src" format="reference"></attr>
-        <attr name="text" ></attr>
+        <attr name="text" format="string" ></attr>
     </declare-styleable>
 </resources>

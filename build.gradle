@@ -16,6 +16,12 @@ buildscript {
     }
 
     repositories {
+        maven {
+            url uri('../repo')
+        }
+    }
+
+    repositories {
         google()
         jcenter()
         mavenLocal()
@@ -44,6 +50,8 @@ buildscript {
         //classpath "org.jetbrains.kotlin:kotlin-android-extensions:1.4.10"
 
         classpath 'com.google.dagger:hilt-android-gradle-plugin:2.30.1-alpha'
+
+        //classpath 'com.smallsoho.mobcase:McImage:1.5.1'
     }
 }
 

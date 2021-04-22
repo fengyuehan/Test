@@ -1,24 +1,21 @@
 {
   "buildFiles": [
-    "C:\\Users\\Yu\\AppData\\Local\\Android\\sdk\\ndk\\20.0.5594570\\build\\cmake\\platforms.cmake",
-    "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\giflib\\CMakeLists.txt",
-    "C:\\Users\\Yu\\AppData\\Local\\Android\\sdk\\ndk\\20.0.5594570\\build\\cmake\\android.toolchain.cmake",
-    "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\CMakeLists.txt"
+    "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\CMakeLists.txt",
+    "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\giflib\\CMakeLists.txt"
   ],
   "cleanCommands": [
-    "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\debug\\x86\" clean"
+    "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\debug\\x86 --target clean"
   ],
-  "buildTargetsCommand": "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\debug\\x86\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "giflib-Debug-x86": {
       "artifactName": "giflib",
-      "buildCommand": "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\debug\\x86\" giflib",
+      "buildCommand": "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\debug\\x86 --target giflib",
       "abi": "x86",
       "output": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\build\\intermediates\\cmake\\debug\\obj\\x86\\libgiflib.so"
     },
     "giftool-Debug-x86": {
       "artifactName": "giftool",
-      "buildCommand": "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\debug\\x86\" giftool",
+      "buildCommand": "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\debug\\x86 --target giftool",
       "abi": "x86",
       "output": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\build\\intermediates\\cmake\\debug\\obj\\x86\\libgiftool.so"
     }

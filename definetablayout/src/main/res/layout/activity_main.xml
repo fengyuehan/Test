@@ -8,13 +8,13 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.core.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/vp"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
-    </androidx.core.view.ViewPager>
+    </androidx.viewpager.widget.ViewPager>
     <com.example.definetablayout.NavigationBar
         android:id="@+id/nb"
         android:background="@color/colorAccent"

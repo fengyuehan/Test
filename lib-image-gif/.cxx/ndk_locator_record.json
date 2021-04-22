@@ -1,5 +1,5 @@
 {
-  "ndkFolder": "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\ndk\\20.0.5594570",
+  "ndkFolder": "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669",
   "messages": [
     {
       "level": "INFO",
@@ -19,10 +19,6 @@
     },
     {
       "level": "INFO",
-      "message": "Because no explicit NDK was requested, the default version \u002720.0.5594570\u0027 for this Android Gradle Plugin will be used"
-    },
-    {
-      "level": "INFO",
       "message": "Considering C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\ndk-bundle in SDK ndk-bundle folder"
     },
     {
@@ -35,7 +31,7 @@
     },
     {
       "level": "INFO",
-      "message": "Found requested NDK version 20.0.5594570 at C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\ndk\\20.0.5594570"
+      "message": "No user requested version, choosing C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669 which is version 21.0.6113669"
     }
   ]
 }

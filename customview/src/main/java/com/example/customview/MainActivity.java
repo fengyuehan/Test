@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mColorButton,mLinearShader,mRadialShader,mSweepShader,mBitmapShader;
     private Button mColorFilter,mLockView,mWaveVIew,mRulerView,mScroll,btn_cloud;
     private Button btn_dot,btn_text,btn_draw_text,btn_draw_more_text,btn_lock_screen,btn_red_envelopes,btn_image_autentication,btn_travel_people;
-    private Button btn_canvas,btn_ship,btn_matrix,btn_pen,btn_mosaic,btn_gua;
+    private Button btn_canvas,btn_ship,btn_matrix,btn_pen,btn_mosaic,btn_gua,btn_shape;
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_pen.setOnClickListener(this);
         btn_mosaic.setOnClickListener(this);
         btn_gua.setOnClickListener(this);
+        btn_shape.setOnClickListener(this);
     }
 
     private void initView() {
@@ -88,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_pen = findViewById(R.id.btn_pen);
         btn_mosaic = findViewById(R.id.btn_mosaic);
         btn_gua = findViewById(R.id.btn_gua);
+        btn_shape = findViewById(R.id.btn_shape);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -168,6 +170,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_gua:
                 startActivity(new Intent(MainActivity.this,GuaGuaActivity.class));
+                break;
+            case R.id.btn_shape:
+                startActivity(new Intent(MainActivity.this,ShapeActivity.class));
                 break;
         }
     }

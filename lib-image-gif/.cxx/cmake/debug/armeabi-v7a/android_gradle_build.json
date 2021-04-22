@@ -1,108 +1,115 @@
+
 {
-  "stringTable": {
-    "0": "C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a",
-    "1": "--target=armv7-none-linux-androideabi16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dgiftool_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC",
-    "2": "--target=armv7-none-linux-androideabi16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/20.0.5594570/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dgiflib_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC"
-  },
-  "buildFiles": [
-    "C:\\Users\\Yu\\AppData\\Local\\Android\\sdk\\ndk\\20.0.5594570\\build\\cmake\\platforms.cmake",
-    "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\giflib\\CMakeLists.txt",
-    "C:\\Users\\Yu\\AppData\\Local\\Android\\sdk\\ndk\\20.0.5594570\\build\\cmake\\android.toolchain.cmake",
-    "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\CMakeLists.txt"
-  ],
-  "cleanCommands": [
-    "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\debug\\armeabi-v7a\" clean"
-  ],
-  "buildTargetsCommand": "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\debug\\armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
-  "libraries": {
-    "giftool-Debug-armeabi-v7a": {
-      "buildCommand": "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\debug\\armeabi-v7a\" giftool",
-      "buildType": "debug",
-      "toolchain": "1296364128",
-      "abi": "armeabi-v7a",
-      "artifactName": "giftool",
-      "files": [
-        {
-          "src": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\GifDecoder.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\lib-native-bridge.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\stream\\Registry.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\stream\\Stream.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        }
-      ],
-      "headers": [],
-      "output": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\build\\intermediates\\cmake\\debug\\obj\\armeabi-v7a\\libgiftool.so"
-    },
-    "giflib-Debug-armeabi-v7a": {
-      "buildCommand": "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\debug\\armeabi-v7a\" giflib",
-      "buildType": "debug",
-      "toolchain": "1296364128",
-      "abi": "armeabi-v7a",
-      "artifactName": "giflib",
-      "files": [
-        {
-          "src": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\giflib\\dgif_lib.c",
-          "flagsOrdinal": 2,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\giflib\\egif_lib.c",
-          "flagsOrdinal": 2,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\giflib\\gif_err.c",
-          "flagsOrdinal": 2,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\giflib\\gif_font.c",
-          "flagsOrdinal": 2,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\giflib\\gif_hash.c",
-          "flagsOrdinal": 2,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\giflib\\gifalloc.c",
-          "flagsOrdinal": 2,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\giflib\\openbsd-reallocarray.c",
-          "flagsOrdinal": 2,
-          "workingDirectoryOrdinal": 0
-        }
-      ],
-      "headers": [],
-      "output": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\build\\intermediates\\cmake\\debug\\obj\\armeabi-v7a\\libgiflib.so"
-    }
-  },
-  "toolchains": {
-    "1296364128": {
-      "cCompilerExecutable": "C:\\Users\\Yu\\AppData\\Local\\Android\\sdk\\ndk\\20.0.5594570\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
-      "cppCompilerExecutable": "C:\\Users\\Yu\\AppData\\Local\\Android\\sdk\\ndk\\20.0.5594570\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
-    }
-  },
-  "cFileExtensions": [
-    "c"
-  ],
-  "cppFileExtensions": [
-    "cpp"
-  ]
+	"buildFiles" : 
+	[
+		"C:/Users/Yu/Desktop/Test/lib-image-gif/CMakeLists.txt",
+		"C:/Users/Yu/Desktop/Test/lib-image-gif/src/main/cpp/giflib/CMakeLists.txt"
+	],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\debug\\armeabi-v7a --target clean"
+	],
+	"cppFileExtensions" : [ "cpp" ],
+	"libraries" : 
+	{
+		"giflib-Debug-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "giflib",
+			"buildCommand" : "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\debug\\armeabi-v7a --target giflib",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dgiflib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Users/Yu/Desktop/Test/lib-image-gif/src/main/cpp/giflib/dgif_lib.c",
+					"workingDirectory" : "C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dgiflib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Users/Yu/Desktop/Test/lib-image-gif/src/main/cpp/giflib/egif_lib.c",
+					"workingDirectory" : "C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dgiflib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Users/Yu/Desktop/Test/lib-image-gif/src/main/cpp/giflib/gif_err.c",
+					"workingDirectory" : "C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dgiflib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Users/Yu/Desktop/Test/lib-image-gif/src/main/cpp/giflib/gif_font.c",
+					"workingDirectory" : "C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dgiflib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Users/Yu/Desktop/Test/lib-image-gif/src/main/cpp/giflib/gif_hash.c",
+					"workingDirectory" : "C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dgiflib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Users/Yu/Desktop/Test/lib-image-gif/src/main/cpp/giflib/gifalloc.c",
+					"workingDirectory" : "C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dgiflib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "C:/Users/Yu/Desktop/Test/lib-image-gif/src/main/cpp/giflib/openbsd-reallocarray.c",
+					"workingDirectory" : "C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a"
+				}
+			],
+			"output" : "C:/Users/Yu/Desktop/Test/lib-image-gif/build/intermediates/cmake/debug/obj/armeabi-v7a/libgiflib.so",
+			"toolchain" : "4285000955"
+		},
+		"giftool-Debug-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "giftool",
+			"buildCommand" : "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\debug\\armeabi-v7a --target giftool",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dgiftool_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Users/Yu/Desktop/Test/lib-image-gif/src/main/cpp/GifDecoder.cpp",
+					"workingDirectory" : "C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dgiftool_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Users/Yu/Desktop/Test/lib-image-gif/src/main/cpp/lib-native-bridge.cpp",
+					"workingDirectory" : "C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dgiftool_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Users/Yu/Desktop/Test/lib-image-gif/src/main/cpp/stream/Registry.cpp",
+					"workingDirectory" : "C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dgiftool_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "C:/Users/Yu/Desktop/Test/lib-image-gif/src/main/cpp/stream/Stream.cpp",
+					"workingDirectory" : "C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a"
+				}
+			],
+			"output" : "C:/Users/Yu/Desktop/Test/lib-image-gif/build/intermediates/cmake/debug/obj/armeabi-v7a/libgiftool.so",
+			"toolchain" : "4285000955"
+		}
+	},
+	"toolchains" : 
+	{
+		"4285000955" : 
+		{
+			"cCompilerExecutable" : "C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+		}
+	}
 }
