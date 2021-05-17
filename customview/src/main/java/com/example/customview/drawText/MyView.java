@@ -7,10 +7,11 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 
-public class MyView extends View {
+public class MyView extends LinearLayout {
     private int baseLineX = 100;
     private int baseLineY = 400;
     private Paint mPaint;
@@ -23,6 +24,7 @@ public class MyView extends View {
 
     public MyView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        setWillNotDraw(false);
         init();
     }
 

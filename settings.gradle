@@ -1,6 +1,7 @@
 /*include ':flavorgradle:out3'
 include ':flavorgradle:out2'
 include ':flavorgradle:out1'*/
+include ':gradlestudy'
 include ':flavorgradle'
 include ':parcelable'
 include ':buildSrc'
@@ -60,3 +61,6 @@ include ':factory2'
 include ':share'
 include 'spiner'
 include ':lib-image-gif'
+
+
+

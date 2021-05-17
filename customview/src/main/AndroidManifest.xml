@@ -72,6 +72,9 @@
         <activity android:name=".DoodleActivity"/>
         <activity android:name=".GuaGuaActivity"/>
         <activity android:name=".ShapeActivity"/>
+        <activity android:name=".XfermodeActivity"/>
+        <activity android:name=".InvalidateActivity"/>
+        <activity android:name=".ColorTextActivity"/>
     </application>
 
 </manifest>

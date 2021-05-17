@@ -1,6 +1,5 @@
 package com.example.buildsrc.utils
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.Util.println
 import java.lang.Exception
 
 class LogUtil {

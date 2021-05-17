@@ -54,4 +54,9 @@
         <!--验证时的误差值-->
         <attr name="deviate" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="ColorTextView">
+        <attr name="originColor" format="color"/>
+        <attr name="changeColor" format="color"/>
+    </declare-styleable>
 </resources>

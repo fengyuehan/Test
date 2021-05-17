@@ -7,16 +7,16 @@ public class Config {
 
     public float maxSize = 1024 * 1024;
     public boolean isCheckSize = true; 
-    public String optimizeType = OPTIMIZE_WEBP_CONVERT; //优化方式，webp化、压缩图片
+    public String optimizeType = OPTIMIZE_WEBP_CONVERT;
     public boolean enableWhenDebug = true;
-    public boolean isCheckPixels = true; //是否检查大像素图片
+    public boolean isCheckPixels = true;
     public int maxWidth = 1000;
     public int maxHeight = 1000;
-    public String[] whiteList = new String[]{}; //优化图片白名单
+    public String[] whiteList = new String[]{};
     public String mctoolsDir = "";
-    public boolean isSupportAlphaWebp = false; //是否支持webp化透明通道的图片,如果开启，请确保minSDK >= 18,或做了其他兼容措施
+    public boolean isSupportAlphaWebp = false;
     public boolean multiThread = true;
-    public String[] bigImageWhiteList = new String[]{}; //大图检测白名单
+    public String[] bigImageWhiteList = new String[]{};
 
     public void maxSize(float maxSize) {
         this.maxSize = maxSize;

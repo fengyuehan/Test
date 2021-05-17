@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mColorButton,mLinearShader,mRadialShader,mSweepShader,mBitmapShader;
     private Button mColorFilter,mLockView,mWaveVIew,mRulerView,mScroll,btn_cloud;
     private Button btn_dot,btn_text,btn_draw_text,btn_draw_more_text,btn_lock_screen,btn_red_envelopes,btn_image_autentication,btn_travel_people;
-    private Button btn_canvas,btn_ship,btn_matrix,btn_pen,btn_mosaic,btn_gua,btn_shape;
+    private Button btn_canvas,btn_ship,btn_matrix,btn_pen,btn_mosaic,btn_gua,btn_shape,btn_fermode,btn_invalidate,btn_requestlayout;
+    private LoadingDialog mLoadingDialog;
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         initView();
         initListener();
+        if (mLoadingDialog == null){
+            mLoadingDialog = new LoadingDialog(this);
+        }
+        mLoadingDialog.show();
     }
 
     private void initListener() {
@@ -61,6 +66,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_mosaic.setOnClickListener(this);
         btn_gua.setOnClickListener(this);
         btn_shape.setOnClickListener(this);
+        btn_fermode.setOnClickListener(this);
+        btn_invalidate.setOnClickListener(this);
+        btn_requestlayout.setOnClickListener(this);
     }
 
     private void initView() {
@@ -90,6 +98,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_mosaic = findViewById(R.id.btn_mosaic);
         btn_gua = findViewById(R.id.btn_gua);
         btn_shape = findViewById(R.id.btn_shape);
+        btn_fermode = findViewById(R.id.btn_fermode);
+        btn_invalidate = findViewById(R.id.btn_invalidate);
+        btn_requestlayout = findViewById(R.id.btn_requestlayout);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -173,6 +184,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_shape:
                 startActivity(new Intent(MainActivity.this,ShapeActivity.class));
+                break;
+            case R.id.btn_fermode:
+                startActivity(new Intent(MainActivity.this,XfermodeActivity.class));
+                break;
+            case R.id.btn_invalidate:
+                startActivity(new Intent(MainActivity.this,InvalidateActivity.class));
+                break;
+            case R.id.btn_requestlayout:
+                startActivity(new Intent(MainActivity.this,ColorTextActivity.class));
                 break;
         }
     }
