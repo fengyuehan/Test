@@ -19,7 +19,7 @@ import com.example.customview.R;
  */
 public class ColorTextView extends androidx.appcompat.widget.AppCompatTextView {
 
-    private Paint mOriginPaint,mChangePaint;
+    private Paint mOriginPaint,mChangePaint,mBarOriginPaint,mBarChangePaint;
     private float mPercent = 0.0f;
     private Direction mDirection = Direction.LEFT_TO_RIGHT;
 
@@ -40,9 +40,13 @@ public class ColorTextView extends androidx.appcompat.widget.AppCompatTextView {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ColorTextView);
         int originColor = typedArray.getColor(R.styleable.ColorTextView_originColor,getTextColors().getDefaultColor());
         int changeColor = typedArray.getColor(R.styleable.ColorTextView_changeColor,getTextColors().getDefaultColor());
+        int barOriginColor = typedArray.getColor(R.styleable.ColorTextView_baroriginColor,getTextColors().getDefaultColor());
+        int barChangeColor = typedArray.getColor(R.styleable.ColorTextView_barchangeColor,getTextColors().getDefaultColor());
 
         mOriginPaint = getPaintByColor(originColor);
         mChangePaint = getPaintByColor(changeColor);
+        mBarOriginPaint = getPaintByColor(barOriginColor);
+        mBarChangePaint = getPaintByColor(barChangeColor);
         typedArray.recycle();
     }
 
@@ -57,6 +61,8 @@ public class ColorTextView extends androidx.appcompat.widget.AppCompatTextView {
     @Override
     protected void onDraw(Canvas canvas) {
         //裁剪区域
+        mBarOriginPaint.setStrokeWidth(3);
+        mBarChangePaint.setStrokeWidth(3);
         int middle = (int) (mPercent * getWidth());
         if (mDirection == Direction.LEFT_TO_RIGHT){
             //绘制不变色的
@@ -64,13 +70,31 @@ public class ColorTextView extends androidx.appcompat.widget.AppCompatTextView {
             drawText(canvas,mChangePaint,0,middle);
             //绘制变色的
             drawText(canvas,mOriginPaint,middle,getWidth());
+            //绘制线
+            drawLine(canvas,mBarChangePaint,0,middle);
+            drawLine(canvas,mBarOriginPaint,middle,getWidth());
         }else {
             //绘制不变色的
             drawText(canvas,mChangePaint,getWidth() - middle,getWidth());
             //绘制变色的
             drawText(canvas,mOriginPaint,0,getWidth()-middle);
+            drawLine(canvas,mBarChangePaint,getWidth() - middle,getWidth());
+            drawLine(canvas,mBarOriginPaint,0,getWidth()-middle);
         }
 
+    }
+
+    private void drawLine(Canvas canvas, Paint mBarChangePaint, int start, int end) {
+        canvas.save();
+        Rect rect = new Rect(start,0,end,getHeight());
+        canvas.clipRect(rect);
+        String text = getText().toString();
+        Rect bounds = new Rect();
+        mBarChangePaint.getTextBounds(text,0,text.length(),bounds);
+        int width = bounds.width();
+        int height = bounds.height();
+        canvas.drawLine(getWidth()/2 - width/2 ,getHeight()/2 + height/2,getWidth()/2 + width/2 ,getHeight()/2 + height/2,mBarChangePaint);
+        canvas.restore();
     }
 
     /**

@@ -58,5 +58,14 @@
     <declare-styleable name="ColorTextView">
         <attr name="originColor" format="color"/>
         <attr name="changeColor" format="color"/>
+        <attr name="baroriginColor" format="color"/>
+        <attr name="barchangeColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="SlidingMenu">
+        <attr name="rightPadding" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="DropDownMenuLayout">
+        <attr name="menuMaxMenuPercent" format="float"/>
     </declare-styleable>
 </resources>

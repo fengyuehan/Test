@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mColorButton,mLinearShader,mRadialShader,mSweepShader,mBitmapShader;
     private Button mColorFilter,mLockView,mWaveVIew,mRulerView,mScroll,btn_cloud;
     private Button btn_dot,btn_text,btn_draw_text,btn_draw_more_text,btn_lock_screen,btn_red_envelopes,btn_image_autentication,btn_travel_people;
-    private Button btn_canvas,btn_ship,btn_matrix,btn_pen,btn_mosaic,btn_gua,btn_shape,btn_fermode,btn_invalidate,btn_requestlayout;
+    private Button btn_canvas,btn_ship,btn_matrix,btn_pen,btn_mosaic,btn_gua,btn_shape,btn_fermode,btn_invalidate,btn_requestlayout,btn_path;
     private LoadingDialog mLoadingDialog;
     @SuppressLint("ResourceType")
     @Override
@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_fermode.setOnClickListener(this);
         btn_invalidate.setOnClickListener(this);
         btn_requestlayout.setOnClickListener(this);
+        btn_path.setOnClickListener(this);
     }
 
     private void initView() {
@@ -101,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_fermode = findViewById(R.id.btn_fermode);
         btn_invalidate = findViewById(R.id.btn_invalidate);
         btn_requestlayout = findViewById(R.id.btn_requestlayout);
+        btn_path = findViewById(R.id.btn_path);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -193,6 +195,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_requestlayout:
                 startActivity(new Intent(MainActivity.this,ColorTextActivity.class));
+                break;
+            case R.id.btn_path:
+                startActivity(new Intent(MainActivity.this,PathActvity.class));
                 break;
         }
     }

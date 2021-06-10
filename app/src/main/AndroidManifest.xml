@@ -21,6 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MaterialRatingBarActivity"/>
+        <activity android:name=".OtherActivity"
+            />
     </application>
 
 </manifest>

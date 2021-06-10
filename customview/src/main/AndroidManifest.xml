@@ -75,6 +75,7 @@
         <activity android:name=".XfermodeActivity"/>
         <activity android:name=".InvalidateActivity"/>
         <activity android:name=".ColorTextActivity"/>
+        <activity android:name=".PathActvity"/>
     </application>
 
 </manifest>

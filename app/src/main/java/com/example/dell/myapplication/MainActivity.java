@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -38,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.ItemDecoration mItemDecoration;
     private MyAdapter mMyAdapter;
     private Resources resources;
-    private Button btn,btn_intepter,btn1,btn_url,btn_ForResult,btn_MaterialRatingBar;
-
+    private Button btn,btn_intepter,btn1,btn_url,btn_ForResult,btn_MaterialRatingBar,btn_sure;
+    private EditText editText;
     private HashMap<Integer,Integer> map;
 
     @Override
@@ -89,8 +90,16 @@ public class MainActivity extends AppCompatActivity {
         btn_intepter = findViewById(R.id.btn_intepter);
         btn1 = findViewById(R.id.btn1);
         btn_url = findViewById(R.id.btn_url);
+        editText = findViewById(R.id.et);
         btn_MaterialRatingBar = findViewById(R.id.btn_MaterialRatingBar);
         btn_ForResult = findViewById(R.id.btn_ForResult);
+        btn_sure = findViewById(R.id.btn_sure);
+        btn_sure.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,OtherActivity.class));
+            }
+        });
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -264,5 +273,41 @@ public class MainActivity extends AppCompatActivity {
                 btn_ForResult.setText(data.getIntExtra("name",0)+"");
             }
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.e("zzf","main----onResume");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.e("zzf","main----onDestroy");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.e("zzf","main----onRestart");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.e("zzf","main----onStop");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.e("zzf","main----onStart");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e("zzf","main----onPause");
     }
 }
