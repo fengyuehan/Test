@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.ItemDecoration mItemDecoration;
     private MyAdapter mMyAdapter;
     private Resources resources;
-    private Button btn,btn_intepter,btn1,btn_url,btn_ForResult,btn_MaterialRatingBar,btn_sure;
+    private Button btn,btn_intepter,btn1,btn_url,btn_ForResult,btn_MaterialRatingBar,btn_sure,btn_jump;
     private EditText editText;
     private HashMap<Integer,Integer> map;
 
@@ -94,6 +94,16 @@ public class MainActivity extends AppCompatActivity {
         btn_MaterialRatingBar = findViewById(R.id.btn_MaterialRatingBar);
         btn_ForResult = findViewById(R.id.btn_ForResult);
         btn_sure = findViewById(R.id.btn_sure);
+        btn_jump = findViewById(R.id.btn_jump);
+        btn_jump.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.putExtra("data","返回值成功");
+                setResult(1,intent);
+                finish();
+            }
+        });
         btn_sure.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

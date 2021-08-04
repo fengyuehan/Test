@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * desc   :
  */
 public class OtherActivity extends AppCompatActivity {
-    private TextView tv_back,tv_jump;
+    private TextView tv_back,tv_jump,tv_jump1;
 
     @Override
     protected void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
@@ -23,6 +23,17 @@ public class OtherActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main1);
         tv_back = findViewById(R.id.tv_back);
         tv_jump = findViewById(R.id.tv_jump);
+        tv_jump1 = findViewById(R.id.tv_jump1);
+
+        tv_jump1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.putExtra("data","返回值成功");
+                setResult(RESULT_OK,intent);
+                finish();
+            }
+        });
         tv_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
