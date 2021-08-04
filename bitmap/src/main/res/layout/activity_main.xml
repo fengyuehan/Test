@@ -20,5 +20,17 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="44dp"/>
+    <Button
+        android:id="@+id/btn_jump_app"
+        android:text="同一个app内跳转"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <Button
+        android:id="@+id/btn_jump"
+        android:text="不是同一个app跳转"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
 
 </LinearLayout>
