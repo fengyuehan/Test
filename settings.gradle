@@ -1,10 +1,13 @@
 /*include ':flavorgradle:out3'
 include ':flavorgradle:out2'
 include ':flavorgradle:out1'*/
+include ':suspend'
+include ':diffutil'
 include ':gradlestudy'
 include ':flavorgradle'
 include ':parcelable'
-include ':buildSrc'
+//buildSrc‘ cannot be used as a project name as it is a reserved name
+//include ':buildSrc'
 include ':pictureoptimization'
 include ':mat'
 include ':pluginservice'

@@ -41,10 +41,12 @@ public class LiveDataActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int x = myViewModel.increaseNumber();
-                myViewModel.getInfo().setValue("info = " + x);
-
+                //myViewModel.getInfo().setValue("info = " + x);
+                myViewModel.getInfo().postValue("info = " + x);
+                myViewModel.getInfo().postValue("info = " + x);
+                myViewModel.getInfo().postValue("info = " + x);
                 myViewModel.getLiveDataSwitch().setValue(false);
-
+                myViewModel.getLiveDataSwitch().postValue(false);
                 liveData5.setValue("liveData5");
                 //liveData6.setValue("liveData6");
             }

@@ -10,9 +10,9 @@
         android:id="@+id/loadView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>-->
-    <me.wangyuwei.slackloadingview.SlackLoadingView
+    <!--<me.wangyuwei.slackloadingview.SlackLoadingView
         android:id="@+id/shapeLoadingView"
         android:layout_width="80dp"
-        android:layout_height="80dp"/>
+        android:layout_height="80dp"/>-->
 
 </LinearLayout>

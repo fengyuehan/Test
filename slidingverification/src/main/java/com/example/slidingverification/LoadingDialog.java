@@ -7,10 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.mingle.widget.LoadingView;
-import com.mingle.widget.ShapeLoadingView;
-
-import me.wangyuwei.slackloadingview.SlackLoadingView;
 
 /**
  * @ClassName LoadingDialog
@@ -21,7 +17,7 @@ import me.wangyuwei.slackloadingview.SlackLoadingView;
  */
 public class LoadingDialog extends Dialog {
     private Context mContext;
-    private SlackLoadingView mSlackLoadingView;
+    //private SlackLoadingView mSlackLoadingView;
 
     public LoadingDialog(Context context){
         super(context);
@@ -39,14 +35,14 @@ public class LoadingDialog extends Dialog {
         lp.height = (int) (display.getHeight()*0.25);
         this.getWindow().setAttributes(lp);
         setCanceledOnTouchOutside(false);
-        mSlackLoadingView = view.findViewById(R.id.shapeLoadingView);
+       /* mSlackLoadingView = view.findViewById(R.id.shapeLoadingView);
         mSlackLoadingView.setDuration(0.01f);
         mSlackLoadingView.setLineLength(0.2f);
-        mSlackLoadingView.start();
+        mSlackLoadingView.start();*/
     }
 
     public void stopLoading(){
-        mSlackLoadingView.reset();
+        //mSlackLoadingView.reset();
         dismiss();
     }
 }
