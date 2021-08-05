@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.suspend">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -9,13 +10,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Flow.FlowActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".SingleNetworkCallActivity"/>
+        <activity android:name=".SeriesNetworkCallsActivity"/>
+        <activity android:name=".ParallelNetworkCallsActivity"/>
+        <activity android:name=".RoomDBActivity"/>
+        <activity android:name=".CatchActivity"/>
+        <activity android:name=".RetryActivity"/>
+        <activity android:name=".RetryWhenActivity"/>
     </application>
 
 </manifest>
