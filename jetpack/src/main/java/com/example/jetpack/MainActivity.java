@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.jetpack.databinding.DataBindingActivity;
+import com.example.jetpack.hilt.TestActivity;
 import com.example.jetpack.ktpaging.KtPagingActivity;
 import com.example.jetpack.lifecycle.LifecycleActivity;
 import com.example.jetpack.livedata.LiveDataActivity;
@@ -16,7 +17,7 @@ import com.example.jetpack.paging3.PagingActivity;
 import com.example.jetpack.room.RoomActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btn_lifecycle,btn_livedata,btn_navigation,btn_databinding,btn_room,btn_paging,btn_kt_paging;
+    private Button btn_lifecycle,btn_livedata,btn_navigation,btn_databinding,btn_room,btn_paging,btn_kt_paging,btn_kt_hilt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_room.setOnClickListener(this);
         btn_paging.setOnClickListener(this);
         btn_kt_paging.setOnClickListener(this);
+        btn_kt_hilt.setOnClickListener(this);
     }
 
     private void init() {
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_room = findViewById(R.id.btn_room);
         btn_paging = findViewById(R.id.btn_paging);
         btn_kt_paging = findViewById(R.id.btn_kt_paging);
+        btn_kt_hilt = findViewById(R.id.btn_kt_hilt);
     }
 
     @Override
@@ -69,6 +72,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_kt_paging:
                 startActivity(new Intent(MainActivity.this, KtPagingActivity.class));
+                break;
+            case R.id.btn_kt_hilt:
+                startActivity(new Intent(MainActivity.this, TestActivity.class));
                 break;
         }
     }
