@@ -31,4 +31,14 @@ class FlowActivity:AppCompatActivity() {
     fun startCatchActivity(view: View){
         startActivity(Intent(this@FlowActivity,CatchActivity::class.java))
     }
+
+    fun startRetryActivity(view: View){
+        startActivity(Intent(this@FlowActivity,RetryActivity::class.java))
+    }
+
+    fun startRetryWhenActivity(view: View){
+        startActivity(Intent(this@FlowActivity,RetryWhenActivity::class.java))
+    }
+
+
 }

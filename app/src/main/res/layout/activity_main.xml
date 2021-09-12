@@ -9,6 +9,11 @@
     android:layout_height="match_parent"
     android:layout_margin="1dp"
     >
+    <Button
+        android:id="@+id/btn_sure_service"
+        android:text="serviceLoad测试"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:visibility="gone"

@@ -51,4 +51,8 @@ dependencies {
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 
     implementation 'me.zhanghai.android.materialratingbar:library:1.4.0'
+
+    implementation project(path:":Alib")
+    implementation project(path:":A2Lib")
+    implementation project(path:":AInterfaceLib")
 }

@@ -26,6 +26,11 @@ import android.widget.Toast;
 import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.callback.NavigationCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.example.a2lib.A2Impl;
+import com.example.ainterfacelib.AInterface;
+import com.example.ainterfacelib.BInterface;
+import com.example.ainterfacelib.CInterface;
+import com.example.alib.AImpl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.ItemDecoration mItemDecoration;
     private MyAdapter mMyAdapter;
     private Resources resources;
-    private Button btn,btn_intepter,btn1,btn_url,btn_ForResult,btn_MaterialRatingBar,btn_sure,btn_jump;
+    private Button btn,btn_intepter,btn1,btn_url,btn_ForResult,btn_MaterialRatingBar,btn_sure,btn_jump,btn_sure_service;
     private EditText editText;
     private HashMap<Integer,Integer> map;
 
@@ -47,6 +52,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btn_sure_service = findViewById(R.id.btn_sure_service);
+        btn_sure_service.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AImpl aInterface = (AImpl) ServiceHelper.getService(AInterface.class);
+                Log.e("zzf",aInterface + "");
+                BInterface bInterface = (A2Impl) ServiceHelper.getService(BInterface.class);
+                Log.e("zzf",aInterface.getname() +"------------" + bInterface.getname());
+
+                List<CInterface> list = ServiceHelper.getServices(CInterface.class);
+                for (CInterface cInterface:list){
+                    Log.e("zzf",cInterface.getName());
+                }
+            }
+        });
         map = new HashMap<>();
         initMap();
         initView();
