@@ -1,0 +1,23 @@
+{
+  "buildFiles": [
+    "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\CMakeLists.txt",
+    "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\src\\main\\cpp\\giflib\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\release\\armeabi-v7a --target clean"
+  ],
+  "libraries": {
+    "giftool-Release-armeabi-v7a": {
+      "artifactName": "giftool",
+      "buildCommand": "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\release\\armeabi-v7a --target giftool",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a\\libgiftool.so"
+    },
+    "giflib-Release-armeabi-v7a": {
+      "artifactName": "giflib",
+      "buildCommand": "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\cmake\\3.6.4111459\\bin\\cmake.exe --build C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\.cxx\\cmake\\release\\armeabi-v7a --target giflib",
+      "abi": "armeabi-v7a",
+      "output": "C:\\Users\\Yu\\Desktop\\Test\\lib-image-gif\\build\\intermediates\\cmake\\release\\obj\\armeabi-v7a\\libgiflib.so"
+    }
+  }
+}
