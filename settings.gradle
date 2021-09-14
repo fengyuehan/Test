@@ -1,8 +1,13 @@
 /*include ':flavorgradle:out3'
 include ':flavorgradle:out2'
 include ':flavorgradle:out1'*/
+
+apply from: 'supportApi.gradle'
+
 include ':main'
+
 include ':AInterfaceLib'
+includeWithApi(':main')
 include ':A2Lib'
 include ':Alib'
 include ':suspend'

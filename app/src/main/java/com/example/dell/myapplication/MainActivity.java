@@ -66,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
                 for (CInterface cInterface:list){
                     Log.e("zzf",cInterface.getName());
                 }
+
+
             }
         });
         map = new HashMap<>();
