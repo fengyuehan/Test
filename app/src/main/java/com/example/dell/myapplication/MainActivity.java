@@ -36,6 +36,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -47,12 +49,55 @@ public class MainActivity extends AppCompatActivity {
     private Button btn,btn_intepter,btn1,btn_url,btn_ForResult,btn_MaterialRatingBar,btn_sure,btn_jump,btn_sure_service;
     private EditText editText;
     private HashMap<Integer,Integer> map;
+    private String str = "<head></head><body>{\"status\":200,\"msg\":\"\\u4ed8\\u6b3e\\u6210\\u529f\",\"order_sn\":\"GT2100142\",\"type\":\"0\",\"refund_id\":\"59K855664M682561S\",\"amount\":\"835.00\"}<div id=\"think_page_trace\" style=\"position: fixed;bottom:0;right:0;font-size:14px;width:100%;z-index: 999999;color: #000;text-align:left;font-family:'微软雅黑';\">\n" +
+            "        <div id=\"think_page_trace_tab\" style=\"display: none;background:white;margin:0;height: 250px;\">\n" +
+            "            <div id=\"think_page_trace_tab_tit\" style=\"height:30px;padding: 6px 12px 0;border-bottom:1px solid #ececec;border-top:1px solid #ececec;font-size:16px\">\n" +
+            "                            <span style=\"color: rgb(0, 0, 0); padding-right: 12px; height: 30px; line-height: 30px; display: inline-block; margin-right: 3px; cursor: pointer; font-weight: 700;\">基本</span>\n" +
+            "                            <span style=\"color: rgb(153, 153, 153); padding-right: 12px; height: 30px; line-height: 30px; display: inline-block; margin-right: 3px; cursor: pointer; font-weight: 700;\">文件</span>\n" +
+            "                            <span style=\"color: rgb(153, 153, 153); padding-right: 12px; height: 30px; line-height: 30px; display: inline-block; margin-right: 3px; cursor: pointer; font-weight: 700;\">流程</span>\n" +
+            "                            <span style=\"color: rgb(153, 153, 153); padding-right: 12px; height: 30px; line-height: 30px; display: inline-block; margin-right: 3px; cursor: pointer; font-weight: 700;\">错误</span>\n" +
+            "                            <span style=\"color: rgb(153, 153, 153); padding-right: 12px; height: 30px; line-height: 30px; display: inline-block; margin-right: 3px; cursor: pointer; font-weight: 700;\">SQL</span>\n" +
+            "                            <span style=\"color: rgb(153, 153, 153); padding-right: 12px; height: 30px; line-height: 30px; display: inline-block; margin-right: 3px; cursor: pointer; font-weight: 700;\">调试</span>\n" +
+            "                        </div>\n" +
+            "            <div id=\"think_page_trace_tab_cont\" style=\"overflow:auto;height:212px;padding:0;line-height: 24px\">\n" +
+            "                            <div style=\"display: block;\">\n" +
+            "                    <ol style=\"padding: 0; margin:0\">\n" +
+            "                        <li style=\"border-bottom:1px solid #EEE;font-size:14px;padding:0 12px\">请求信息 : 2021-09-16 17:32:01 HTTP/1.1 GET : https://kevin.bigline.cc/api/v1/notify/paypal_notify?success=true&amp;order_sn=GT2100142&amp;type=0&amp;paymentId=PAYID-MFBQ5KQ42131433NN5364608&amp;token=EC-1UD77879037602805&amp;PayerID=L8ZK3DBMSZ3L8</li><li style=\"border-bottom:1px solid #EEE;font-size:14px;padding:0 12px\">运行时间 : 6.116112s [ 吞吐率：0.16req/s ] 内存消耗：5,726.33kb 文件加载：297</li><li style=\"border-bottom:1px solid #EEE;font-size:14px;padding:0 12px\">查询信息 : 13 queries</li><li style=\"border-bottom:1px solid #EEE;font-size:14px;padding:0 12px\">缓存信息 : 1 reads,0 writes</li><li style=\"border-bottom:1px solid #EEE;font-size:14px;padding:0 12px\">会话信息 : SESSION_ID=aaacf203e5e7731e581b5e30a217639a</li>                </ol>\n" +
+            "                </div>\n" +
+            "                            <div style=\"display:none;\">\n" +
+            "                    <ol style=\"padding: 0; margin:0\">\n" + "</div>\n" +
+            "                            <div style=\"display:none;\">\n" +
+            "                    <ol style=\"padding: 0; margin:0\">\n" +
+            "                                        </ol>\n" +
+            "                </div>\n" +
+            "                            <div style=\"display:none;\">\n" +
+            "                    <ol style=\"padding: 0; margin:0\">\n" +
+            "                        <li style=\"border-bottom:1px solid #EEE;font-size:14px;padding:0 12px\">paypal回调参数:{\"success\":\"true\",\"order_sn\":\"GT2100142\",\"type\":\"0\",\"paymentId\":\"PAYID-MFBQ5KQ42131433NN5364608\",\"token\":\"EC-1UD77879037602805\",\"PayerID\":\"L8ZK3DBMSZ3L8\"}</li>                </ol>\n" +
+            "                </div>\n" +
+            "                            <div style=\"display:none;\">\n" +
+            "                    <ol style=\"padding: 0; margin:0\">";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Pattern pattern = Pattern.compile("[{].*[}]");
+        Matcher matcher = pattern.matcher(str);
+        List<String> list = new ArrayList<>();
+        while (matcher.find()){
+            list.add(matcher.group());
+        }
+        String html = "";
+        for (String str:list){
+            if (str.contains("status")){
+                html = str;
+            }
+        }
+        html = html.substring(1,html.length()-1);
+        String[] strs = html.split(",");
+        String[] strs2 = strs[0].split(":");
+        Log.e("zzf",html);
+        Log.e("zzf",strs[0] + "----" + strs2[1]);
         btn_sure_service = findViewById(R.id.btn_sure_service);
         btn_sure_service.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
                 for (CInterface cInterface:list){
                     Log.e("zzf",cInterface.getName());
                 }
-
 
             }
         });
