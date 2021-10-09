@@ -1,0 +1,34 @@
+apply plugin: 'kotlin'
+apply plugin: 'java-gradle-plugin'
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.10"
+
+    }
+}
+
+repositories {
+    jcenter()
+    google()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.10"
+}
+
+gradlePlugin{
+    plugins{
+        version{
+            id = "com.example.version"
+            implementationClass = "com.example.version.DependencyVersionPlugin"
+        }
+    }
+}
+
+

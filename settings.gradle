@@ -1,7 +1,7 @@
 /*include ':flavorgradle:out3'
 include ':flavorgradle:out2'
 include ':flavorgradle:out1'*/
-
+includeBuild("version")
 apply from: 'supportApi.gradle'
 
 include ':main'
@@ -76,3 +76,4 @@ include ':lib-image-gif'
 
 
 include ':nestedsrcolldemo'
+include ':myapplication2'

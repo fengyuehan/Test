@@ -60,7 +60,7 @@ private void deleteEmptyDir(File dir) {
                 if (tmpFile.isDirectory()) {
                     deleteEmptyDir(tmpFile);
                 }
-                if (tmpFile.isDirectory() && tmpFile.listFiles().length <= 0) {
+                if (tmpFile.isDirectory() /*&& tmpFile.listFiles().length <= 0*/) {
                     tmpFile.delete()
                 }
             }

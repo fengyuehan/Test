@@ -1,4 +1,8 @@
+plugins{
+    id  "com.example.version"
+}
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 29
@@ -56,4 +60,8 @@ dependencies {
     implementation project(path:":A2Lib")
     implementation project(path:":AInterfaceLib")
     implementation project(path:":main")
+
+    implementation(AndroidX.coreKtx)
+    implementation(AndroidX.appcompat)
+    implementation(AndroidX.constraintlayout)
 }
