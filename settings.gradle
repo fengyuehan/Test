@@ -77,3 +77,4 @@ include ':lib-image-gif'
 
 include ':nestedsrcolldemo'
 include ':myapplication2'
+include ':weblib'
