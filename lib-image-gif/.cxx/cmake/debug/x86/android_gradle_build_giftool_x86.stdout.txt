@@ -1,0 +1,5 @@
+[1/5] Building CXX object CMakeFiles/giftool.dir/src/main/cpp/lib-native-bridge.cpp.o
+[2/5] Building CXX object CMakeFiles/giftool.dir/src/main/cpp/stream/Registry.cpp.o
+[3/5] Building CXX object CMakeFiles/giftool.dir/src/main/cpp/stream/Stream.cpp.o
+[4/5] Building CXX object CMakeFiles/giftool.dir/src/main/cpp/GifDecoder.cpp.o
+[5/5] Linking CXX shared library ..\..\..\..\build\intermediates\cmake\debug\obj\x86\libgiftool.so

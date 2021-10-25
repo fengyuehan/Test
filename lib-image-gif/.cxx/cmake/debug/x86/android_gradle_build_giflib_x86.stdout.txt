@@ -1,0 +1,8 @@
+[1/8] Building C object src/main/cpp/giflib/CMakeFiles/giflib.dir/dgif_lib.c.o
+[2/8] Building C object src/main/cpp/giflib/CMakeFiles/giflib.dir/egif_lib.c.o
+[3/8] Building C object src/main/cpp/giflib/CMakeFiles/giflib.dir/gif_err.c.o
+[4/8] Building C object src/main/cpp/giflib/CMakeFiles/giflib.dir/gif_font.c.o
+[5/8] Building C object src/main/cpp/giflib/CMakeFiles/giflib.dir/gif_hash.c.o
+[6/8] Building C object src/main/cpp/giflib/CMakeFiles/giflib.dir/gifalloc.c.o
+[7/8] Building C object src/main/cpp/giflib/CMakeFiles/giflib.dir/openbsd-reallocarray.c.o
+[8/8] Linking C shared library ..\..\..\..\build\intermediates\cmake\debug\obj\x86\libgiflib.so
