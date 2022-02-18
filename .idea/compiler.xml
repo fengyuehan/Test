@@ -5,16 +5,16 @@
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto.service/auto-service/1.0-rc4/44954d465f3b9065388bbd2fc08a3eb8fd07917c/auto-service-1.0-rc4.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto/auto-common/0.8/c6f7af0e57b9d69d81b05434ef9f3c5610d498c4/auto-common-0.8.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/23.5-jre/e9ce4989adf6092a3dab6152860e93d989e8cf88/guava-23.5-jre.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/2.0.0/518929596ee3249127502a8573b2e008e2d51ed3/checker-qual-2.0.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.0.18/5f65affce1684999e2f4024983835efc3504012e/error_prone_annotations-2.0.18.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/ed28ded51a8b1c6b112568def5f4b455e6809019/j2objc-annotations-1.1.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/775b7e22fb10026eed3f86e8dc556dfafe35f2d5/animal-sniffer-annotations-1.14.jar" />
+          <entry name="$USER_HOME$/.gradle/wrapper/dists/gradle-5.6.4-bin/caches/modules-2/files-2.1/com.google.auto.service/auto-service/1.0-rc4/44954d465f3b9065388bbd2fc08a3eb8fd07917c/auto-service-1.0-rc4.jar" />
+          <entry name="$USER_HOME$/.gradle/wrapper/dists/gradle-5.6.4-bin/caches/modules-2/files-2.1/com.google.auto/auto-common/0.8/c6f7af0e57b9d69d81b05434ef9f3c5610d498c4/auto-common-0.8.jar" />
+          <entry name="$USER_HOME$/.gradle/wrapper/dists/gradle-5.6.4-bin/caches/modules-2/files-2.1/com.google.guava/guava/23.5-jre/e9ce4989adf6092a3dab6152860e93d989e8cf88/guava-23.5-jre.jar" />
+          <entry name="$USER_HOME$/.gradle/wrapper/dists/gradle-5.6.4-bin/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar" />
+          <entry name="$USER_HOME$/.gradle/wrapper/dists/gradle-5.6.4-bin/caches/modules-2/files-2.1/org.checkerframework/checker-qual/2.0.0/518929596ee3249127502a8573b2e008e2d51ed3/checker-qual-2.0.0.jar" />
+          <entry name="$USER_HOME$/.gradle/wrapper/dists/gradle-5.6.4-bin/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.0.18/5f65affce1684999e2f4024983835efc3504012e/error_prone_annotations-2.0.18.jar" />
+          <entry name="$USER_HOME$/.gradle/wrapper/dists/gradle-5.6.4-bin/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/ed28ded51a8b1c6b112568def5f4b455e6809019/j2objc-annotations-1.1.jar" />
+          <entry name="$USER_HOME$/.gradle/wrapper/dists/gradle-5.6.4-bin/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/775b7e22fb10026eed3f86e8dc556dfafe35f2d5/animal-sniffer-annotations-1.14.jar" />
         </processorPath>
-        <module name="Test.annotation_compiler" />
+        <module name="Test_(1).annotation_compiler" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
@@ -138,6 +138,120 @@
       <module name="Test.weblib" target="1.8" />
       <module name="Test.wheelview" target="1.8" />
       <module name="Test.zxingdemo" target="1.8" />
+      <module name="Test_(1).A2Lib" target="1.8" />
+      <module name="Test_(1).aidl" target="1.8" />
+      <module name="Test_(1).AInterfaceLib" target="1.8" />
+      <module name="Test_(1).Algorithm" target="1.8" />
+      <module name="Test_(1).Alib" target="1.8" />
+      <module name="Test_(1).androidplugin" target="1.8" />
+      <module name="Test_(1).animation" target="1.8" />
+      <module name="Test_(1).app" target="1.8" />
+      <module name="Test_(1).aptdemo" target="1.8" />
+      <module name="Test_(1).arouterdemo" target="1.8" />
+      <module name="Test_(1).ArouterTest" target="1.8" />
+      <module name="Test_(1).asm" target="1.8" />
+      <module name="Test_(1).aspectjdemo" target="1.8" />
+      <module name="Test_(1).AsynTask" target="1.8" />
+      <module name="Test_(1).banner" target="1.8" />
+      <module name="Test_(1).bitmap" target="1.8" />
+      <module name="Test_(1).bitmapload" target="1.8" />
+      <module name="Test_(1).buildSrc" target="1.8" />
+      <module name="Test_(1).camerademo" target="1.8" />
+      <module name="Test_(1).changeskin" target="1.8" />
+      <module name="Test_(1).chatdemo" target="1.8" />
+      <module name="Test_(1).ContentProvider" target="1.8" />
+      <module name="Test_(1).customview" target="1.8" />
+      <module name="Test_(1).daggerdemo" target="1.8" />
+      <module name="Test_(1).daggerdemo2" target="1.8" />
+      <module name="Test_(1).datastructures" target="1.8" />
+      <module name="Test_(1).dayandnightchange" target="1.8" />
+      <module name="Test_(1).definetablayout" target="1.8" />
+      <module name="Test_(1).designpattern" target="1.8" />
+      <module name="Test_(1).dialogfragment" target="1.8" />
+      <module name="Test_(1).diffutil" target="1.8" />
+      <module name="Test_(1).eventbus" target="1.8" />
+      <module name="Test_(1).eventdispatch" target="1.8" />
+      <module name="Test_(1).factory2" target="1.8" />
+      <module name="Test_(1).file" target="1.8" />
+      <module name="Test_(1).fingerprintdemo" target="1.8" />
+      <module name="Test_(1).flavorgradle" target="1.8" />
+      <module name="Test_(1).floatingwindow" target="1.8" />
+      <module name="Test_(1).flowdemo" target="1.8" />
+      <module name="Test_(1).FlowLayout" target="1.8" />
+      <module name="Test_(1).fragment" target="1.8" />
+      <module name="Test_(1).fragmentjumpactivity" target="1.8" />
+      <module name="Test_(1).gaode" target="1.8" />
+      <module name="Test_(1).glidepicasso" target="1.8" />
+      <module name="Test_(1).gradleplugin" target="1.8" />
+      <module name="Test_(1).gradlestudy" target="1.8" />
+      <module name="Test_(1).greendao" target="1.8" />
+      <module name="Test_(1).hilt" target="1.8" />
+      <module name="Test_(1).hotfix" target="1.8" />
+      <module name="Test_(1).htmllink" target="1.8" />
+      <module name="Test_(1).immersionbar" target="1.8" />
+      <module name="Test_(1).innerclass" target="1.8" />
+      <module name="Test_(1).IntentService" target="1.8" />
+      <module name="Test_(1).ioc2" target="1.8" />
+      <module name="Test_(1).jetpack" target="1.8" />
+      <module name="Test_(1).jsandandroid" target="1.8" />
+      <module name="Test_(1).keyboard" target="1.8" />
+      <module name="Test_(1).kotlindemo" target="1.8" />
+      <module name="Test_(1).lettersidebar" target="1.8" />
+      <module name="Test_(1).linkedhashmapactivity" target="1.8" />
+      <module name="Test_(1).litepaldemo" target="1.8" />
+      <module name="Test_(1).LiveData" target="1.8" />
+      <module name="Test_(1).livedatabus" target="1.8" />
+      <module name="Test_(1).lombok" target="1.8" />
+      <module name="Test_(1).lottie" target="1.8" />
+      <module name="Test_(1).luckypan" target="1.8" />
+      <module name="Test_(1).main" target="1.8" />
+      <module name="Test_(1).main-api" target="1.8" />
+      <module name="Test_(1).MarqueTextView" target="1.8" />
+      <module name="Test_(1).mat" target="1.8" />
+      <module name="Test_(1).MaterialDesign" target="1.8" />
+      <module name="Test_(1).motionlayoutdemo" target="1.8" />
+      <module name="Test_(1).myapplication" target="1.8" />
+      <module name="Test_(1).myapplication2" target="1.8" />
+      <module name="Test_(1).navigation" target="1.8" />
+      <module name="Test_(1).nestedsrcolldemo" target="1.8" />
+      <module name="Test_(1).notificaitondemo" target="1.8" />
+      <module name="Test_(1).otcchatkeyboard" target="1.8" />
+      <module name="Test_(1).parcelable" target="1.8" />
+      <module name="Test_(1).pickerview" target="1.8" />
+      <module name="Test_(1).pictureoptimization" target="1.8" />
+      <module name="Test_(1).pluginactivity" target="1.8" />
+      <module name="Test_(1).pluginservice" target="1.8" />
+      <module name="Test_(1).PopupWindow" target="1.8" />
+      <module name="Test_(1).processkeeplive" target="1.8" />
+      <module name="Test_(1).produceandconsum" target="1.8" />
+      <module name="Test_(1).proxy" target="1.8" />
+      <module name="Test_(1).recyclerviewdemo" target="1.8" />
+      <module name="Test_(1).reflect" target="1.8" />
+      <module name="Test_(1).roomdemo" target="1.8" />
+      <module name="Test_(1).rxjava" target="1.8" />
+      <module name="Test_(1).scrollview" target="1.8" />
+      <module name="Test_(1).service" target="1.8" />
+      <module name="Test_(1).share" target="1.8" />
+      <module name="Test_(1).shoppingcart" target="1.8" />
+      <module name="Test_(1).skin-night" target="1.8" />
+      <module name="Test_(1).slidingverification" target="1.8" />
+      <module name="Test_(1).smartrefreshlayout" target="1.8" />
+      <module name="Test_(1).spiner" target="1.8" />
+      <module name="Test_(1).staggeredgrid" target="1.8" />
+      <module name="Test_(1).statusbarplus" target="1.8" />
+      <module name="Test_(1).suspend" target="1.8" />
+      <module name="Test_(1).synchronizeddemo" target="1.8" />
+      <module name="Test_(1).taskaffinitytest" target="1.8" />
+      <module name="Test_(1).timepicker" target="1.8" />
+      <module name="Test_(1).transition" target="1.8" />
+      <module name="Test_(1).video" target="1.8" />
+      <module name="Test_(1).viewpager" target="1.8" />
+      <module name="Test_(1).viewstubdemo" target="1.8" />
+      <module name="Test_(1).wanandroid" target="1.8" />
+      <module name="Test_(1).weblib" target="1.8" />
+      <module name="Test_(1).wheelview" target="1.8" />
+      <module name="Test_(1).zxingdemo" target="1.8" />
+      <module name="version" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

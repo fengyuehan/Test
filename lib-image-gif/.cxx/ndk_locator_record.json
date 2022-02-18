@@ -1,5 +1,5 @@
 {
-  "ndkFolder": "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669",
+  "ndkFolder": "C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620",
   "messages": [
     {
       "level": "INFO",
@@ -31,7 +31,11 @@
     },
     {
       "level": "INFO",
-      "message": "No user requested version, choosing C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\ndk\\21.0.6113669 which is version 21.0.6113669"
+      "message": "Considering C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620 in SDK ndk folder"
+    },
+    {
+      "level": "INFO",
+      "message": "No user requested version, choosing C:\\Users\\Yu\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620 which is version 23.1.7779620"
     }
   ]
 }

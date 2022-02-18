@@ -17,7 +17,7 @@ public class ReentrantLockActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main1);
+        setContentView(R.layout.activity_main_other);
         final Thread t1 = new Thread(new Runnable() {
             @Override
             public void run() {

@@ -279,7 +279,8 @@ public class AtomicActivity extends AppCompatActivity {
     /**
      * LongAdder
      * LongAdder克服了高并发下使用AtomicLong的缺点。既然AtomicLong的性能瓶颈是由于过多线程同时去竞争一个变量的更新而产生的，LongAdder则是把一个变量分解为多个变量，让同样多的线程去竞争多个资源，解决了性能问题。
-     * LongAdder 是把一个变量拆成多份，变为多个变量，有点像 ConcurrentHashMap 中 的分段锁把一个Long型拆成一个base变量外加多个Cell，每个Cell包装了一个Long型变量。
+     * LongAdder 是把一个变量拆成多份，变为多个变量，有点像 ConcurrentHashMap 中 的分段锁把一个Long型拆成一个base变量外加多个Cell，每个Ce
+     * 变量。
      * 这样，在同等并发量的情况下，争夺单个变量更新操作的线程量会减少，这变相地减少了争夺共享资源的并发量。<br />另外，多个线程在争夺同一个Cell原子变量时如果失败了，
      * 它并不是在当前Cell变量上一直自旋CAS重试，而是尝试在其他Cell的变量上进行CAS尝试，这个改变增加了当前线程重试CAS成功的可能性。
      * 最后，在获取LongAdder当前值时，是把所有Cell变量的value值累加后再加上base返回的。LongAdder维护了一个延迟初始化的原子性更新数组（默认情况下Cell数组是null）和一个基值变量base。
@@ -361,7 +362,7 @@ public class AtomicActivity extends AppCompatActivity {
     }
 
     /**
-     * AtomicMarkableReference
+     * AtomicStampedReference
      * 原子更新带有版本号的引用类型，该类将整数值与引用关联起来，可用于原子的更新数据和数据版本号，可以解决使用CAS进行原子更新时可能出现的ABA问题。
      */
     private void AtomicExample8() {

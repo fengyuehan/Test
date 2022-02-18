@@ -47,6 +47,7 @@
             <option value="$PROJECT_DIR$/aspectjdemo" />
             <option value="$PROJECT_DIR$/banner" />
             <option value="$PROJECT_DIR$/bitmap" />
+            <option value="$PROJECT_DIR$/bitmapload" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/camerademo" />
             <option value="$PROJECT_DIR$/changeskin" />
@@ -67,6 +68,7 @@
             <option value="$PROJECT_DIR$/fingerprintdemo" />
             <option value="$PROJECT_DIR$/flavorgradle" />
             <option value="$PROJECT_DIR$/floatingwindow" />
+            <option value="$PROJECT_DIR$/flowdemo" />
             <option value="$PROJECT_DIR$/fragment" />
             <option value="$PROJECT_DIR$/fragmentjumpactivity" />
             <option value="$PROJECT_DIR$/gaode" />
@@ -85,7 +87,6 @@
             <option value="$PROJECT_DIR$/keyboard" />
             <option value="$PROJECT_DIR$/kotlindemo" />
             <option value="$PROJECT_DIR$/lettersidebar" />
-            <option value="$PROJECT_DIR$/lib-image-gif" />
             <option value="$PROJECT_DIR$/linkedhashmapactivity" />
             <option value="$PROJECT_DIR$/litepaldemo" />
             <option value="$PROJECT_DIR$/livedatabus" />
@@ -95,6 +96,7 @@
             <option value="$PROJECT_DIR$/main" />
             <option value="$PROJECT_DIR$/main-api" />
             <option value="$PROJECT_DIR$/mat" />
+            <option value="$PROJECT_DIR$/motionlayoutdemo" />
             <option value="$PROJECT_DIR$/myapplication" />
             <option value="$PROJECT_DIR$/myapplication2" />
             <option value="$PROJECT_DIR$/navigation" />

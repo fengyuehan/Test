@@ -25,7 +25,7 @@ public class RecyclerViewPoolActivity extends AppCompatActivity implements View.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main1);
+        setContentView(R.layout.activity_main_other);
         initOperate();
         rcy = findViewById(R.id.rcy);
         tvCacheView = findViewById(R.id.tv_cache_view);

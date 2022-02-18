@@ -18,7 +18,7 @@ public class ModelActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main1);
+        setContentView(R.layout.activity_main_other);
         textView = findViewById(R.id.tv);
 
         textView.setText(dicos.returnDicos());

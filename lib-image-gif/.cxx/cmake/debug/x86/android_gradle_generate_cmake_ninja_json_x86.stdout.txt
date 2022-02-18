@@ -1,15 +1,5 @@
--- Check for working C compiler: C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe
--- Check for working C compiler: C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe
--- Check for working CXX compiler: C:/Users/Yu/AppData/Local/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/x86
+-- Check for working C compiler: C:/Users/Yu/AppData/Local/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe
+-- Check for working C compiler: C:/Users/Yu/AppData/Local/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe -- broken
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/Yu/Desktop/Test (1)/lib-image-gif/.cxx/cmake/debug/x86/CMakeFiles/CMakeOutput.log".
+See also "C:/Users/Yu/Desktop/Test (1)/lib-image-gif/.cxx/cmake/debug/x86/CMakeFiles/CMakeError.log".

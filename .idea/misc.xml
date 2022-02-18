@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ASMIdeaPluginConfiguration">
+    <asm skipDebug="true" skipFrames="true" skipCode="false" expandFrames="false" />
+    <groovy codeStyle="LEGACY" />
+  </component>
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Yu/Desktop/Test (1)/bitmapload/src/main/res/layout/activity_main.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/Yu/Desktop/Test (1)/bitmapload/src/main/res/layout/activity_main1.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/Yu/Desktop/Test (1)/bitmapload/src/main/res/layout/activity_main_other.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/Yu/Desktop/Test (1)/bitmapload/src/main/res/layout/activity_show.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/Yu/Desktop/Test (1)/bitmapload/src/main/res/layout/main.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/Yu/Desktop/Test (1)/motionlayoutdemo/src/main/res/layout/activity_main.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/Yu/Desktop/Test/LiveData/src/main/res/layout/activity_main.xml" value="0.33695652173913043" />
         <entry key="..\:/Users/Yu/Desktop/Test/LiveData/src/main/res/layout/activity_main3.xml" value="0.1" />
       </map>

@@ -21,7 +21,7 @@ public class OnTouchActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main1);
+        setContentView(R.layout.activity_main_other);
         my_button = findViewById(R.id.my_button);
         btn = findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {

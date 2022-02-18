@@ -72,9 +72,12 @@ include ':dayandnightchange'
 include ':factory2'
 include ':share'
 include 'spiner'
-include ':lib-image-gif'
+//include ':lib-image-gif'
 
 
 include ':nestedsrcolldemo'
 include ':myapplication2'
 include ':weblib'
+include ':motionlayoutdemo'
+include ':bitmapload'
+include ':flowdemo'
