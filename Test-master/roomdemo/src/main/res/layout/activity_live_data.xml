@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <data>
+        <variable
+            name="onlyLive"
+            type="String" />
+        <variable
+            name="dataSource"
+            type="com.example.roomdemo.data.TestBean" />
+        <variable
+            name="liveModule"
+            type="com.example.roomdemo.LiveDataViewModel" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单独使用LiveData设置数据："
+                />
+
+            <TextView
+                android:id="@+id/txt_only_live"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{onlyLive}"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DataBinding双向数据绑定设置数据："
+                />
+
+            <TextView
+                android:id="@+id/txt_dataBinding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={dataSource.name}"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ViewModel配合LiveData设置数据："
+                />
+
+            <TextView
+                android:id="@+id/txt_viewmodel_livedata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{liveModule.data}"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_contact_search_bg">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/icon_search" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="37dp"
+            android:layout_marginRight="33dp"
+            android:background="#0000"
+            android:cursorVisible="true"
+            android:focusable="true"
+            android:hint="搜索"
+            android:maxLines="1"
+            android:textColor="@color/color_33"
+            android:textColorHint="#B3B3B3"
+            android:textCursorDrawable="@drawable/shape_cursor_edittext"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="3.5dp"
+            android:padding="6.5dp"
+            android:src="@drawable/icon_contact_close" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="24dp">
+
+        <androidx.appcompat.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.lettersidebar.LetterSlideBar
+            android:id="@+id/lsv"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="72dp" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_otc_detail_bg3"
+            android:gravity="center"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:textColor="@color/color_33"
+            android:textSize="22sp" />
+    </FrameLayout>
+</LinearLayout>

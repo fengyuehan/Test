@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--<com.example.customdatelibrary.ZhxDate
+        android:id="@+id/zhxdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.example.customdatelibrary.ZhxDate>-->
+    <com.example.timepicker.calendar.MultiFunctionCalendarView
+        android:id="@+id/mfcv"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"/>
+    <Button
+        android:id="@+id/btn"
+        android:text="自定义时间选择器"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+
+    <Button
+        android:id="@+id/btn_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_above="@id/btn"
+        android:layout_alignParentBottom="true"
+        android:text="日历" />
+
+</LinearLayout>

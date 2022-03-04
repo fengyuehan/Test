@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2016 Zhang Hai <Dreaming.in.Code.ZH@Gmail.com>
+  ~ All Rights Reserved.
+  -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/screen_edge_horizontal_margin"
+        android:paddingRight="@dimen/screen_edge_horizontal_margin"
+        android:paddingTop="@dimen/screen_edge_vertical_margin"
+        android:paddingBottom="@dimen/screen_edge_vertical_margin"
+        android:orientation="vertical">
+
+        <!-- Normal Layout -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/normal_layout"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/framework_implementation"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+        <RatingBar
+            android:id="@+id/framework_normal_ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:maxHeight="48dp"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginRight="-4dp"
+            android:rating="2.5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/library_implementation"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/library_normal_ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-3dp"
+            android:layout_marginRight="-3dp"
+            android:rating="2.5"
+            style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/library_implementation_tinted"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/library_tinted_normal_ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-3dp"
+            android:stepSize="0.1"
+            android:rating="2.8"
+            app:mrb_progressTint="#FF6333"
+            app:mrb_secondaryProgressTint="#FEB098"
+            app:mrb_progressBackgroundTint="#FEB098"
+            style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+        <!-- Wide Layout -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wide_layout"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/framework_implementation"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+        <RatingBar
+            android:id="@+id/framework_wide_ratingbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:maxHeight="48dp"
+            android:rating="2.5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/library_implementation"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/library_wide_ratingbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rating="2.5"
+            style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/library_implementation_tinted"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/library_tinted_wide_ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:rating="2.5"
+            android:stepSize="0.1"
+            app:mrb_progressTint="#FF6333"
+            app:mrb_secondaryProgressTint="#FEB098"
+            app:mrb_progressBackgroundTint="#FEB098"
+            style="@style/Widget.MaterialRatingBar.RatingBar" />
+
+        <!-- Decimal step size -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/decimal_step_size"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/framework_implementation"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+        <RatingBar
+            android:id="@+id/framework_decimal_ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:maxHeight="48dp"
+            android:stepSize="0.01"
+            android:isIndicator="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/library_implementation"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/library_decimal_ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stepSize="0.01"
+            style="@style/Widget.MaterialRatingBar.RatingBar.Indicator" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/library_implementation_tinted"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/library_tinted_decimal_ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stepSize="0.01"
+            app:mrb_progressTint="@color/tint"
+            style="@style/Widget.MaterialRatingBar.RatingBar.Indicator" />
+    </LinearLayout>
+</ScrollView>

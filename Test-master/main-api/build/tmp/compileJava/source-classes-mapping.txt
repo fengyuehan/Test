@@ -1,0 +1,2 @@
+com/example/main/api/UserInfo.java
+ com.example.main.api.UserInfo

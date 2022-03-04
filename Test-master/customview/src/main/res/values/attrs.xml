@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    /**
+    * Created by guanaj on .
+    */
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="leftMenuView" format="reference" />
+        <attr name="rightMenuView" format="reference" />
+        <attr name="contentView" format="reference" />
+        <attr name="canRightSwipe" format="boolean" />
+        <attr name="canLeftSwipe" format="boolean" />
+        <attr name="fraction" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="AuditProgressView">
+        <attr name="apv_isCurrentComplete" format="boolean"/>
+        <attr name="apv_isNextComplete" format="boolean"/>
+        <attr name="apv_isFirstStep" format="boolean"/>
+        <attr name="apv_isLastStep" format="boolean"/>
+        <attr name="apv_stepCount" format="integer"/>
+        <attr name="apv_text" format="string|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="CloudMusicLoadingView">
+        <!-- 音轨数量 -->
+        <attr name="cmlv_rail_count" format="integer" />
+        <!-- 音轨的颜色 -->
+        <attr name="cmlv_rail_color" format="color" />
+        <!-- 音轨线宽粗细 -->
+        <attr name="cmlv_line_width" format="integer|float|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiImageView">
+        <attr name="singleImgSize" format="dimension" />
+        <attr name="imgGap" format="dimension" />
+        <attr name="maxSize" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ImageAuthenticationView">
+        <!--滑块的高度-->
+        <attr name="unitHeight" format="dimension" />
+        <!--滑块的宽度-->
+        <attr name="unitWidth" format="dimension" />
+        <!--滑块占图片高度的比例-->
+        <attr name="unitHeightScale" format="integer" />
+        <!--滑块占图片宽度的比例-->
+        <attr name="unitWidthScale" format="integer" />
+        <!--滑块边框的图片资源-->
+        <attr name="unitShadeSrc" format="reference" />
+        <!--阴影部分的图片资源-->
+        <attr name="unitShowSrc" format="reference" />
+        <!--是否需要旋转-->
+        <attr name="needRotate" format="boolean" />
+        <!--验证时的误差值-->
+        <attr name="deviate" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ColorTextView">
+        <attr name="originColor" format="color"/>
+        <attr name="changeColor" format="color"/>
+        <attr name="baroriginColor" format="color"/>
+        <attr name="barchangeColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="SlidingMenu">
+        <attr name="rightPadding" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="DropDownMenuLayout">
+        <attr name="menuMaxMenuPercent" format="float"/>
+    </declare-styleable>
+</resources>

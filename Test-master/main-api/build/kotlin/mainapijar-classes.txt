@@ -1,0 +1,1 @@
+C:\Users\86153\Desktop\test\Test-master\main-api\build\classes\java\main\com\example\main\api\UserInfo.class;C:\Users\86153\Desktop\test\Test-master\main-api\build\classes\kotlin\main\com\example\main\api\AInterface.class;C:\Users\86153\Desktop\test\Test-master\main-api\build\classes\kotlin\main\com\example\main\api\UserService.class

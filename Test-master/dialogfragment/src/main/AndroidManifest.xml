@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.dialogfragment">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/><!--这行代码必须存在，否则点击不了系统设置中的按钮-->
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        tools:replace="android:icon, android:theme"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <activity android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@style/AppThemeprice"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".MyService"
+            android:enabled="true"
+            android:exported="true"
+            />
+    </application>
+
+</manifest>

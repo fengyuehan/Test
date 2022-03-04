@@ -1,0 +1,5 @@
+-- Check for working C compiler: C:/Users/Yu/AppData/Local/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe
+-- Check for working C compiler: C:/Users/Yu/AppData/Local/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe -- broken
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/Yu/Desktop/Test (1)/lib-image-gif/.cxx/cmake/debug/x86/CMakeFiles/CMakeOutput.log".
+See also "C:/Users/Yu/Desktop/Test (1)/lib-image-gif/.cxx/cmake/debug/x86/CMakeFiles/CMakeError.log".

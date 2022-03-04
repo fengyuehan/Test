@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--菊花图 自定义属性-->
+    <declare-styleable name="ChrysanthemumView">
+        <!--线条个数-->
+        <attr name="lineCount" format="integer" />
+        <!--菊花开始颜色-->
+        <attr name="startColor" format="reference|color" />
+        <!--菊花结束颜色-->
+        <attr name="endColor" format="reference|color" />
+    </declare-styleable>
+</resources>

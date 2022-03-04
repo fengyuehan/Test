@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_back"
+        android:text="返回"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:padding="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_jump"
+        android:text="跳转"
+        android:layout_centerInParent="true"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_jump1"
+        android:text="跳转"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="20dp"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

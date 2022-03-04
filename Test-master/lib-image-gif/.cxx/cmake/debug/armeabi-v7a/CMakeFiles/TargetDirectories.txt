@@ -1,0 +1,6 @@
+C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/giftool.dir
+C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a/src/main/cpp/giflib/CMakeFiles/edit_cache.dir
+C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a/src/main/cpp/giflib/CMakeFiles/giflib.dir
+C:/Users/Yu/Desktop/Test/lib-image-gif/.cxx/cmake/debug/armeabi-v7a/src/main/cpp/giflib/CMakeFiles/rebuild_cache.dir

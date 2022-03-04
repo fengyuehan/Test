@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btn_horizontal"
+                android:text="横向嵌套滑动"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_vertical"
+                android:text="纵向嵌套滑动"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/btn_recycler_pool"
+                android:text="缓存池"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/add"
+        android:title="添加"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="100">
+        </item>
+
+    <item
+        android:id="@+id/delete"
+        android:title="删除"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="100">
+    </item>
+
+    <item
+        android:id="@+id/list_view"
+        android:title="listview"
+        app:showAsAction="never"
+        android:orderInCategory="100">
+    </item>
+
+    <item
+        android:id="@+id/horizontal_list__iew"
+        android:title="HorizontalListView"
+        app:showAsAction="never"
+        android:orderInCategory="100">
+    </item>
+
+    <item
+        android:id="@+id/gridview"
+        android:title="gridview"
+        app:showAsAction="never"
+        android:orderInCategory="100">
+    </item>
+
+    <item
+        android:id="@+id/horizontalGridView"
+        android:title="HorizontalGridView"
+        app:showAsAction="never"
+        android:orderInCategory="100">
+    </item>
+    <item
+        android:id="@+id/staggeredgridview"
+        android:orderInCategory="100"
+        android:title="StaggeredGridView"
+        app:showAsAction="never"/>
+</menu>

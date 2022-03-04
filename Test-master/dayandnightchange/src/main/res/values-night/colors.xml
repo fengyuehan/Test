@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 日间主题色 -->
+    <color name="colorPrimary">#3b3b3b</color>
+    <color name="colorPrimaryDark">#383838</color>
+    <color name="colorAccent">#a72b55</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="backgroundColor">#3b3b3b</color>
+    <!--&lt;!&ndash; 夜间主题色 &ndash;&gt;
+    <color name="nightColorPrimary">#3b3b3b</color>
+    <color name="nightColorPrimaryDark">#383838</color>
+    <color name="nightColorAccent">#a72b55</color>-->
+</resources>

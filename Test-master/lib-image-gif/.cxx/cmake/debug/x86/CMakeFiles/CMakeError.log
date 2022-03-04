@@ -1,0 +1,12 @@
+Determining if the C compiler works failed with the following output:
+Change Dir: C:/Users/Yu/Desktop/Test (1)/lib-image-gif/.cxx/cmake/debug/x86/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Users\Yu\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\ninja.exe" "cmTC_3085b"
+[1/2] Building C object CMakeFiles/cmTC_3085b.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_3085b
+FAILED: cmd.exe /C "cd . && C:\Users\Yu\AppData\Local\Android\sdk\ndk\23.1.7779620\toolchains\llvm\prebuilt\windows-x86_64\bin\clang.exe  --target=i686-none-linux-android16 --gcc-toolchain=C:/Users/Yu/AppData/Local/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/Yu/AppData/Local/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_3085b.dir/testCCompiler.c.o  -o cmTC_3085b  -latomic -lm && cd ."
+ld: error: failed to write to the output file: Permission denied
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ninja: build stopped: subcommand failed.
+
+

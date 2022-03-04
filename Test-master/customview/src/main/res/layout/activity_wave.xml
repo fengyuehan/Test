@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.example.customview.wave.WaveView
+
+        android:id="@+id/wv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <com.example.customview.wave.RenderWaveView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <com.example.customview.wave.DoubleWaveView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"/>
+    <Button
+        android:id="@+id/btn_start"
+        android:text="开始动画"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <Button
+        android:id="@+id/btn_end"
+        android:text="结束动画"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+</LinearLayout>

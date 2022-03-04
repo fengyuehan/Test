@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <!--此文件针对于9以上系统不能发http请求，CLEARTEXT communication to 192.168.1.120 not permitted by network security policy-->
+    <base-config cleartextTrafficPermitted="true"
+        tools:ignore="InsecureBaseConfiguration" />
+</network-security-config>

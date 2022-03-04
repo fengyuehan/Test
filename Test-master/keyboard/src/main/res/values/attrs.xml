@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PassWordEditText">
+        <attr name="passwordNumber" format="integer" />
+        <attr name="passwordRadius" format="dimension" />
+        <attr name="passwodColor" format="color" />
+        <attr name="divisionLineColor" format="color" />
+        <attr name="bgColor" format="color" />
+        <attr name="divisionLineSize" format="dimension" />
+        <attr name="bgSize" format="dimension" />
+        <attr name="bgCorner" format="dimension" />
+    </declare-styleable>
+</resources>

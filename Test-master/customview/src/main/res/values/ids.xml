@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tag_row" type="id"/>
+    <item name="lock_btn" type="id" />
+    <item name="float_button" type="id"/>
+</resources>

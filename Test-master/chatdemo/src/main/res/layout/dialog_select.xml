@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/ll_select_picture"
+    android:orientation="vertical"
+    android:minHeight="300dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et_chat"
+            android:background="@drawable/shape_chat_box_bg"
+            android:layout_marginLeft="18dp"
+            android:layout_centerVertical="true"
+            android:layout_width="280dp"
+            android:layout_height="40dp" />
+
+        <ImageView
+            android:id="@+id/iv"
+            android:background="@drawable/shape_add_bg"
+            android:src="@mipmap/icon_add"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp"
+            android:layout_centerVertical="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+    </RelativeLayout>
+    <View
+        android:background="#e6e6e6"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <ImageView
+        android:id="@+id/iv_image_select"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="18dp"
+        android:src="@mipmap/icon_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+</LinearLayout>

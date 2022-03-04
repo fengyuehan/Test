@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="1dp"
+    >
+    <Button
+        android:id="@+id/btn_sure_service"
+        android:text="serviceLoad测试"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        tools:ignore="MissingClass">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <Button
+        android:id="@+id/btn"
+        android:text="不带参跳转测试Arouter"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <Button
+        android:id="@+id/btn1"
+        android:text="带参跳转测试Arouter"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <Button
+        android:id="@+id/btn_intepter"
+        android:text="跳转拦截Arouter"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <Button
+        android:id="@+id/btn_url"
+        android:text="url跳转Arouter"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <Button
+        android:id="@+id/btn_ForResult"
+        android:text="startActivityForResult跳转Arouter"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <Button
+        android:id="@+id/btn_MaterialRatingBar"
+        android:text="MaterialRatingBar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+
+    <EditText
+        android:id="@+id/et"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <Button
+        android:id="@+id/btn_sure"
+        android:text="确定"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+    <Button
+        android:id="@+id/btn_jump"
+        android:text="两个app相互跳转"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+</LinearLayout>

@@ -1,0 +1,43 @@
+apply plugin: 'kotlin'
+//apply from: 'bintray.gradle'
+//apply from: 'publish.gradle'
+/*apply plugin: 'groovy'
+apply plugin: 'maven'*/
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.31"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation 'com.android.tools.build:gradle:3.5.4'
+}
+
+/*
+group='com.example.lib'
+version='1.0.0'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('../repo'))
+        }
+    }
+}
+*/

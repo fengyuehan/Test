@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_store_name"
+        android:text="店铺0"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_store_money"
+        android:textSize="18sp"
+        android:text="10.2"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+   <LinearLayout
+       android:layout_gravity="right"
+       android:layout_margin="5dp"
+       android:orientation="horizontal"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+       <ImageView
+           android:id="@+id/iv_jian"
+           android:src="@drawable/jian"
+           android:layout_width="wrap_content"
+           android:layout_marginRight="5dp"
+           android:layout_height="wrap_content" />
+       <TextView
+           android:id="@+id/tv_count"
+           android:text="1"
+           android:layout_margin="5dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <ImageView
+           android:id="@+id/iv_add"
+           android:src="@drawable/add"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+   </LinearLayout>
+</LinearLayout>

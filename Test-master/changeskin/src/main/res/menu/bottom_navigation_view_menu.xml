@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bnv_home"
+        android:icon="@drawable/icon_workset"
+        android:title="@string/tab_name_home" />
+    <item
+        android:id="@+id/bnv_discovery"
+        android:icon="@drawable/icon_discovery"
+        android:title="@string/tab_name_discovery" />
+    <item
+        android:id="@+id/bnv_mine"
+        android:icon="@drawable/icon_signal"
+        android:title="@string/tab_name_mine" />
+</menu>

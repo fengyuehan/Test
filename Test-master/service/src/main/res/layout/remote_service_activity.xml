@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout style="@style/style_division_parent">
+
+            <View style="@style/style_line" />
+
+            <TextView
+                style="@style/style_small_title"
+                android:text="开启服务" />
+
+            <View style="@style/style_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_remote_start"
+                style="@style/style_button"
+                android:text="开启服务" />
+
+            <Button
+                android:id="@+id/bt_remote_stop"
+                style="@style/style_button"
+                android:text="停止服务" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/style_division_parent">
+
+            <View style="@style/style_line" />
+
+            <TextView
+                style="@style/style_small_title"
+                android:text="绑定服务" />
+
+            <View style="@style/style_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_remote_bind"
+                style="@style/style_button"
+                android:text="绑定服务" />
+
+            <Button
+                android:id="@+id/bt_add_book"
+                style="@style/style_button"
+                android:text="增加数据" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_get_book"
+                style="@style/style_button"
+                android:text="获取数据" />
+
+            <Button
+                android:id="@+id/bt_remote_unbind"
+                style="@style/style_button"
+                android:text="解绑服务" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_callback"
+            android:text="回调"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

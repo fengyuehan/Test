@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="onClickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_insert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:onClick="@{onClickListener}"
+                android:text="插入数据"
+                android:textAllCaps="false"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ff0000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="以下是测试外键约束，每个按钮只限点一次，删除后可重复"
+                android:textColor="#ff0000"
+                />
+
+            <Button
+                android:id="@+id/btn_insert_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:onClick="@{onClickListener}"
+                android:text="插入uid = 100的人"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:id="@+id/btn_insert_clothes_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="@{onClickListener}"
+                android:text="往uid = 100 的人里插入黑色衣服"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:id="@+id/btn_insert_clothes_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="@{onClickListener}"
+                android:text="往uid = 100 的人里插入红色"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:id="@+id/btn_delete_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="@{onClickListener}"
+                android:text="删除uid = 100 的人"
+                android:textAllCaps="false"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:text="当前人总数：" />
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/txt_clothes_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:text="衣服总数：" />
+
+    </RelativeLayout>
+
+</layout>

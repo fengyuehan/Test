@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_marginTop="10dp"
+        android:text="测试LayoutInflater"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+
+</RelativeLayout>

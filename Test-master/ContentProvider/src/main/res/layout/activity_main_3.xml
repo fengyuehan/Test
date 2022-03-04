@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/search_etid_text"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:src="@drawable/search_gray_icon" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.appcompat.widget.RecyclerView>
+        <com.example.contentprovider.wavesidebarrecyclerview.WaveSideBar
+            android:id="@+id/sideBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:chooseTextColor="@android:color/white"
+            app:textColor="#969696"
+            app:backgroundColor="#bef9b81b"
+            app:textSize="10sp"
+            app:hintTextSize="32sp"
+            app:radius="15dp"
+            app:circleRadius="18dp"/>
+    </FrameLayout>
+</androidx.constraintlayout.ConstraintLayout>
