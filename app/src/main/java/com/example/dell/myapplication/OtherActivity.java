@@ -20,7 +20,7 @@ public class OtherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_other);
+        setContentView(R.layout.activity_main);
         tv_back = findViewById(R.id.tv_back);
         tv_jump = findViewById(R.id.tv_jump);
         tv_jump1 = findViewById(R.id.tv_jump1);

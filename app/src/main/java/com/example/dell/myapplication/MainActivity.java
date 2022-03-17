@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ARouter.getInstance()
-                        .build("/main/login")
+                        .build("/a/login")
                         .withString("path","您好")
                         .navigation();
             }
@@ -208,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ARouter.getInstance()
-                        .build("/main/login")
+                        .build("/a/login")
                         .withString("path","您好")
                         .navigation();
             }
@@ -216,6 +216,7 @@ public class MainActivity extends AppCompatActivity {
         btn_url.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //如果两个拦截器的优先级一样，项目编译就会报错。所以，不同拦截器定义的优先级属性值不能相同
                 Uri uri = Uri.parse("test://com/main/UrlLoginActivity");
                 ARouter.getInstance().build(uri).navigation(MainActivity.this, new NavigationCallback() {
                     @Override

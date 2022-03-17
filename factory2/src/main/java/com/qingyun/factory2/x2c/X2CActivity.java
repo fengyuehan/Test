@@ -14,7 +14,7 @@ public class X2CActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        X2C.setContentView(this, R.layout.activity_main_other);
+        X2C.setContentView(this, R.layout.activity_main);
 
     }
 }

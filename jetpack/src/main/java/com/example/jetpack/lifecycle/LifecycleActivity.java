@@ -11,6 +11,7 @@ import com.example.jetpack.lifecycle.LifecycleObserverImpl;
 public class LifecycleActivity extends AppCompatActivity {
 
     private LifecycleObserverImpl lifecycleObserver;
+    private LifecycleHandler mLifecycleHandler;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -18,6 +19,8 @@ public class LifecycleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_lifecycle);
         lifecycleObserver = new LifecycleObserverImpl();
         getLifecycle().addObserver(lifecycleObserver);
+        mLifecycleHandler = new LifecycleHandler(this);
+
     }
 
 

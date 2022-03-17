@@ -1,6 +1,9 @@
 /*include ':flavorgradle:out3'
 include ':flavorgradle:out2'
 include ':flavorgradle:out1'*/
+
+println("setting设置")
+
 includeBuild("version")
 apply from: 'supportApi.gradle'
 
@@ -81,3 +84,33 @@ include ':weblib'
 include ':motionlayoutdemo'
 include ':bitmapload'
 include ':flowdemo'
+include ':groovydemo'
+
+rootProject.name = "测试"
+
+gradle.addBuildListener(new BuildListener() {
+    @Override
+    void buildStarted(Gradle gradle) {
+        println("buildStarted------------")
+    }
+
+    @Override
+    void settingsEvaluated(Settings settings) {
+        println("settingsEvaluated------------")
+    }
+
+    @Override
+    void projectsLoaded(Gradle gradle) {
+        println("projectsLoaded------------")
+    }
+
+    @Override
+    void projectsEvaluated(Gradle gradle) {
+        println("projectsEvaluated------------")
+    }
+
+    @Override
+    void buildFinished(BuildResult result) {
+        println("buildFinished------------")
+    }
+})

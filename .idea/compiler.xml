@@ -14,7 +14,7 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/ed28ded51a8b1c6b112568def5f4b455e6809019/j2objc-annotations-1.1.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/775b7e22fb10026eed3f86e8dc556dfafe35f2d5/animal-sniffer-annotations-1.14.jar" />
         </processorPath>
-        <module name="test.annotation_compiler" />
+        <module name="测试.annotation_compiler" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
@@ -30,20 +30,20 @@
       <module name="test.aidl" target="1.8" />
       <module name="Test.AInterfaceLib" target="1.8" />
       <module name="test.AInterfaceLib" target="1.8" />
-      <module name="Test.Algorithm" target="1.8" />
       <module name="test.Algorithm" target="1.8" />
+      <module name="Test.Algorithm" target="1.8" />
       <module name="Test.Alib" target="1.8" />
       <module name="test.Alib" target="1.8" />
-      <module name="Test.androidplugin" target="1.8" />
       <module name="test.androidplugin" target="1.8" />
+      <module name="Test.androidplugin" target="1.8" />
       <module name="test.animation" target="1.8" />
       <module name="Test.animation" target="1.8" />
       <module name="test.app" target="1.8" />
       <module name="Test.app" target="1.8" />
       <module name="test.aptdemo" target="1.8" />
       <module name="Test.aptdemo" target="1.8" />
-      <module name="test.arouterdemo" target="1.8" />
       <module name="Test.arouterdemo" target="1.8" />
+      <module name="test.arouterdemo" target="1.8" />
       <module name="test.ArouterTest" target="1.8" />
       <module name="Test.ArouterTest" target="1.8" />
       <module name="Test.asm" target="1.8" />
@@ -54,8 +54,8 @@
       <module name="test.AsynTask" target="1.8" />
       <module name="Test.banner" target="1.8" />
       <module name="test.banner" target="1.8" />
-      <module name="Test.bitmap" target="1.8" />
       <module name="test.bitmap" target="1.8" />
+      <module name="Test.bitmap" target="1.8" />
       <module name="test.bitmapload" target="1.8" />
       <module name="test.buildSrc" target="1.8" />
       <module name="Test.buildSrc" target="1.8" />
@@ -73,10 +73,10 @@
       <module name="Test.daggerdemo" target="1.8" />
       <module name="Test.daggerdemo2" target="1.8" />
       <module name="test.daggerdemo2" target="1.8" />
-      <module name="test.datastructures" target="1.8" />
       <module name="Test.datastructures" target="1.8" />
-      <module name="Test.dayandnightchange" target="1.8" />
+      <module name="test.datastructures" target="1.8" />
       <module name="test.dayandnightchange" target="1.8" />
+      <module name="Test.dayandnightchange" target="1.8" />
       <module name="Test.definetablayout" target="1.8" />
       <module name="test.definetablayout" target="1.8" />
       <module name="test.designpattern" target="1.8" />
@@ -97,15 +97,15 @@
       <module name="Test.fingerprintdemo" target="1.8" />
       <module name="test.flavorgradle" target="1.8" />
       <module name="Test.flavorgradle" target="1.8" />
-      <module name="test.floatingwindow" target="1.8" />
       <module name="Test.floatingwindow" target="1.8" />
+      <module name="test.floatingwindow" target="1.8" />
       <module name="test.flowdemo" target="1.8" />
       <module name="Test.FlowLayout" target="1.8" />
       <module name="test.FlowLayout" target="1.8" />
       <module name="Test.fragment" target="1.8" />
       <module name="test.fragment" target="1.8" />
-      <module name="test.fragmentjumpactivity" target="1.8" />
       <module name="Test.fragmentjumpactivity" target="1.8" />
+      <module name="test.fragmentjumpactivity" target="1.8" />
       <module name="Test.gaode" target="1.8" />
       <module name="test.gaode" target="1.8" />
       <module name="Test.glidepicasso" target="1.8" />
@@ -116,6 +116,7 @@
       <module name="Test.gradlestudy" target="1.8" />
       <module name="test.greendao" target="1.8" />
       <module name="Test.greendao" target="1.8" />
+      <module name="test.groovydemo" target="1.8" />
       <module name="Test.hilt" target="1.8" />
       <module name="test.hilt" target="1.8" />
       <module name="Test.hotfix" target="1.8" />
@@ -138,14 +139,14 @@
       <module name="Test.keyboard" target="1.8" />
       <module name="test.kotlindemo" target="1.8" />
       <module name="Test.kotlindemo" target="1.8" />
-      <module name="Test.lettersidebar" target="1.8" />
       <module name="test.lettersidebar" target="1.8" />
+      <module name="Test.lettersidebar" target="1.8" />
       <module name="Test.lib" target="1.8" />
       <module name="Test.lib-image-gif" target="1.8" />
       <module name="Test.linkedhashmapactivity" target="1.8" />
       <module name="test.linkedhashmapactivity" target="1.8" />
-      <module name="test.litepaldemo" target="1.8" />
       <module name="Test.litepaldemo" target="1.8" />
+      <module name="test.litepaldemo" target="1.8" />
       <module name="Test.LiveData" target="1.8" />
       <module name="test.LiveData" target="1.8" />
       <module name="test.livedatabus" target="1.8" />
@@ -154,29 +155,29 @@
       <module name="test.lombok" target="1.8" />
       <module name="Test.lottie" target="1.8" />
       <module name="test.lottie" target="1.8" />
-      <module name="test.luckypan" target="1.8" />
       <module name="Test.luckypan" target="1.8" />
+      <module name="test.luckypan" target="1.8" />
       <module name="Test.main" target="1.8" />
       <module name="test.main" target="1.8" />
-      <module name="Test.main-api" target="1.8" />
       <module name="test.main-api" target="1.8" />
+      <module name="Test.main-api" target="1.8" />
       <module name="test.MarqueTextView" target="1.8" />
       <module name="Test.MarqueTextView" target="1.8" />
       <module name="Test.mat" target="1.8" />
       <module name="test.mat" target="1.8" />
-      <module name="test.MaterialDesign" target="1.8" />
       <module name="Test.MaterialDesign" target="1.8" />
+      <module name="test.MaterialDesign" target="1.8" />
       <module name="test.motionlayoutdemo" target="1.8" />
-      <module name="test.myapplication" target="1.8" />
       <module name="Test.myapplication" target="1.8" />
+      <module name="test.myapplication" target="1.8" />
       <module name="test.myapplication2" target="1.8" />
       <module name="Test.myapplication2" target="1.8" />
       <module name="Test.navigation" target="1.8" />
       <module name="test.navigation" target="1.8" />
       <module name="test.nestedsrcolldemo" target="1.8" />
       <module name="Test.nestedsrcolldemo" target="1.8" />
-      <module name="test.notificaitondemo" target="1.8" />
       <module name="Test.notificaitondemo" target="1.8" />
+      <module name="test.notificaitondemo" target="1.8" />
       <module name="Test.otcchatkeyboard" target="1.8" />
       <module name="test.otcchatkeyboard" target="1.8" />
       <module name="Test.parcelable" target="1.8" />
@@ -190,8 +191,8 @@
       <module name="Test.plugindemo" target="1.8" />
       <module name="test.pluginservice" target="1.8" />
       <module name="Test.pluginservice" target="1.8" />
-      <module name="test.PopupWindow" target="1.8" />
       <module name="Test.PopupWindow" target="1.8" />
+      <module name="test.PopupWindow" target="1.8" />
       <module name="test.processkeeplive" target="1.8" />
       <module name="Test.processkeeplive" target="1.8" />
       <module name="Test.produceandconsum" target="1.8" />
@@ -200,24 +201,24 @@
       <module name="test.proxy" target="1.8" />
       <module name="Test.recyclerviewdemo" target="1.8" />
       <module name="test.recyclerviewdemo" target="1.8" />
-      <module name="Test.reflect" target="1.8" />
       <module name="test.reflect" target="1.8" />
+      <module name="Test.reflect" target="1.8" />
       <module name="Test.roomdemo" target="1.8" />
       <module name="test.roomdemo" target="1.8" />
-      <module name="test.rxjava" target="1.8" />
       <module name="Test.rxjava" target="1.8" />
+      <module name="test.rxjava" target="1.8" />
       <module name="Test.scrollview" target="1.8" />
       <module name="test.scrollview" target="1.8" />
-      <module name="test.service" target="1.8" />
       <module name="Test.service" target="1.8" />
+      <module name="test.service" target="1.8" />
       <module name="test.share" target="1.8" />
       <module name="Test.share" target="1.8" />
-      <module name="test.shoppingcart" target="1.8" />
       <module name="Test.shoppingcart" target="1.8" />
+      <module name="test.shoppingcart" target="1.8" />
       <module name="Test.skin-night" target="1.8" />
       <module name="test.skin-night" target="1.8" />
-      <module name="Test.slidingverification" target="1.8" />
       <module name="test.slidingverification" target="1.8" />
+      <module name="Test.slidingverification" target="1.8" />
       <module name="Test.smartrefreshlayout" target="1.8" />
       <module name="test.smartrefreshlayout" target="1.8" />
       <module name="test.spiner" target="1.8" />
@@ -239,8 +240,8 @@
       <module name="Test.version" target="1.8" />
       <module name="Test.video" target="1.8" />
       <module name="test.video" target="1.8" />
-      <module name="test.viewpager" target="1.8" />
       <module name="Test.viewpager" target="1.8" />
+      <module name="test.viewpager" target="1.8" />
       <module name="test.viewstubdemo" target="1.8" />
       <module name="Test.viewstubdemo" target="1.8" />
       <module name="test.wanandroid" target="1.8" />
@@ -365,6 +366,119 @@
       <module name="Test_(1).wheelview" target="1.8" />
       <module name="Test_(1).zxingdemo" target="1.8" />
       <module name="version" target="1.8" />
+      <module name="测试.A2Lib" target="1.8" />
+      <module name="测试.aidl" target="1.8" />
+      <module name="测试.AInterfaceLib" target="1.8" />
+      <module name="测试.Algorithm" target="1.8" />
+      <module name="测试.Alib" target="1.8" />
+      <module name="测试.androidplugin" target="1.8" />
+      <module name="测试.animation" target="1.8" />
+      <module name="测试.app" target="1.8" />
+      <module name="测试.aptdemo" target="1.8" />
+      <module name="测试.arouterdemo" target="1.8" />
+      <module name="测试.ArouterTest" target="1.8" />
+      <module name="测试.asm" target="1.8" />
+      <module name="测试.aspectjdemo" target="1.8" />
+      <module name="测试.AsynTask" target="1.8" />
+      <module name="测试.banner" target="1.8" />
+      <module name="测试.bitmap" target="1.8" />
+      <module name="测试.bitmapload" target="1.8" />
+      <module name="测试.camerademo" target="1.8" />
+      <module name="测试.changeskin" target="1.8" />
+      <module name="测试.chatdemo" target="1.8" />
+      <module name="测试.ContentProvider" target="1.8" />
+      <module name="测试.customview" target="1.8" />
+      <module name="测试.daggerdemo" target="1.8" />
+      <module name="测试.daggerdemo2" target="1.8" />
+      <module name="测试.datastructures" target="1.8" />
+      <module name="测试.dayandnightchange" target="1.8" />
+      <module name="测试.definetablayout" target="1.8" />
+      <module name="测试.designpattern" target="1.8" />
+      <module name="测试.dialogfragment" target="1.8" />
+      <module name="测试.diffutil" target="1.8" />
+      <module name="测试.eventbus" target="1.8" />
+      <module name="测试.eventdispatch" target="1.8" />
+      <module name="测试.factory2" target="1.8" />
+      <module name="测试.file" target="1.8" />
+      <module name="测试.fingerprintdemo" target="1.8" />
+      <module name="测试.flavorgradle" target="1.8" />
+      <module name="测试.floatingwindow" target="1.8" />
+      <module name="测试.flowdemo" target="1.8" />
+      <module name="测试.FlowLayout" target="1.8" />
+      <module name="测试.fragment" target="1.8" />
+      <module name="测试.fragmentjumpactivity" target="1.8" />
+      <module name="测试.gaode" target="1.8" />
+      <module name="测试.glidepicasso" target="1.8" />
+      <module name="测试.gradleplugin" target="1.8" />
+      <module name="测试.gradlestudy" target="1.8" />
+      <module name="测试.greendao" target="1.8" />
+      <module name="测试.groovydemo" target="1.8" />
+      <module name="测试.hilt" target="1.8" />
+      <module name="测试.hotfix" target="1.8" />
+      <module name="测试.htmllink" target="1.8" />
+      <module name="测试.immersionbar" target="1.8" />
+      <module name="测试.innerclass" target="1.8" />
+      <module name="测试.IntentService" target="1.8" />
+      <module name="测试.ioc2" target="1.8" />
+      <module name="测试.jetpack" target="1.8" />
+      <module name="测试.jsandandroid" target="1.8" />
+      <module name="测试.keyboard" target="1.8" />
+      <module name="测试.kotlindemo" target="1.8" />
+      <module name="测试.lettersidebar" target="1.8" />
+      <module name="测试.linkedhashmapactivity" target="1.8" />
+      <module name="测试.litepaldemo" target="1.8" />
+      <module name="测试.LiveData" target="1.8" />
+      <module name="测试.livedatabus" target="1.8" />
+      <module name="测试.lombok" target="1.8" />
+      <module name="测试.lottie" target="1.8" />
+      <module name="测试.luckypan" target="1.8" />
+      <module name="测试.main" target="1.8" />
+      <module name="测试.main-api" target="1.8" />
+      <module name="测试.MarqueTextView" target="1.8" />
+      <module name="测试.mat" target="1.8" />
+      <module name="测试.MaterialDesign" target="1.8" />
+      <module name="测试.motionlayoutdemo" target="1.8" />
+      <module name="测试.myapplication" target="1.8" />
+      <module name="测试.myapplication2" target="1.8" />
+      <module name="测试.navigation" target="1.8" />
+      <module name="测试.nestedsrcolldemo" target="1.8" />
+      <module name="测试.notificaitondemo" target="1.8" />
+      <module name="测试.otcchatkeyboard" target="1.8" />
+      <module name="测试.parcelable" target="1.8" />
+      <module name="测试.pickerview" target="1.8" />
+      <module name="测试.pictureoptimization" target="1.8" />
+      <module name="测试.pluginactivity" target="1.8" />
+      <module name="测试.pluginservice" target="1.8" />
+      <module name="测试.PopupWindow" target="1.8" />
+      <module name="测试.processkeeplive" target="1.8" />
+      <module name="测试.produceandconsum" target="1.8" />
+      <module name="测试.proxy" target="1.8" />
+      <module name="测试.recyclerviewdemo" target="1.8" />
+      <module name="测试.reflect" target="1.8" />
+      <module name="测试.roomdemo" target="1.8" />
+      <module name="测试.rxjava" target="1.8" />
+      <module name="测试.scrollview" target="1.8" />
+      <module name="测试.service" target="1.8" />
+      <module name="测试.share" target="1.8" />
+      <module name="测试.shoppingcart" target="1.8" />
+      <module name="测试.skin-night" target="1.8" />
+      <module name="测试.slidingverification" target="1.8" />
+      <module name="测试.smartrefreshlayout" target="1.8" />
+      <module name="测试.spiner" target="1.8" />
+      <module name="测试.staggeredgrid" target="1.8" />
+      <module name="测试.statusbarplus" target="1.8" />
+      <module name="测试.suspend" target="1.8" />
+      <module name="测试.synchronizeddemo" target="1.8" />
+      <module name="测试.taskaffinitytest" target="1.8" />
+      <module name="测试.timepicker" target="1.8" />
+      <module name="测试.transition" target="1.8" />
+      <module name="测试.video" target="1.8" />
+      <module name="测试.viewpager" target="1.8" />
+      <module name="测试.viewstubdemo" target="1.8" />
+      <module name="测试.wanandroid" target="1.8" />
+      <module name="测试.weblib" target="1.8" />
+      <module name="测试.wheelview" target="1.8" />
+      <module name="测试.zxingdemo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

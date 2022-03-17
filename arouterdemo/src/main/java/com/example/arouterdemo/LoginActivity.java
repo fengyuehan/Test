@@ -11,7 +11,7 @@ import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 
-@Route(path = "/main/login")
+@Route(path = "/a/login")
 public class LoginActivity extends AppCompatActivity {
     /**
      * 被@Autowired修饰的成员变量不能背pravite修饰，不然运行时会报错
